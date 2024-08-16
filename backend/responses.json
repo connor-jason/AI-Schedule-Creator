@@ -1,0 +1,1679 @@
+[
+    {
+        ": AB1531 or instructor approval; this course is closed to native<br />speakers of Arabic and heritage speakers except with written permission from the instructor.": "AB 1531 OR instructor approval"
+    },
+    {
+        ": AB1531 &amp; AB1532 or instructor approval; this course is closed to<br />native speakers of Arabic and heritage speakers except with written permission from the<br />instructor.": "AB 1531 AND AB 1532 OR instructor approval"
+    },
+    {
+        ": AB1531, AB1532 &amp; AB1533 or instructor approval<i>; this course</i><i>is closed to native speakers of Arabic and heritage speakers except with written permission from</i><i>the instructor.</i>  Students cannot receive credit for both AB 210X and AB 2531.": "AB 1531 AND AB 1532 AND AB 1533 OR instructor approval"
+    },
+    {
+        ": AB1531, AB1532, AB1533 &amp; AB2531 or instructor approval;<i>this course is closed to native speakers of Arabic and heritage speakers except with written</i><i>permission from the instructor.</i>Students cannot receive credit for both AB 220X and AB 2532.": "AB 1531 AND AB 1532 AND AB 1533 AND (AB 2531 OR instructor approval)"
+    },
+    {
+        ": AB1531, AB1532, AB1533, AB2531 &amp; AB2532 or instructor<br />approval; this course is closed to native speakers of Arabic and heritage speakers except with<br />written permission from the instructor.<br />Students cannot receive credit for both AB 230X and AB 2533.": "AB 1531 AND AB 1532 AND AB 1533 AND AB 2531 AND AB 2532 OR instructor approval; closed to native speakers of Arabic and heritage speakers except with written permission from the instructor. Credit for both AB 230X and AB 2533 is not allowed."
+    },
+    {
+        ": differential equations (MA2051 or equivalent), dynamics (ES 2503, PH 2101 or equivalent), thermodynamics (ES 3001, PH 2101, CH 3510 or equivalent). </span>Students may not receive credit for both AE 2110 and AE 3602.": "MA 2051 OR equivalent AND ES 2503 OR PH 2101 OR equivalent AND ES 3001 OR PH 2101 OR CH 3510 OR equivalent."
+    },
+    {
+        ": basic physics, (PH 1110, PH 1111) elementary differential and integral calculus (MA 1021, MA 1022), ordinary differential equations (MA2051) or equivalent.": "PH 1110 AND PH 1111 AND MA 1021 AND MA 1022 OR MA 2051"
+    },
+    {
+        ": ordinary differential equations (MA 2051 or equivalent), introductory dynamics (ES 2503, PH 2201 or equivalent), and linear algebra (MA 2071 or equivalent).</span><br />Students may not receive credit for both AE 2310 and either AE/ME 3703 or AE 3713.": "MA 2051 OR equivalent AND ES 2503 OR PH 2201 OR equivalent AND MA 2071 OR equivalent"
+    },
+    {
+        ": multivariable calculus (MA 1024 or equivalent), differential equations (MA 2051 or equivalent), dynamics (ES 2503, PH 2201 or equivalent). </span>Students may not receive credit for both AE 2320 and AE 2713.": "MA 1024 OR MA 2051 AND ES 2503 OR PH 2201"
+    },
+    {
+        ": differential, integral, multivariable calculus (MA 1021, MA 1022, MA 1024 or equivalent), mechanics (PH 1110, PH 1111, or equivalent). </span>Students may not receive credit for both AE 2410 and AE 2712.": "MA 1021 AND MA 1022 AND (MA 1024 OR equivalent) AND (PH 1110 OR PH 1111 OR equivalent)"
+    },
+    {
+        ": mechanics (PH1110 / 1111 or equivalent), electromagnetism (PH 1120 / 1121 or equivalent), and ordinary differential equations (MA 2051 or equivalent).": "PH 1110 OR PH 1111 AND PH 1120 OR PH 1121 AND MA 2051"
+    },
+    {
+        ": thermodynamics (ES 3001, CH 3510 or equivalent), incompressible fluid dynamics (AE 2110 or equivalent). </span>Students may not receive credit for both AE 3110 and AE 3410.": "ES 3001 OR CH 3510 AND AE 2110"
+    },
+    {
+        ": incompressible and compressible fluid dynamics (AE 2110, AE 3110 or equivalent). </span>Students may not receive credit for both AE 3120 and AE 3711.": "AE 2110 OR AE 3110 AND AE 3120 OR AE 3711"
+    },
+    {
+        ": linear algebra (MA 2071 or equivalent), dynamics (ES 2503, PH 2201 or equivalent), and controls (AE 2310 or equivalent). Students may not receive credit for both AE 3310 and AE 4733.": "MA 2071 OR ES 2503 OR PH 2201 AND AE 2310"
+    },
+    {
+        ": differential equations (MA 2051 or equivalent), introductory aerospace structures (AE 2410 or equivalent. Students may not receive credit for both AE 3420 and AE 3712.": "MA 2051 OR AE 2410 AND (AE 3420 OR AE 3712)"
+    },
+    {
+        ": introductory material science (ES 2001), and introductory stress analysis (AE 2410 or equivalent). </span>Students may not receive credit for both AE 3430 and AE 4717.": "ES 2001 AND (AE 2410 OR equivalent)"
+    },
+    {
+        ": thermodynamics (ES 3001, CH 3510, PH 2101 or equivalent), compressible fluid dynamics (AE/ME 3110 or equivalent).</span><br />Students may not receive credit for both AE 4210 and either AE 4710 or AE 4711.": "ES 3001 AND CH 3510 AND (PH 2101 OR equivalent) AND AE/ME 3110 OR equivalent"
+    },
+    {
+        ": compressible fluid dynamics (AE 3110 or equivalent), thermodynamics (ES 3001, PH 2101, CH 3510 or equivalent). Students may not receive credit for both AE 4220 and AE 4719.": "AE 3110 OR ES 3001 OR PH 2101 OR CH 3510"
+    },
+    {
+        ": controls (AE 2310 or equivalent), attitude and position kinematics (AE 4733 or equivalent). </span>Students may not receive credit for both AE 4310 and AE 4723.": "AE 2310 OR AE 4733 AND (AE 4310 OR AE 4723)"
+    },
+    {
+        ": astronautics (AE 2320 or equivalent), dynamics (ES 2503, PH 2201 or equivalent), control (AE 2310 or equivalent). Students may not receive credit for both AE 4320 and AE 4713.": "AE 2320 OR ES 2503 OR PH 2201 AND AE 2310"
+    },
+    {
+        ": dynamics (ES 2503, PH 2201, PH2202 or equivalent), control (AE 2310 or equivalent), aerospace structures (AE 3420 or equivalent). </span>Students may not receive credit for both AE 4410 and AE 4712.": "ES 2503 AND PH 2201 AND (PH 2202 OR equivalent) AND AE 2310 OR equivalent AND AE 3420 OR equivalent"
+    },
+    {
+        ": aerodynamics (AE 3120 or equivalent), aerospace structures (AE 3420 or equivalent), air breathing propulsion (AE 4210 or equivalent), aircraft dynamics and control (AE 4310 or equivalent). Students may not receive credit for both AE 4510 and AE 4770.": "AE 3120 OR AE 3420 OR AE 4210 OR AE 4310."
+    },
+    {
+        ": astronautics (AE 2320 or equivalent), space environments (AE/PH 2550), spacecraft dynamics and control (AE 4320 or equivalent), telecommunications (AE 3310),space structures (AE 3420 or equivalent), rocket propulsion (AE 4220 or equivalent). Students may not receive credit for both AE 4520 and AE 4771. </div>": "AE 2320 OR AE 2550 AND AE 4320 OR AE 3310 AND AE 3420 OR AE 4220"
+    },
+    {
+        ": Familiarity with Matlab\u00ae. Students cannot receive credit for this course if they have taken AE/ME 5220 \u201cControl of Linear Dynamical Systems\u201d.": "None"
+    },
+    {
+        ": AR 1100.": "AR 1100"
+    },
+    {
+        ": Basic knowledge of 3D modeling, texturing and animation (IMGD 2101 and IMGD 2201 or equivalent).<br />Students may not receive credit for both IMGD 204X and AR/IMGD 2048.": "IMGD 2101 AND (IMGD 2201 OR equivalent)"
+    },
+    {
+        ": AR1100 and AR1101.": "AR 1100 AND AR 1101"
+    },
+    {
+        ": AR 2114.": "AR 2114"
+    },
+    {
+        ": AR1100": "AR 1100"
+    },
+    {
+        ": Basic knowledge of figure drawing (AR 2202) and digital art software (AR 1101) is recommended.": "AR 2202 AND AR 1101"
+    },
+    {
+        ": Basic knowledge digital art software (AR 1101) is recommended. Suggested background: Basic knowledge of animation (IMGD/AR 2222).": "AR 1101 OR IMGD 2222"
+    },
+    {
+        ": Basic knowledge of the history and theory of film (HU 2251 or equivalent).": "HU 2251 OR equivalent"
+    },
+    {
+        ": AR 1101, AR 2202": "AR 1101 AND AR 2202"
+    },
+    {
+        ": Basic 3D modeling skills (AR 1101)<br />This course will be offered in 2020-21, and in alternating years thereafter.": "AR 1101"
+    },
+    {
+        ": Experience with 2D vector art and 3D modeling (AR1101 or equivalent).": "AR 1101 OR equivalent"
+    },
+    {
+        ": AR 1100": "AR 1100"
+    },
+    {
+        ": AR 1101, IMGD/AR 2101, AR 2202": "AR 1101 AND IMGD 2101 AND AR 2202"
+    },
+    {
+        ": Animation (AR/IMGD 2101 or equivalent), and exposure to digital audio or music and introductory programming.": "AR 2101 OR exposure to digital audio OR introductory programming."
+    },
+    {
+        ": Observational and gesture drawing and color (AR 1101), experience drawing live model (AR 2202), composition skills and color (AR/IMGD 2700).": "AR 1101 AND AR 2202 AND AR/IMGD 2700"
+    },
+    {
+        ": Knowledge of digital 2D animation techniques and classical animation principles (IMGD/AR 2222).": "IMGD 2222 OR AR 2222"
+    },
+    {
+        ": Knowledge of digital 3D animation techniques and classical animation principles (IMGD/AR 2333).": "IMGD 2333 OR AR 2333"
+    },
+    {
+        ": AR 2202, IMGD/AR 2700": "AR 2202 AND IMGD 2700 OR AR 2700"
+    },
+    {
+        ": Introductory architectural design (AREN 2002 or equivalent).<br />Students may not receive credit for both AREN 2004 and AREN 3005": "AREN 2002 OR equivalent AND NOT (AREN 2004 AND AREN 3005)"
+    },
+    {
+        ": electricity and magnetism (PH 1120/1121 or equivalent)": "PH 1120 OR PH 1121"
+    },
+    {
+        ": Intermediate architectural design (AREN 2002 and AREN 2004 or equivalent)": "AREN 2002 AND (AREN 2004 OR equivalent)"
+    },
+    {
+        ": Thermodynamics. Some sections of this course may be offered as Writing Intensive (WI)": "None"
+    },
+    {
+        ": AREN 3003, ES 3004.": "AREN 3003 AND ES 3004"
+    },
+    {
+        ": Building Physics and HVAC system design (AREN 3024 and AREN 3003) and Architectural Design (AREN 2002, AREN 2004, and AREN 3002 or equivalent).<br />Students may not receive credit for both AREN 3020 and AREN 3025": "AREN 3024 AND AREN 3003 AND AREN 2002 AND AREN 2004 AND (AREN 3002 OR equivalent)"
+    },
+    {
+        ": Building Physics and HVAC system design (AREN 3024 and AREN 3003) and Architectural Design (AREN 2002, AREN 2004, and AREN 3002 or equivalent).<br />Students may not receive credit for both AREN 3022 and AREN 3026": "AREN 3024 AND AREN 3003 AND (AREN 2002 AND AREN 2004 AND (AREN 3002 OR equivalent))"
+    },
+    {
+        ": thermodynamics and heat transfer (ES 3001, ES 3003 or equivalent).": "ES 3001 OR ES 3003"
+    },
+    {
+        ":This course is intended for students who have a basic understanding of architectural design processes and who are passionate about exploring innovative and emerging design approaches. Previous experience in architecture, design, or related design fields would be helpful. Familiarity with fundamental drafting software such as CAD and SolidWorks, as well as basic knowledge of programming concepts, would be advantageous, though optional.": "None"
+    },
+    {
+        ": High School Biology": ""
+    },
+    {
+        ": High school biology . Programming experience is not required .<br />": "None"
+    },
+    {
+        ": high school biology": "none"
+    },
+    {
+        ": a solid working knowledge of biological principles such as would be learned in a rigorous high school biology course .": "None"
+    },
+    {
+        ": a solid working knowledge of biological principles such as would be learned in a rigorous high school biology course.": "\"\""
+    },
+    {
+        ": a solid working knowledge of biological principles such as would be learned in a rigorous high school biology course": "None"
+    },
+    {
+        ": High school biology. No previous laboratory experience is assumed.": ""
+    },
+    {
+        ": A working knowledge of concepts of cellular and molecular biology (BB 1101 or equivalent), and knowledge of chemical properties and reactions (CH 1010 and CH 1020 or equivalent). Suggested background: a working knowledge of chemical kinetics, equilibrium, and thermodynamics (CH 1030 or equivalent)": "BB 1101 OR CH 1010 AND CH 1020 AND CH 1030"
+    },
+    {
+        ": a working knowledge of concepts in biodiversity ( BB1102, BB1002, or equivalent). Students may not receive credit for both BB 2030 and BB 1040 (no longer offered).": "BB 1102 OR BB 1002"
+    },
+    {
+        ": A foundational knowledge of concepts in ecology and biodiversity (BB 1102 or equivalent) -Suggested background: integral and differential calculus.": "BB 1102 OR MA 1021"
+    },
+    {
+        ": Foundational knowledge of cell and molecular biotechnology (BB 1101 or equivalent).": "BB 1101 OR equivalent"
+    },
+    {
+        ": at least one college-level biology course. Students may not receive credit for this course and BB 2902.": "BI 1xxx"
+    },
+    {
+        ": at least one college-level biology course.": "\"One college-level biology course\"."
+    },
+    {
+        ": at least one college-level biology course.Students may not receive credit for this course and BB 2904, BB 294X, or BB 292X.": "AT LEAST ONE COLLEGE-LEVEL BIOLOGY COURSE."
+    },
+    {
+        ": at least one college-level biology course.Students may not receive credit for this course and BB 2915": "\"at least one college-level biology course.\""
+    },
+    {
+        ": Foundational knowledge of concepts in biology and biotechnology (BB 1101 and BB 1102 or equivalent)": "BB 1101 AND (BB 1102 OR equivalent)"
+    },
+    {
+        ": a working knowledge of concepts in biotechnology, microbiology, and molecular biology, (BB 1101, BB 2003, and BB 3950, or equivalent). Students may not receive credit for both BB 2002 Microbiology: Plagues of the Modern World and BB 3003.": "BB 1101 AND BB 2003 AND BB 3950 OR equivalent"
+    },
+    {
+        ": A thorough understanding of ecology (BB 2040 Ecology or equivalent).": "BB 2040"
+    },
+    {
+        ": A working knowledge of concepts in cell biology (BB 2550 or equivalent), genetics or molecular biology (BB2920, BB3950 or equivalent), and physiology (BB 2101 or equivalent).": "BB 2550 OR BB 2920 OR BB 3950 AND BB 2101"
+    },
+    {
+        ": A working knowledge of concepts in physiology and cell biology (BB 2101 and BB 2550 or equivalent), and a working knowledge of chemical properties and reactions (CH 1010 and CH 1020 or equivalent). Suggested background: Concurrent Laboratory: BB 3815. Students who have received credit for BB 2130 may not take BB 3101 for credit.": "BB 2101 AND (BB 2550 OR equivalent) AND CH 1010 AND (CH 1020 OR equivalent)"
+    },
+    {
+        ": A working knowledge of concepts in physiology and cell biology (BB 2101 and BB 2550 or equivalent), and a working knowledge of chemical properties and reactions (CH 1010 and CH 1020 or equivalent).Suggested background: Concurrent Laboratory: BB 3815. Students who have received credit for BB 3110 may not take BB 3102 for credit .": "BB 2101 AND (BB 2550 OR equivalent) AND CH 1010 AND (CH 1020 OR equivalent) AND Concurrent Laboratory: BB 3815"
+    },
+    {
+        ": BB 1025 and BB 2550; CH 1010 and CH 1020.Suggested background: Concurrent Laboratory Module: BB 3514. Students who have received credit for BB 3110 may not take BB 3102 for credit .": "BB 1025 AND BB 2550 AND CH 1010 AND CH 1020 AND BB 3514"
+    },
+    {
+        ": knowledge of aseptic technique (BB 1801 or 2815 or equivalent) and cell biology (BB 2550 or equivalent).Students may not receive credit for this course and BB 3513.": "BB 1801 OR BB 2815 AND BB 2550"
+    },
+    {
+        ": a working knowledge of laboratory skills and concepts in anatomy and physiology (BB 2803, BB 3101, or BB 3102 or equivalent) and general biology lab practices (BB 1801 or equivalent).Students may not receive credit for this course and BB 3515, BB 3511, or BB 3514": "BB 2803 OR BB 3101 OR BB 3102 AND BB 1801"
+    },
+    {
+        ": a working knowledge of laboratory techniques in molecular biology and microbiology (BB 1801 or BB 2815 or equivalent), and concepts in cell biology (BB 2550 or equivalent). Students may not receive credit for this course and BB 3521.": "BB 1801 OR BB 2815 AND BB 2550"
+    },
+    {
+        ": BB 1102, BB 2803, or equivalent. Concurrent or prior registration in BB 3120 is recommended.Students may not receive credit for this course and BB 3525.": "BB 1102 OR BB 2803"
+    },
+    {
+        ": Working knowledge of the principles of molecular biology (BB 1101, BB 2920, or BB 3950 or equivalent) and cell biology (BB 2550 or equivalent), as well as relevant biology laboratory experience (BB 1801, BB 2815, or equivalent).Students may not receive credit for this course and BB 3527.": "BB 1101 OR BB 2920 OR BB 3950 AND BB 2550 AND (BB 1801 OR BB 2815)"
+    },
+    {
+        ": a working knowledge of laboratory skills in protein purification (BB 2802 and BB 1801, or equivalent) and concepts in cell biology (BB 2550 or equivalent) and biochemistry (CH 4110 or equivalent). Some knowledge of immunology may be beneficial.Students may not receive credit for this course and BB 3530.": "BB 2802 AND BB 1801 OR EQUIVALENT AND BB 2550 OR EQUIVALENT AND CH 4110 OR EQUIVALENT"
+    },
+    {
+        ": Working knowledge of the principles of molecular biology (BB 1101, BB 2920, or 3950 or equivalent) and cell biology (BB 2550 or equivalent), as well as relevant biology laboratory experience (BB 1801, 3827, or equivalent).": "BB 1101 OR BB 2920 OR BB 3950 AND BB 2550 AND BB 1801 OR BB 3827"
+    },
+    {
+        ": a working knowledge of the principles of cell biology (BB 2550 or equivalent) as well as a foundational lab experience such as that offered in BB 1801 and BB 3813. Students may not receive credit for this course and BB 3570.": "BB 2550 OR equivalent AND BB 1801 AND BB 3813"
+    },
+    {
+        ": a working knowledge of the concepts in cell biology, genetics and biochemistry (BB 2550, BB 2920, CH 4110 and 4120 or equivalent)": "BB 2550 AND BB 2920 AND (CH 4110 OR CH 4120)"
+    },
+    {
+        ": A thorough understanding of genetics (BB 2920 or equivalent) and cell biology (BB 2550 or equivalent) and an understanding of organic chemistry (CH 2310 or equivalent).": "BB 2920 OR equivalent AND BB 2550 OR equivalent AND CH 2310 OR equivalent"
+    },
+    {
+        ": A thorough understanding of genetics (BB 2920 or equivalent), cell biology (BB 2550 or equivalent), and molecular biology (BB 3950 or equivalent).": "BB 2920 OR BB 2550 OR BB 3950"
+    },
+    {
+        ": a working knowledge of concepts in biochemistry and molecular genetics (CH 4110 and 4120, or equivalent, and CH 4130 or BB 3950 or equivalent)<br />": "CH 4110 AND CH 4120 OR EQUIVALENT AND (CH 4130 OR BB 3950 OR EQUIVALENT)"
+    },
+    {
+        ": Students should have a strong foundational knowledge of cell biology, molecular biology, and genetics, as would be obtained from BB2550, BB2920, and BB3950. This course will be offered in 2020-21, and in alternating years thereafter.": "BB 2550 AND BB 2920 AND BB 3950"
+    },
+    {
+        ": Prior to enrolling in the course, a student should have completed all of the BB course distribution requirements for BBT majors at the 1000 and 2000 level, or should seek advice from the course instructor. Topics will be announced prior to registration in the year preceding the course offering.Only one offering of BB 4900 can count toward BBT major distribution requirements, although additional offerings may be taken as free electives.": "BB course distribution requirements for BBT majors at the 1000 and 2000 level."
+    },
+    {
+        ": CS 2102 or CS 2103, CS 2223, MA 2610 orMA 2611, and one or more biology courses.<br />This course will be offered in 2019-20, and in alternating years thereafter": "CS 2102 OR CS 2103 AND CS 2223 AND (MA 2610 OR MA 2611) AND (biology courses)"
+    },
+    {
+        ": MA 2612, MA 2631 (or MA 2621), and one or more biology courses.<br />This course is offered in 2019-20, and in alternating years thereafter.": "MA 2612 AND (MA 2631 OR MA 2621) AND one or more biology courses"
+    },
+    {
+        ": prior knowledge of college-level chemistry and physics.Students who have previously received credit for ES 2001 or BME 2811 may not receive credit for BME 2001.": "COLLEGE-LEVEL CHEMISTRY AND COLLEGE-LEVEL PHYSICS. EXCLUDE ES 2001 OR BME 2811."
+    },
+    {
+        ": prior knowledge of college-level chemistry and physics.<br />Students who have previously received credit for ES 2001 or BME 2811 may not receive credit for BME 2001.": "College-level chemistry AND College-level physics AND NOT ES 2001 AND NOT BME 2811"
+    },
+    {
+        ": PH 1120/21, CH 1010 or equivalent.": "PH 1120 OR PH 1121 AND CH 1010"
+    },
+    {
+        ": BME 2210, CS 1004 or equivalent.": "BME 2210 AND CS 1004 OR equivalent"
+    },
+    {
+        ": Differential (MA 1021) and integral (MA 1022) calculus, vector algebra (MA 1023), physics mechanics (PH 1110 or PH 1111), and statics (ES 2501). Students who have previously received credit for BME 2511 or ES 2502 may not receive credit for BME 2502.": "MA 1021 AND MA 1022 AND MA 1023 AND (PH 1110 OR PH 1111) AND ES 2501"
+    },
+    {
+        ": Basic knowledge of differential and integral calculus (e.g. MA 1021 and MA 1022 or equivalent), human biology (e.g., BB 1025 or equivalent), and chemistry (e.g. CH 1010 and CH1020 or equivalent).": "MA 1021 AND (MA 1022 OR equivalent) AND (BB 1025 OR equivalent) AND (CH 1010 AND CH 1020 OR equivalent)"
+    },
+    {
+        ":BME 2210, ECE 2010, ECE 2019 or equivalent. Students who have previously taken BME 3011 may not receive credit for this course": "BME 2210 AND ECE 2010 AND (ECE 2019 OR equivalent)"
+    },
+    {
+        ": BME 2210, ECE 2010, ECE 2019 or equivalent. Students who have previously taken BME 3011 may not receive credit for this course.": "BME 2210 AND ECE 2010 AND (ECE 2019 OR equivalent)"
+    },
+    {
+        ": A first course in MATLAB such as BME 2211, BME 1004 or equivalent.": "BME 2211 OR BME 1004"
+    },
+    {
+        ": A knowledge of Cell Biology (such as BB 2550), biomechanics and biotransport (such as BME 2511), and signal analysis (such as BME 2210) or equivalent.": "BB 2550 AND BME 2511 AND BME 2210 OR equivalent"
+    },
+    {
+        ": Statics (ES 2501) and dynamics (ES 2503).Students who have previously taken BME 3504 cannot receive credit for this course.": "ES 2501 AND ES 2503"
+    },
+    {
+        ": Statics (ES 2501) and dynamics (ES 2503).<br />Students who have previously taken BME 3504 cannot receive credit for this course.": "ES 2501 AND ES 2503"
+    },
+    {
+        ": A solid knowledge of mechanics of materials (ES2502) and material science (ES 2001). Students who have previously taken BME3504 may not receive credit for this course.Some sections of this course may be offered as Writing Intensive (WI).": "ES 2502 AND ES 2001"
+    },
+    {
+        ": Ability to independently perform tensile and bending tests using a uniaxial mechanical testing machine and to perform mechanical and statistical analysis of test data (BME3505). Students who have previously taken BME3504 may not receive credit for this course.Some sections of this course may be offered as Writing Intensive (WI).": "BME 3505 AND NOT BME 3504"
+    },
+    {
+        ": Ability to independently perform tensile and bending tests using a uniaxial mechanical testing machine and to perform mechanical and statistical analysis of test data (BME3505). Students who have previously taken BME3504 may not receive credit for this course.<br />Some sections of this course may be offered as Writing Intensive (WI).": "BME 3504 NOT BME 3505"
+    },
+    {
+        ": Basic Chemistry (CH 1010, CH 1020), Basic Physics (PH 1010), Material Science (ES 2001 or BME 2811), stress analysis (ES 2502 or BME 2502) and a knowledge of cell biology (BB 2550), or equivalent.": "CH 1010 AND CH 1020 AND PH 1010 AND (ES 2001 OR BME 2811) AND (ES 2502 OR BME 2502) AND BB 2550"
+    },
+    {
+        ": </b>Basic calculus and differential equations, basic chemistry and physics.": "MA 1021 AND PH 1110 AND PH 1111"
+    },
+    {
+        ": Basic knowledge of differential and integral calculus (e.g., MA 2051 or equivalent), fundamental knowledge of biological system function or cell function (e.g., BB 1035 or BB 2550 or equivalent), fundamentals of data analysis and process modeling such as some of the topics covered in BME 2211 or BME 2610 or ChE 2011, or equivalent.": "MA 2051 AND (BB 1035 OR BB 2550) AND (BME 2211 OR BME 2610 OR ChE 2011)"
+    },
+    {
+        ": Basic chemistry (CH 1010 and CH 1020) and a knowledge of material science (ES 2001) or equivalent.": "CH 1010 AND CH 1020 AND ES 2001 OR equivalent"
+    },
+    {
+        ": Basic chemistry (CH 1010 and CH 1020) and a solid knowledge of cell biology (BB 2550) or equivalent.": "CH 1010 AND CH 1020 AND BB 2550 OR equivalent"
+    },
+    {
+        ": ECE 2311, ECE 2312, or equivalent.This course will be offered in 2020-21, and in alternating years thereafter.": "ECE 2311 OR ECE 2312"
+    },
+    {
+        ": Knowledge obtained in BME 3012, BME 3013 and ability to perform statistical analysis of the data.": "BME 3012 AND BME 3013"
+    },
+    {
+        ": BME 3012, BME 3013, ECE 2010 and ECE 2019.This course will be offered in 2020-21, and in alternating years thereafter.": "BME 3012 AND BME 3013 AND ECE 2010 AND ECE 2019"
+    },
+    {
+        ": Proficiency in applying the engineering design process to open ended problems (BME 3300 or equivalent)": "BME 3300 OR equivalent"
+    },
+    {
+        ": Basic knowledge of solid mechanics (ES 2501, ES 2502, ES 2503, ME 3501 or equivalent), differential and integral calculus (i.e., MA 2051 or equivalent), and prior MATLAB experience (e.g., BME 2211).": "ES 2501 AND ES 2502 AND ES 2503 OR ME 3501 AND MA 2051 AND BME 2211"
+    },
+    {
+        ": Mechanics (ES 2501, ES 2502, ES 2503, ME 3501), Mathematics (MA 2051).": "ES 2501 AND ES 2502 AND ES 2503 AND ME 3501 AND MA 2051"
+    },
+    {
+        ": A demonstrated ability to independently use skeletal biomechanics equipment to measure balance, kinetics, and kinematics is essential (BME 3507) and the ability to perform statistical analysis of test data.": "BME 3507"
+    },
+    {
+        ": ME 3501 and fluid mechanics equivalent to ES 3004.<br />This course will be offered in 2020-21, and in alternating years thereafter.": "ME 3501 AND ES 3004"
+    },
+    {
+        ": Cell biology (BB 2550). Additional coursework in molecular biology (BB 2950) and/or genetics (BB 2920) would be beneficial. Students who earned credit for BME 37XX may not receive credit for BME 4701.": "BB 2550 AND (BB 2950 OR BB 2920)"
+    },
+    {
+        ": BB 3130 or equivalent introduction to Human Anatomy, ES 2001 or equivalent introduction to Materials Science and Engineering.": "BB 3130 OR ES 2001"
+    },
+    {
+        ": BB 2550 or equivalent, ES 2001 or equivalent, PH 1110 or PH 1111.": "BB 2550 OR ES 2001 OR PH 1110 OR PH 1111"
+    },
+    {
+        ": Fundamental knowledge of biomaterials (e.g. BME 2811 or equivalent), multivariable calculus (e.g. MA 1024 or equivalent) and biological system function or cell function (e.g., BB 1035 or BB 2550 or equivalent).": "BME 2811 OR MA 1024 AND BB 1035 OR BB 2550"
+    },
+    {
+        ": Linear algebra, ME/RBE 301 or equivalent Students cannot receive credit for this course if they have taken the Special Topics (ME 593U) version of the same course.": "MA 2071 OR ME 301"
+    },
+    {
+        ": Basic statistics, equivalent to that in MA 2611 and MA 2612.": "MA 2611 OR MA 2612"
+    },
+    {
+        ": CE 2000.": "CE 2000"
+    },
+    {
+        ": CE 2000 and CE 2001.Suggested background: CE 1030.": "CE 2000 AND CE 2001 AND CE 1030"
+    },
+    {
+        ": CE 2002 and CE 3010.<br />Suggested background: CE 1030.": "CE 1030 AND CE 2002 AND CE 3010"
+    },
+    {
+        ": CE 2002 and CE 3010.Suggested background: CE 1030.": "CE 2002 AND CE 3010 AND CE 1030"
+    },
+    {
+        ": CE 2000, CE 2001, and CE 2002.Suggested background: CE 1030.": "CE 1030 AND CE 2000 AND CE 2001 AND CE 2002"
+    },
+    {
+        ": CE 1030.": "CE 1030"
+    },
+    {
+        ": AREN 2023.<br />This course will be offered in 2020-21, and in alternating years thereafter.": "\"\""
+    },
+    {
+        ": CE 1030 and CE 2001.<br />Some sections of this course may be offered as Writing Intensive (WI).": "CE 1030 AND CE 2001"
+    },
+    {
+        ": CE 1030 and CE 2001.<i>Some sections of this course may be offered as Writing Intensive (WI).</i>": "CE 1030 AND CE 2001"
+    },
+    {
+        ": CE 2000 and CE 2001.<br />Suggested background: GE 2341.": "GE 2341 AND CE 2000 AND CE 2001"
+    },
+    {
+        ": CE 3041.Suggested background: CE 3008.": "CE 3008"
+    },
+    {
+        ": college-level chemistry.": "CHE 1110"
+    },
+    {
+        ": CE 3059 and ES 3004.": "CE 3059 AND ES 3004"
+    },
+    {
+        ": ES 3004.": "ES 3004"
+    },
+    {
+        ": CE 3059 or CE 3070.": "CE 3059 OR CE 3070"
+    },
+    {
+        ":</b> Recommended background: CE 2001, CE 3041, ES 3004. Suggested background: GE 2341.": "CE 2001 AND CE 3041 AND ES 3004 OR GE 2341"
+    },
+    {
+        ": CE 3059, CE 3060, and CE 3061.": "CE 3059 AND CE 3060 AND CE 3061"
+    },
+    {
+        ": ES 3004.<br />This course will be offered in 2020-21, and in alternating years thereafter.": "ES 3004"
+    },
+    {
+        ": familiarity with transport phenomena, such as in ES 3004 (Fluid Mechanics) and ES 3002 (Mass Transfer), and familiarity with reaction kinetics and reactor design, such as through CHE 3201 (Kinetics and Reactor Design). Background such as CE 3059 (Environmental Engineering), CE 3060 (Water Treatment), or CE3061 (Wastewater Treatment) is suggested.<br />This course will be offered in 2020-21, and in alternating years thereafter": "ES 3004 AND ES 3002 AND CHE 3201 OR CE 3059 OR CE 3060 OR CE 3061"
+    },
+    {
+        ": CE 3059, CE 4600, and CE 4610.": "CE 3059 AND CE 4600 AND CE 4610"
+    },
+    {
+        "</span><span>: </span><span>CE 3059, CE 4600, and CE 4610.</span></span><span> </span><span> </span></div>": "CE 3059 AND CE 4600 AND CE 4610"
+    },
+    {
+        ": undergraduate knowledge of strength of materials, fluid mechanics, and linear algebra.": "ST 1010 AND FL 1020 AND MA 2071"
+    },
+    {
+        ":  There is no needed background for this course.": ""
+    },
+    {
+        ": Properties of matter, basic bonding theory, Lewis structures and molecular orbitals, intermolecular forces. See CH1010.": "CH 1010"
+    },
+    {
+        ": Properties of matter, basic bonding theory, Lewis structures and molecular orbitals, intermolecular forces. Redox reactions, solution thermodynamics, colligative properties, balancing of chemical reactions. See CH1010 and CH1020.": "CH 1010 AND CH 1020"
+    },
+    {
+        ": Properties of matter, basic bonding theory, Lewis structures and molecular orbitals, intermolecular forces. Redox reactions, solution thermodynamics, colligative properties, balancing of chemical reactions. Reaction kinetics, equilibrium processes, acid-base chemistry and principles of thermodynamics (entropy, free energy). See CH1010, CH1020 and CH1030.": "CH 1010 AND CH 1020 AND CH 1030"
+    },
+    {
+        ": CH 2310. The course is intended for chemists, chemical engineers and bio-science majors.": "CH 2310"
+    },
+    {
+        ": CH2310 and CH2320. The course is intended for biochemists, chemists, chemical engineers and bioscience majors.": "CH 2310 AND CH 2320"
+    },
+    {
+        ": Fundamentals of chemistry, basic chemistry laboratory techniques (e.g., basic synthesis, spectral analysis and chemical separation skills).": "None"
+    },
+    {
+        ": CH 1010, CH 1020, CH 1030, CH 1040.": "CH 1010 AND CH 1020 AND CH 1030 AND CH 1040"
+    },
+    {
+        ": Fundamentals in chemistry (see CH 1010 \u2013 CH 1040), knowledge in thermodynamics (see CH 3510).": "CH 1010 AND CH 1020 AND CH 1030 AND CH 1040 AND CH 3510"
+    },
+    {
+        ": Fundamentals of chemistry (see CH 1010, CH 1020, CH 1030) and chemical characterization techniques (see CH1040), basic chemistry laboratory techniques (e.g., basic chemical synthesis, spectral analysis and chemical separation skills).": "CH 1010 AND CH 1020 AND CH 1030 AND CH 1040"
+    },
+    {
+        ": Principles of inorganic chemistry, chemical bonding and reactions, thermodynamic stability of inorganic species, solubility and precipitation of inorganic compounds. Advanced chemistry laboratory skills (see CH 2660)": "None"
+    },
+    {
+        ": Firm understanding of general chemistry topics (CH 1010 \u2013 CH 1030).": "CH 1010 AND CH 1020 AND CH 1030"
+    },
+    {
+        ": Students should be familiar with the material covered in the general chemistry sequence CH 1010-1040, and calculus including multi variables.": "CH 1010 AND CH 1040 AND MA 1021"
+    },
+    {
+        ": Chemical Thermodynamics and Calculus I \u2013 IV or equivalent courses. Anticipated Instructor: Prof. George Kaminsk": "CHEM 1110 OR MA 1021 AND MA 1022 AND MA 1023 AND MA 1024"
+    },
+    {
+        ": a solid foundation in elementary physics and<br />calculus.<br />This course is normally for students in their third year.": "MA 1021"
+    },
+    {
+        ": Familiarity with organic chemistry topics including functional groups, nucleophilic addition and substitution reactions, stereochemistry, and carbonyl chemistry. General knowledge of cellular architecture is also recommended. See CH 2310, CH 2320, CH 2330, and BB2550 or equivalent.": "CH 2310 AND CH 2320 AND CH 2330 AND BB 2550 OR equivalent"
+    },
+    {
+        ": Knowledge of organic chemistry fundamentals as well as concepts including protein structure and folding, catalytic mechanics, enzyme kinetics, and ATP synthesis and hydrolysis mechanisms. See CH 2310, BB 2550, and CH 4110 or equivalent.": "CH 2310 AND BB 2550 AND CH 4110 OR equivalent"
+    },
+    {
+        ": Knowledge of organic chemistry fundamentals as well as concepts including protein structure and folding, catalytic mechanics, enzyme kinetics, and ATP synthesis and hydrolysis mechanisms. See CH 2310, CH 2320, CH 2330, BB 2550, and CH 4110 or equivalent.": "CH 2310 AND CH 2320 AND CH 2330 AND BB 2550 AND CH 4110"
+    },
+    {
+        ": Familiarity with organic chemistry topics including functional groups, nucleophilic addition and substitution reactions, stereochemistry, and carbonyl chemistry. General knowledge of cellular architecture is also recommended. See CH 2310, CH 2320, CH 2330, and BB2550 or equivalent.Specific concepts that we will discuss are: Glucose and glycogen metabolism; Gluconeogenesis; Citric Acid Cycle; Lipid, amino acid and nucleotide metabolisms; Mammalian Fuel Metabolism: Integration and Regulation.": "CH 2310 AND CH 2320 AND CH 2330 AND BB 2550 OR equivalent"
+    },
+    {
+        ": Knowledge of organic chemistry fundamentals as well as biochemical concepts including DNA replication and recombination, RNA synthesis and protein synthesis. Familiarity with cellular architecture is also recommended. See CH 2310, BB 2550, BB 4010 and CH 4110 or equivalent.": "CH 2310 AND BB 2550 AND BB 4010 AND CH 4110 OR equivalent"
+    },
+    {
+        ". Students are encouraged to have a fundamental understanding of chemistry and biochemistry topics before taking this class. \nThis is proposed to be a category III course that we will first offer in A term of the 24-25AY.": ""
+    },
+    {
+        ": CH 1010 - CH 1040, CH 2640 - CH 2670, CH 3410, CH 3530, and CH 3550, and a fundamental understanding of atomic, molecular and solid state structures and properties. Thermodynamic stabilities of inorganic species. Acidity, solubility and precipitation of inorganic compounds (see CH3410).": "CH 1010 AND CH 1040 AND CH 2640 AND CH 2670 AND CH 3410 AND CH 3530 AND CH 3550"
+    },
+    {
+        ": Fundamental understanding of introductory biochemistry (CH4110, CH4120, and/or CH4130).": "CH 4110 AND CH 4120 AND CH 4130"
+    },
+    {
+        ": Elementary college chemistry and calculus.<br />Students may not receive credit towards CHE distribution requirements for both CHE 2011 and CM 2001.": "CHE 2011 AND MA 1021"
+    },
+    {
+        ": Elementary college chemistry and calculus and some familiarity with the topics listed in CHE 2011.<br />Students may not receive credit towards CHE distribution requirements for both CHE 2012 and ES 3000.": "CHE 2011 AND MA 1021"
+    },
+    {
+        ": Elementary college chemistry and calculus and some familiarity with the topics listed in CHE 2011 and CHE 2012.<br />Students may not receive credit towards CHE distribution requirements for both CHE 2013 and CM 2102.": "CHE 2011 AND CHE 2012 AND MA 1021"
+    },
+    {
+        ": Elementary college chemistry and calculus and some familiarity with the topics listed in CHE 2011 and CHE 2012.Students may not receive credit towards CHE distribution requirements for both CHE 2013 and CM 2102.": "CHE 2011 AND CHE 2012 AND MA 1021"
+    },
+    {
+        ": Elementary college chemistry and calculus and some familiarity with the topics listed in CHE 2011, CHE 2012, and CHE 2013.<br />Students may not receive credit towards CHE distribution requirements for both CHE 2014 and CM 2002.<i>Some sections of this course may be offered as Writing Intensive (WI). </i>": "CHE 2011 AND CHE 2012 AND CHE 2013 AND MA 1021"
+    },
+    {
+        ": Elementary college chemistry and calculus and some familiarity with the topics listed in CHE 2011, CHE 2012, and CHE 2013.Students may not receive credit towards CHE distribution requirements for both CHE 2014 and CM 2002.<br />Some sections of this course may be offered as Writing Intensive (WI).": "CHE 2011 AND CHE 2012 AND CHE 2013 AND MA 1021"
+    },
+    {
+        ": differential equations, thermodynamics and someorganic chemistry.": "None"
+    },
+    {
+        ": material and energy balances, thermodynamics, organic chemistry, and differential equations.This course will be offered in 2019-20, and in alternating years thereafter.": "None"
+    },
+    {
+        ": ordinary differential equations, partial derivatives and vectors, momentum heat and mass transfer.": "None"
+    },
+    {
+        ": knowledge of chemistry (CH 1010, 1020, 1030), differential and integral calculus, and chemical processes (CHE 2011).<br />Students may not receive credit for both CHE 3702 and CHE 320X.This course will be offered in 2019-20, and in alternating years thereafter.": "CH 1010 AND CH 1020 AND CH 1030 AND MA 1021 AND CHE 2011"
+    },
+    {
+        ": knowledge of chemistry, mathematics and engineering principles.": ""
+    },
+    {
+        ": familiarity with techniques and procedures emphasized in CHE 4401.": "CHE 4401"
+    },
+    {
+        ": thermodynamics; heat, mass and momentum transfer; inorganic and organic chemistry; chemical kinetics and reactor design.": "None"
+    },
+    {
+        ": familiarity with techniques and procedures emphasized in CHE 4403.": "CHE 4403"
+    },
+    {
+        ": knowledge of fluid flow and heat transfer, mathematics and chemical engineering principles.": "None"
+    },
+    {
+        ": familiarity with techniques and procedures of chemical engineering design (CHE 4403), working knowledge of thermodynamics, heat, mass and momentum transfer, inorganic and organic chemistry, chemical kinetics and reactor design.<br />This course meets the requirements for a core course and a Capstone Design course in chemical engineering. Students may not receive core credit for both CHE 4404 and CHE 4410.": "CHE 4403 AND THERMODYNAMICS AND HEAT AND MASS AND MOMENTUM TRANSFER AND INORGANIC CHEMISTRY AND ORGANIC CHEMISTRY AND CHEMICAL KINETICS AND REACTOR DESIGN"
+    },
+    {
+        ": Undergraduate degree in Chemical Engineering": "None"
+    },
+    {
+        ": CN 1541.This course is closed to native speakers of Chinese and heritage speakers except with written permission from the instructor.": "CN 1541"
+    },
+    {
+        ": CN 1542.This course is closed to native speakers of Chinese and heritage speakers except with written permission from the instructor.": "CN 1542"
+    },
+    {
+        ": CN 1542.<i>This course is closed to native speakers of Chinese and heritage speakers, except with written permission from the coordinator of the Chinese track.</i>": "CN 1542"
+    },
+    {
+        ": CN 1543.This course is closed to native speakers of Chinese and heritage speakers except with written permission from the instructor.": "CN 1543"
+    },
+    {
+        ": CN 1543.<i>This course is closed to native speakers of Chinese and heritage speakers, except with written permission from the coordinator of the Chinese track.</i>": "CN 1543"
+    },
+    {
+        ": CN 2541 Intermediate Chinese I or the equivalent.<br /><i>This course is closed to native speakers of Chinese and heritage speakers except with written permission from the instructor.</i>": "CN 2541 OR equivalent"
+    },
+    {
+        ": CN 2541.<i>This course is closed to native speakers of Chinese and heritage speakers, except with written permission from the coordinator of the Chinese track.</i>": "CN 2541"
+    },
+    {
+        ": CN 2542 or the equivalent.<br />This course is closed to native speakers of Chinese and heritage speakers except with written permission from the instructor.": "CN 2542 OR equivalent"
+    },
+    {
+        ": CN 2542.This course satisfies the Inquiry Practicum requirement.<i>This course is closed to native speakers of Chinese and heritage speakers, except with written permission from the coordinator of the Chinese track.</i>": "CN 2542"
+    },
+    {
+        ": CN 2543 or equivalent.This course is closed to native speakers of Chinese and heritage speakers except with written permission from the instructor.": "CN 2543 OR equivalent"
+    },
+    {
+        ": CN 2544 or the equivalent.This course is closed to native speakers of Chinese and heritage speakers except with written permission from the instructor.": "CN 2544 OR equivalent"
+    },
+    {
+        ": CN 3541 Advanced Intermediate Chinese I or equivalent.<br />Students may not receive credit for both CN 3542 and CN 354X.": "CN 3541 OR equivalent"
+    },
+    {
+        ": CN 3542 Advanced Intermediate Chinese II or equivalent. Students may not receive credit for both CN 3543 and CN 355X.": "CN 3542 OR equivalent AND NOT (CN 3543 AND CN 355X)"
+    },
+    {
+        ": This course is designed for CFL (Chinese as a Foreign Language) and CHL (Chinese as a Heritage) students who complete the prerequisite of CN3543 or equivalent.  Students who have completed CN356X cannot receive credit for CN3561.": "CN 3543 OR equivalent AND NOT CN 356X"
+    },
+    {
+        ": Substantial prior programming experience (including functions, recursion, and lists, as would be covered in high-school Advanced Placement Computer Science A courses, but not necessarily AP CS Principles courses). Either CS 1101 or CS 1102 provides sufficient background for further courses in the CS department. Undergraduate credit may not be earned for both this course and CS 1101.": "CS 1101 OR CS 1102"
+    },
+    {
+        ": CS 2301 or CS 2303, or a significant knowledge of C/C&#43;&#43;.": "CS 2301 OR CS 2303"
+    },
+    {
+        ": CS 1101 or CS 1102.": "CS 1101 OR CS 1102"
+    },
+    {
+        ": CS 1101 or CS 1102 and significant prior experience writing object-oriented programs from scratch. Advanced Placement Computer Science A courses should provide sufficient background; students from AP CS Principles courses or gentler introductions to Java Programming are advised to take CS 2102 instead. Students may receive credit for only one of the following three courses: CS 2102, CS 210X, CS 2103.": "CS 1101 OR CS 1102 AND (AP CS A OR (significant prior experience writing object-oriented programs from scratch)) AND (CS 2102 OR CS 210X OR CS 2103)"
+    },
+    {
+        ": Some programming experience such as found in CS 1101, CS 1102, or CS 1004.": "CS 1101 OR CS 1102 OR CS 1004"
+    },
+    {
+        ": CS 2102 or CS 2103, and CS 2022.": "CS 2102 OR CS 2103 AND CS 2022"
+    },
+    {
+        ": CS 1101 or CS 1102 or previous experience programming a computer.<br />All Computer Science students and other students wishing to prepare for upper-level courses in Computer Science should take CS 2303 instead of CS 2301. Students who have credit for CS 2303 may not receive subsequent credit for CS 2301.": "CS 1101 OR CS 1102 OR previous experience programming a computer AND CS 2303"
+    },
+    {
+        ": CS 1101 or CS 1102 or previous experience programming a computer.All Computer Science students and other students wishing to prepare for upper-level courses in Computer Science should take CS 2303 instead of CS 2301. Students who have credit for CS 2303 may not receive subsequent credit for CS 2301.": "CS 1101 OR CS 1102 OR previous experience programming a computer AND CS 2303"
+    },
+    {
+        ": CS 2102, CS 2103, or CS 2119 and/or substantial object-oriented programming experience.": "CS 2102 OR CS 2103 AND CS 2119 OR substantial object-oriented programming experience"
+    },
+    {
+        ": CS 2303 or CS 2301, and CS 2011.": "CS 2303 OR CS 2301 AND CS 2011"
+    },
+    {
+        ": CS 2102, CS 2103, or CS 2119.": "CS 2102 OR CS 2103 OR CS 2119"
+    },
+    {
+        ": a general knowledge of computers and computer systems.": ""
+    },
+    {
+        ": Discrete mathematics (CS 2022 or equivalent) and algorithms (CS 2223 or equivalent).<br />Students who have credit for CS 4121 may not receive credit for CS 3133.": "CS 2022 OR CS 2223 AND CS 4121"
+    },
+    {
+        ": Discrete mathematics (CS 2022 or equivalent) and algorithms (CS 2223 or equivalent).Students who have credit for CS 4121 may not receive credit for CS 3133.": "CS 2022 OR CS 4121 AND CS 2223"
+    },
+    {
+        ": CS 2022 and either CS 2102, CS 2103, or CS 2119.": "CS 2022 AND (CS 2102 OR CS 2103 OR CS 2119)"
+    },
+    {
+        ": MA 2071. An ability to write computer programs in a scientific language is assumed.": "MA 2071"
+    },
+    {
+        ": MA 2051. An ability to write computer programs in a scientific language is assumed. Undergraduate credit may not be earned for both this course and for MA 3255/CS 4031.": "MA 2051 AND (NOT MA 3255 OR CS 4031)"
+    },
+    {
+        "</b><span>: Knowledge of Machine Learning (CS 4342 ), Linear Algebra (such as MA 2071) and Probability (MA 2621 or MA 2631)</span>": "CS 4342 AND MA 2071 AND (MA 2621 OR MA 2631)"
+    },
+    {
+        ": Algorithms (CS 2223 or equivalent), and some knowledge of probability.<br />This course will be offered in 2020-21, and in alternating years thereafter.": "CS 2223 OR equivalent"
+    },
+    {
+        ": CS 3133.This course will be offered in 2019-20, and in alternating years thereafter.": "CS 3133"
+    },
+    {
+        ": CS 2303 and CS 3733.<br />This course will be offered in 2020-21, and in alternating years thereafter.": "CS 2303 AND CS 3733"
+    },
+    {
+        ": CS 2102, CS 2103, or CS 2119; and CS 3013.": "CS 2102 OR CS 2103 OR CS 2119 AND CS 3013"
+    },
+    {
+        ": CS 2102 or CS 2103; CS 2223; and CS 3133.": "CS 2102 OR CS 2103 AND CS 2223 AND CS 3133"
+    },
+    {
+        ": Multivariate Calculus (MA 1024 or MA 1034), Linear Algebra (such as MA 2071), Probability (MA 2621 or MA 2631), and Algorithms (CS 2223).<br />Students may not earn credit for both CS 453X and CS 4342.<br />Undergraduate credit may not be earned both for this course and for CS 539.": "MA 1024 OR MA 1034 AND MA 2071 AND MA 2621 OR MA 2631 AND CS 2223"
+    },
+    {
+        ": CS3013 and CS3733. The course assumes nontrivial experience with C and Unix, familiarity with operating systems, filesystems, and databases, and experience with technologies for building web applications (from CS4241 or personal experience).": "CS 3013 AND CS 3733"
+    },
+    {
+        ": Knowledge of operating systems (CS 3013 or equivalent) and computer networks (CS 3516 or equivalent). Familiarity with Linux or Unix is essential.": "CS 3013 OR CS 3516"
+    },
+    {
+        ": CS 3431 and CS 3733.This course will be offered in 2019-20, and in alternating years thereafter.": "CS 3431 AND CS 3733"
+    },
+    {
+        ": Knowledge in database systems at the level of CS4432, and programming experience are assumed.": "CS 4432 AND programming experience"
+    },
+    {
+        ": MA 2611, CS 2223, and CS 3431, or CS 3733.<br />This course will be offered in 2019-20, and in alternating years thereafter.": "MA 2611 AND CS 2223 AND (CS 3431 OR CS 3733)"
+    },
+    {
+        ": CS 3013, CS 3516, and knowledge of probability. The course assumes a familiarity with operating systems including Unix or Linux and significant experience with C/C&#43;&#43;.<br />This course will be offered in 2019-20, and in alternating years thereafter.": "CS 3013 AND CS 3516 AND KNOWLEDGE OF PROBABILITY"
+    },
+    {
+        ": Proficiency in programming in Java, including classes, inheritance, exceptions, interfaces, and polymorphism (CS 2102 or equivalent).<br />Students may not earn credit for both CS 403X and CS 4518.": "CS 2102 OR equivalent AND NOT CS 403X AND NOT CS 4518"
+    },
+    {
+        ": CS 2303, CS 3133, and experience programming in a functional language (as provided by CS 1101 or CS 1102).<br />Undergraduate credit may not be earned for both this course and CS 536.<br />This course will be offered in 2019-20, and in alternating years thereafter.": "CS 2303 AND CS 3133 AND (CS 1101 OR CS 1102)"
+    },
+    {
+        ": CS 2223, CS 2303 and MA 2071.": "CS 2223 AND CS 2303 AND MA 2071"
+    },
+    {
+        ": CS 4731.<br />This course will be offered in 2020-21, and in alternating years thereafter.": "CS 4731"
+    },
+    {
+        ": Experience in expressing algorithms in a modern programming language (e.g., ECE 2049 or CS 2301).<br />Suggested background: Discrete mathematics (CS 2022/MA 2201 or equivalent).": "ECE 2049 OR CS 2301 AND CS 2022 OR MA 2201"
+    },
+    {
+        ": CS 2102 or CS 2103, and CS 2223.": "CS 2102 OR CS 2103 AND CS 2223"
+    },
+    {
+        ": Background in artificial intelligence, databases, and statistics at the undergraduate level, or permission of the instructor. Proficiency in a high level programming language.": "AI AND DB AND STAT OR INSTRUCTOR PERMISSION AND HIGH LEVEL PROGRAMMING"
+    },
+    {
+        ": Core artificial intelligence classes, such as machine learning and deep learning, or equivalent background is highly recommended.": "None"
+    },
+    {
+        ": Basic understanding of programming concepts, and preferably some python knowledge.": ""
+    },
+    {
+        ": Programming skills at the level of CS 5007.": "CS 5007"
+    },
+    {
+        ": The students should have an introductory undergraduate-level or graduate-level introductory background in machine learning and deep neural networks.": "None"
+    },
+    {
+        ": Data science basics equivalent to DS 1010, applied statistics and regression equivalent to MA2611 and MA 2612, and the ability to write computer programs in a scientific language equivalent to a CS programming course at the CS 1000 or CS 2000 level are assumed.": "DS 1010 AND MA 2611 AND MA 2612 AND (CS 1000 OR CS 2000)"
+    },
+    {
+        ": Data science basics equivalent to DS 1010, and data analysis principles and modeling equivalent to DS 2010, knowledge of basic statistics equivalent to (MA2611 and MA 2612), and the ability to program equivalent to (CS 1004 or CS 1101 or CS 1102) and (CS 2102, CS2103 or CS 2119), as well as understanding of databases equivalent to (CS3431 or MIS3720) are assumed.": "DS 1010 AND DS 2010 AND MA 2611 AND MA 2612 AND (CS 1004 OR CS 1101 OR CS 1102) AND (CS 2102 OR CS 2103 OR CS 2119) AND (CS 3431 OR MIS 3720)"
+    },
+    {
+        ": Linear Algebra (MA 2071 or equivalent), Applied<br />Statistics and Regression (MA 2612 or equivalent), Probability (MA 2631 or<br />equivalent). The ability to write computer programs in a scientific language is<br />assumed.": "MA 2071 OR MA 2612 OR MA 2631"
+    },
+    {
+        ": high school physics, and MA 1022 (concurrent).": "HIGH SCHOOL PHYSICS AND MA 1022"
+    },
+    {
+        ": ECE 2010, MA 1024 (or equivalent), PH 1120/21 and MA 2051 (concurrent). Note: Students who have received credit for ECE 2111 may not receive credit for ECE 2019.": "ECE 2010 AND (MA 1024 OR equivalent) AND (PH 1120 OR PH 1121) AND MA 2051 (concurrent)"
+    },
+    {
+        ": Introductory Electrical and Computer Engineering concepts covered in a course such as ECE 2010 or RBE 1001, and MA 1022. Note: Students who have received credit for ECE 2022 may not receive credit for ECE 2029.": "ECE 2010 OR RBE 1001 AND MA 1022"
+    },
+    {
+        ": A prior course in computer programming, such as CS 1004, CS 1101/2, or BME 1004.": "CS 1004 OR CS 1101 OR CS 1102 OR BME 1004"
+    },
+    {
+        ": ECE 2039 (preferred for ECE majors) or a course in C language programming such as CS 2301/3 or equivalent; and ECE 2010 or equivalent knowledge in basic circuits, devices and analysis.Suggested Background: ECE 2029 or equivalent knowledge of digital logic, logic signals, and logic operations.": "ECE 2039 OR CS 2301 OR CS 2303 AND ECE 2010 AND ECE 2029"
+    },
+    {
+        ": ECE 2010 or equivalent knowledge in basic circuits, devices and analysis; and C language programming (CS 2301 or equivalent) Suggested Background: ECE 2029 or equivalent knowledge of digital logic, logic signals and logic operations; Note: Students who have received credit for ECE 2801 may not receive credit for ECE 2049.": "ECE 2010 OR ECE 2029 AND CS 2301"
+    },
+    {
+        ": ECE 2019.": "ECE 2019"
+    },
+    {
+        ": ECE 2010": "ECE 2010"
+    },
+    {
+        ": ECE 2039 (preferred for ECE majors) or a prior course in computer programming such as CS 2301/3, CS 1004 or CS 1101/2; MA 2051; and ECE 2019.": "ECE 2039 OR CS 2301 OR CS 2303 OR CS 1004 OR CS 1101 OR CS 1102 AND MA 2051 AND ECE 2019"
+    },
+    {
+        ": ECE 2039 (preferred for ECE majors) or a prior course in computer programming such as CS 2301/3, CS 1004 or CS 1101/2; MA 2051; and ECE 2311.": "ECE 2039 OR CS 2301/3 OR CS 1004 OR CS 1101/2 AND MA 2051 AND ECE 2311"
+    },
+    {
+        ": MA 2051, ECE 2311, and a prior course in computer programming such as CS 2301 or CS 1101/2/4.": "MA 2051 AND ECE 2311 AND (CS 2301 OR CS 1101 OR CS 1102 OR CS 1104)"
+    },
+    {
+        ": At least three of ECE 2019, ECE 2029, ECE 2049, ECE 2311.": "ECE 2019 OR ECE 2029 OR ECE 2049 AND ECE 2311"
+    },
+    {
+        ": Ordinary Differential Equations (MA 2051), Sensors, Circuits, and Systems (ECE 2019), and Continuous-time Signal and System Analysis (ECE 2311). Students may not receive credit for both ES 3011 and ECE 3012.": "MA 2051 AND ECE 2019 AND ECE 2311."
+    },
+    {
+        ": ECE 2019, ECE 3204. Suggested background: ECE 2112": "ECE 2019 AND ECE 3204 AND ECE 2112"
+    },
+    {
+        ": Introductory electronic-circuit design and analog-signal analysis as found in ECE 2201 and ECE 2311.": "ECE 2201 AND ECE 2311"
+    },
+    {
+        ":</span></b><span> </span><div><span><span>ECE 2312</span><span> \u201c</span><span>Discrete-Time Signal and System Analysis</span><span>\u201d</span><span>; </span><span>ECE</span><span> </span><span>2305 \u201cIntroduction to Communications and Networks\u201d</span><span>.</span></span><span> </span></div><div><span> </span></div><div><b><span>Suggested Background:</span></b><span> </span></div><div><span><span>ECE 2049 \u201cEmbedded Computing in Engineering Design\u201d</span><span>.</span></span><span> </span></div></div>": "ECE 2305 AND ECE 2049"
+    },
+    {
+        ": ECE 2312, Discrete-Time Signal and System Analysis; ECE 2039 Computational Engineering (pending course approval).Students who have taken ECE 340X may not get credit for ECE 3405. Suggested Background: Linear Algebra (MA 2071) and Probability (MA 2621 or MA 2631)": "MA 2071 AND MA 2621 OR MA 2631"
+    },
+    {
+        ": ECE 2010 or equivalent Suggested background: ECE 2019 or equivalent": "ECE 2010 OR ECE 2019"
+    },
+    {
+        ": ECE 2029 and ECE 2049 Students who have received credit for ECE 3810 may not receive credit for ECE 3829.": "ECE 2029 AND ECE 2049 AND NOT ECE 3810"
+    },
+    {
+        ": ECE 2029 and ECE 2049.": "ECE 2029 AND ECE 2049"
+    },
+    {
+        ": ECE 3204, ECE 3501. Students who have previously received credit for ECE 3503 may not receive credit for ECE 4503.": "ECE 3204 AND ECE 3501"
+    },
+    {
+        ": ECE 2049, ECE 2312, some prior experience in C programming. Suggested background: ECE 3311.": "ECE 2049 AND ECE 2312 AND ECE 3311"
+    },
+    {
+        ": ECE 3849 Suggested Background: ECE 3829": "ECE 3829"
+    },
+    {
+        ": ECE 2029 \u2013 Introduction to Digital Circuit Design, ECE 2201 \u2013 Microelectronic Circuits I.Students who have taken ECE 490X may not get credit for ECE 4901. Suggested Background: ECE 3204 \u2013 Microelectronic Circuits II": "ECE 2029 AND ECE 2201 AND ECE 3204"
+    },
+    {
+        ": familiarity with the analysis of linear circuits and with the theory of bipolar and MOSFET transistors. Such skills are typically acquired in ECE 3204. Suggested background: ECE 4904.This course will be offered in 2019-20, and in alternating years thereafter": "ECE 3204 AND ECE 4904"
+    },
+    {
+        ": ECON 1110. This course will be offered in 2019-20, and in alternating years thereafter.": "\"\""
+    },
+    {
+        ": Some introductory economics, such as Introductory Micro- or Macroeconomics (ECON 1110 or ECON 1120; or equivalent). Students who completed ECON 212X: Public Economics cannot receive credit for ECON 2126: Public Economics.": "ECON 1110 OR ECON 1120"
+    },
+    {
+        ": ECON 1110 or ECON 2110. This course will be offered in 2020-21, and in alternating years thereafter.": "ECON 1110 OR ECON 2110"
+    },
+    {
+        ": Working knowledge of economic principles or system </span><span>dynamics concepts as covered in an introductory economics or system dynamics course </span><span>such as ECON 1110, ECON 1120, SS1505 or SD1510.</span>": "ECON 1110 OR ECON 1120 OR SS1505 OR SD1510"
+    },
+    {
+        ": Introductory Microeconomics (Econ 1110)": "Econ 1110"
+    },
+    {
+        ": PSY 1401Developmental Psychology, PSY 2401 Psychology of Education, or PSY 2410 School Psychology": "PSY 1401 OR PSY 2401 OR PSY 2410"
+    },
+    {
+        ": Teaching Methods or equivalent. Students who took ID 3200 for credit are not eligible to take EDU 3200 for credit": "TEACHING METHODS OR EQUIVALENT"
+    },
+    {
+        ": Teaching Methods EDU4100 or equivalent, Sheltered English Immersion EDU3200 or equivalent, PSY2401 Psychology of Education, completion of pre-practicum fieldwork experiences 1 and 2. Students must be doing their student teaching practicum concurrently to enroll in this course. Students who took ID 4000 for credit are not eligible to take EDU 4000 for credit.": "EDU 4100 OR equivalent AND EDU 3200 OR equivalent AND PSY 2401 AND completion of pre-practicum fieldwork experiences 1 AND 2 AND concurrent enrollment in student teaching practicum."
+    },
+    {
+        ": PSY 1401 or 2401 or 2410, EDU 2200, EDU 2300, EDU 3200": "PSY 1401 OR PSY 2401 OR PSY 2410 AND EDU 2200 AND EDU 2300 AND EDU 3200"
+    },
+    {
+        ": Completion of Student Teaching practicum of the Teacher Preparation Program Only students in their last year of the Teacher Preparation Program should register for this course": "\"\""
+    },
+    {
+        ": Introductory level creative writing (EN1219: Introduction to Creative Writing)": "EN 1219"
+    },
+    {
+        ": No prior coursework is required. However, previous coursework in storytelling (such as EN 121X: Intro to Creative Writing or film courses) or structured authoring (such as WR 3210: Technical Writing) is useful.": "None"
+    },
+    {
+        ": Introductory level creative writing (EN 2219 (formerly EN 3217) or equivalent). This course will be offered in 2019-20, and in alternating years thereafter.": "EN 2219 OR equivalent"
+    },
+    {
+        ": Introductory level creative writing (EN1219: Introduction to Creative Writing) and creative writing in the course genre (EN2219: Creative Writing: Fiction, Creative Nonfiction, Poetry, or Multi-Genre.)": "EN 1219 AND EN 2219"
+    },
+    {
+        ": ENV 1100This course will be offered in 2019-20, and in alternating years thereafter.": "ENV 1100"
+    },
+    {
+        ": introduction to environmental studies and a passion for urban exploration.\nThis course will be offered in 2019-20, and in alternating years thereafter.": "\"\""
+    },
+    {
+        ": prior knowledge of college-level chemistry.": "None"
+    },
+    {
+        ": Differential (MA 1021) and integral (MA 1022) calculus, vector algebra (MA 1023), and double and triple integration (MA 1024).": "MA 1021 AND MA 1022 AND MA 1023 AND MA 1024"
+    },
+    {
+        "; mechanical systems (ES 2501 or equivalent), differential (MA 1021) and integral (MA 1022) calculus, vector algebra (MA 1023), and double and triple integration (MA 1024).": "ES 2501 OR MA 1021 AND MA 1022 AND MA 1023 AND MA 1024"
+    },
+    {
+        ": Statics (ES 2501 or CE 2000).": "ES 2501 OR CE 2000"
+    },
+    {
+        ": elementary college chemistry; second year students.This course will be offered in 2020-21, and in alternating years thereafter.": "None"
+    },
+    {
+        ": basic physics, (PH 1110, PH 1111) elementary differential and integral calculus (MA 1021, MA 1022) or equivalents.": "PH 1110 AND PH 1111 AND (MA 1021 OR MA 1022)"
+    },
+    {
+        ": fundamentals of chemical thermodynamics, fluid flow and heat transfer; ordinary differential equations (MA 2051 or equivalent).": "MA 2051 OR equivalent"
+    },
+    {
+        ": knowledge of thermodynamics, fluid mechanics, and ordinary differential equations (ES 3001, ES 3004, and MA 2051) or equivalents.": "ES 3001 AND ES 3004 AND MA 2051 OR equivalents"
+    },
+    {
+        ": basic physics, basic differential equations, and vectors.": "None"
+    },
+    {
+        ": Ordinary Differential Equations (MA 2051) and Electricity and Magnestism (PH 1120, PH 1121). Students may not receive credit for both ES 3011 and ECE 3012": "MA 2051 AND PH 1120 AND PH 1121"
+    },
+    {
+        ": familiarity with drafting standards (ES 1310), mechanical systems (ES 2501 or CE 2000, ES 2503), strength of materials (ES 2502 or CE 2001) and kinematics (ME 3310) is assumed. Additional background in machine design (ME 2300, ME 3320) is helpful": "ES 1310 AND (ES 2501 OR CE 2000 OR ES 2503) AND (ES 2502 OR CE 2001) AND ME 3310 AND (ME 2300 OR ME 3320)"
+    },
+    {
+        ": Familiarity with concepts of creativity, innovation, entrepreneurial and critical thinking, ethics, cross-cultural relations, and social problems (BUS 1010, BUS 1020, BUS 2060 or equivalent).": "BUS 1010 OR BUS 1020 OR BUS 2060"
+    },
+    {
+        "for this course consists of five of the following: ACC 2101, BUS 1010, BUS 1020, BUS 2020, BUS 2060, BUS 3010, BUS 3020, BUS 4030, ETR 3915, OIE 2850.": "ACC 2101 OR BUS 1010 OR BUS 1020 OR BUS 2020 OR BUS 2060 OR BUS 3010 OR BUS 3020 OR BUS 4030 OR ETR 3915 OR OIE 2850."
+    },
+    {
+        ": Introductory business and finance topics such as those found in BUS 2060.": "BUS 2060"
+    },
+    {
+        ": Knowledge of Finance fundamentals (equivalent to that in FIN 2070). Basic knowledge of the financial industry would also be helpful (e.g., FIN 3300).": "FIN 2070 AND FIN 3300"
+    },
+    {
+        ": Students should ideally have taken Statistics 2611 and 2612, and FIN 2070.": "STAT 2611 AND STAT 2612 AND FIN 2070"
+    },
+    {
+        ": Thermodynamics.": "None"
+    },
+    {
+        ": MA 2051 Differential Equations and ES 3001 Thermodynamics.": "MA 2051 AND ES 3001"
+    },
+    {
+        ": Basic knowledge of fire behavior and control (FP 3070 or equivalent).<br />Students cannot receive credit for both FP 4001 and FP 580S": "FP 3070 OR EQUIVALENT AND NOT (FP 4001 AND FP 580S)"
+    },
+    {
+        ": GN 1511.": "GN 1511"
+    },
+    {
+        ": GN 1512": "GN 1512"
+    },
+    {
+        ": GN 2511.": "GN 2511"
+    },
+    {
+        ": GN 2512": "GN 2512"
+    },
+    {
+        ": GN 3511": "GN 3511"
+    },
+    {
+        ": GN 3511.<br /><br /><i>This course satisfies the Inquiry Practicum requirement.</i>": "GN 3511"
+    },
+    {
+        ": GN 3511 (Advanced German I) and GN 3512<br />(Advanced German II) or equivalent.<br />This course satisfies the Inquiry Practicum requirement.<br />This course will be offered in 2020-21, and in alternating years thereafter.": "GN 3511 AND GN 3512 OR equivalent"
+    },
+    {
+        ": GN3512 or higher.\nThis course satisfies the Inquiry Practicum requirement.This course will be offered in 2020-21, and in alternating years thereafter.Some sections of this course may be offered as Writing Intensive (WI).": "GN 3512 OR higher"
+    },
+    {
+        ": GOV 1301 or GOV 1303.\nThis course will be offered in 2019-20, and in alternating years thereafter.": "GOV 1301 OR GOV 1303"
+    },
+    {
+        ": GOV 1303 or GOV 1310.": "GOV 1303 OR GOV 1310"
+    },
+    {
+        ": GOV 1310 or GOV 2310.This course will be offered in 2019-20, and in alternating years thereafter.": "GOV 1310 OR GOV 2310"
+    },
+    {
+        ": HI 2400 Topics in Environmental History.": "None"
+    },
+    {
+        ": Courses in European history and the history of science and technology": "\"\""
+    },
+    {
+        ": Some familiarity with history of science or history of technology, and with United States history.": "None"
+    },
+    {
+        ": </span><span>previous</span><span> courses on Asia such as HU 1412, HI 2328, HI 2343, or RE 2724. Some sections of this course may be offered as Writing Intensive (WI).</span></span><span> </span></div></div>": "HU 1412 OR HI 2328 OR HI 2343 OR RE 2724"
+    },
+    {
+        ": SP 2521 and SP 2522 .</span><span>This course will be offered in 2020-21, and in alternating years thereafter.</span>": "SP 2521 AND SP 2522"
+    },
+    {
+        ": Acceptance into the Global Health Graduate program or permission of instructor.": "\"\""
+    },
+    {
+        ": Completion of 12 credits in 3 Core CCA courses and 8 credits of GQP.": "12 CREDITS IN 3 CORE CCA COURSES AND 8 CREDITS OF GQP"
+    },
+    {
+        ": Varies with topic.": ""
+    },
+    {
+        ": IMGD 1000.": "IMGD 1000"
+    },
+    {
+        ": IMGD 1000 and IMGD 1001. This course assumes no prior knowledge of audio production.": "IMGD 1000 AND IMGD 1001"
+    },
+    {
+        ": design and development fundamentals. Students may not receive credit for both 2450 and IMGD/WR 3400.": "2450 AND IMGD/WR 3400"
+    },
+    {
+        ": IMGD 1000<br />.<br />This course will be offered in 2016-17, and in alternating years thereafter.": "\"\""
+    },
+    {
+        ": Intermediate programming experience (such as from CS 2102 or CS 1004), knowledge of game studies (IMGD 1000 or equivalent) and the game development process (IMGD 1001 or equivalent).": "CS 2102 OR CS 1004 AND IMGD 1000 OR EQUIVALENT AND IMGD 1001 OR EQUIVALENT"
+    },
+    {
+        ": High school algebra": "MA 1021"
+    },
+    {
+        ": CS 2303.": "CS 2303"
+    },
+    {
+        ": Game Audio (IMGD 2030)": ""
+    },
+    {
+        ": Prior experience with 3D content creation software such as that provided by IMGD 2101 (3D Modeling I), IMGD 2333 (3D Animation I) or IMGD 2048 (Technical Art and Character Rigging).": "IMGD 2101 OR IMGD 2333 OR IMGD 2048"
+    },
+    {
+        ": IMGD 1001, and either CS 2301 or CS 2303<br />.<br />This course will be offered in 2015-16, and in alternating years thereafter.": "IMGD 1001 AND (CS 2301 OR CS 2303)"
+    },
+    {
+        ": previous experience with story structure and writing for interactive media, such as that provided by IMGD/WR 2450 (formerly numbered IMGD/WR 3400). Students may not receive credit for both IMGD/WR 3450 and IMGD/WR 2400": "IMGD/WR 2450 AND (IMGD/WR 3450 OR IMGD/WR 2400)"
+    },
+    {
+        ": 3D modeling (IMGD/AR 2101 and 3101), digital painting (IMGD/AR 2700), 3D animation (IMGD/AR 2333).": "IMGD 2101 AND IMGD 3101 AND IMGD 2700 AND IMGD 2333"
+    },
+    {
+        ": IMGD 2900: Digital Game Design I, and basic knowledge of statistical data analysis such as that provided by IMGD 2905: Data Analysis for Game Development.": "IMGD 2900 AND IMGD 2905"
+    },
+    {
+        ": IMGD 3000.": "IMGD 3000"
+    },
+    {
+        ": Varies depending on topic.": ""
+    },
+    {
+        ": Prior experience with delivering interactive software projects in previous IMGD courses.": "None"
+    },
+    {
+        ": IMGD 1002, IMGD 3500, MU 1611.": "IMGD 1002 AND IMGD 3500 AND MU 1611"
+    },
+    {
+        ": IMGD 1002, or equivalent knowledge.<br />Students may not receive credit for both IMGD 4700 and IMGD 403X.<br />This course will be offered in 2016-17, and in alternating years thereafter.": "IMGD 1002 OR equivalent knowledge"
+    },
+    {
+        ": This course is intended for students who have participated in WPI\u2019s global programs, including global IQPs, MQPs, Humanities projects, or exchange programs, either in the US or abroad .": "\"\""
+    },
+    {
+        ": ISE 1800 or equivalent skills (determined by Writing Placement or consent of the instructor) .": "ISE 1800 OR equivalent skills"
+    },
+    {
+        ": ISE 1801 or equivalent skills (determined by Writing Placement or consent of the instructor) .": "ISE 1801 OR equivalent skills"
+    },
+    {
+        ": ISE 1801 or equivalent skills.": "ISE 1801 OR equivalent skills"
+    },
+    {
+        ": Composition for non-native speakers of English<br />(ISE 1801) or equivalent skills.<br />This course satisfies the Inquiry Seminar requirement.<br />Note: Students who have taken ISE 380X may not receive credit for this<br />course.<br />This course will be offered in 2019-2020, and in alternate years thereafter.": "ISE 1801 OR equivalent skills"
+    },
+    {
+        ": JP 100X or equivalent.": "JP 100X OR equivalent"
+    },
+    {
+        ": JP 110X or equivalent.": "JP 110X OR equivalent"
+    },
+    {
+        ": JP 120X or equivalent.": "JP 120X OR equivalent"
+    },
+    {
+        ": JP200X or equivalent. </span></span><span> </span></div>": "JP 200X OR equivalent"
+    },
+    {
+        ": JP210X or equivalent. </span></span><span> </span><span style=\"font-size:12px\"> </span></div>": "JP 210X OR equivalent"
+    },
+    {
+        ": Basic knowledge of graphing, algebraic expressions, and trigonometric functions.": "MA 1021"
+    },
+    {
+        ": Algebra, trigonometry and analytic geometry. Although the course will make use of computers, no programming experience is assumed.<br />Students may not receive credit for both MA 1021 and MA 1020.": "MA 1021 OR MA 1020"
+    },
+    {
+        ": Algebra, trigonometry and analytic geometry. Although the course will make use of computers, no programming experience is assumed.Students may not receive credit for both MA 1021 and MA 1020.": "MA 1021 OR MA 1020"
+    },
+    {
+        ": Algebra, trigonometry and analytic geometry.Although the course will make use of computers, no programming experienceis assumed.Students may not receive credit for both MA 1021 and MA 1020.": "MA 1021 OR MA 1020"
+    },
+    {
+        ": MA 1021. Although the course will make use of computers, no programming experience is assumed.": "MA 1021"
+    },
+    {
+        ": MA 1021. Although the course will make use ofcomputers, no programming experience is assumed.": "MA 1021"
+    },
+    {
+        ": MA 1022. Although the course will make use of computers, no programming experience is assumed.": "MA 1022"
+    },
+    {
+        ": MA 1023. Although the course will make use of computers, no programming experience is assumed.": "MA 1023"
+    },
+    {
+        ": MA 1023. Although the course will make use ofcomputers, no programming experience is assumed.": "MA 1023"
+    },
+    {
+        ": Differential and integral calculus (MA1021 and MA 1022, or equivalent).<br />Note: Students can receive credit for this class and MA1023 Calculus III.": "MA 1021 AND MA 1022 OR equivalent"
+    },
+    {
+        ": Theoretical Calculus III (MA1033, or equivalent). Note: Students can receive credit for this class and MA1024 Calculus IV.": "MA 1033 OR MA 1024"
+    },
+    {
+        ": Curiosity about Mathematics": "\"\""
+    },
+    {
+        ": at least two courses in Mathematical Sciences at WPI, or equivalent.": "MA 1021 OR MA 2071"
+    },
+    {
+        ": MA 1024.": "MA 1024"
+    },
+    {
+        ": Basic knowledge of matrix algebra": "MA 2071"
+    },
+    {
+        ": MA 2071 or MA 2072.": "MA 2071 OR MA 2072"
+    },
+    {
+        ": MA 1024. Suggested background: Familiaritywith vectors and matrices. Although the course makes use of computers, noprogramming experience is assumed. Students who have received credit forCE 2010 may not receive credit for MA 2210.": "MA 1024"
+    },
+    {
+        ": Single variable calculus (MA 1021 and MA 1022 or equivalent) and the ability to work with appropriate computer software.<br />Students may not receive credit for both MA 2211 and MA 3211": "MA 1021 AND MA 1022 OR equivalent AND NOT (MA 2211 AND MA 3211)"
+    },
+    {
+        ": Single variable calculus (MA 1021 and MA 1022 or equivalent) and the ability to work with appropriate computer software.Students may not receive credit for both MA 2211 and MA 3211": "MA 1021 AND MA 1022 OR equivalent AND (MA 2211 OR MA 3211)"
+    },
+    {
+        ": An introduction to theory of interest (MA 2211 or equivalent) and the ability to work with appropriate computer software.": "MA 2211 OR equivalent"
+    },
+    {
+        ": MA 2071.This course will be offered in 2020-21, and in alternating years thereafter.": "MA 2071"
+    },
+    {
+        ": multivariable calculus (MA 1024 or equivalent), ordinary differential equations (MA 2051 or equivalent), and linear algebra (MA 2071 or equivalent).": "MA 1024 OR MA 2051 AND MA 2071"
+    },
+    {
+        ": MA 1022.": "MA 1022"
+    },
+    {
+        ": MA 2611.": "MA 2611"
+    },
+    {
+        ": MA 1024.Undergraduate credit may not be earned both for this course and for MA 2621.": "MA 1024 AND NOT MA 2621"
+    },
+    {
+        ": An introduction to the theory of interest, and familiarity with basic probability (MA 2211 and either MA 2621 or MA 2631, or equivalent).": "MA 2211 AND (MA 2621 OR MA 2631)"
+    },
+    {
+        ": An introduction to actuarial mathematics (MA3212 or equivalent)": "MA 3212 OR equivalent"
+    },
+    {
+        ": At least one actuarial course, such as </span><span>MA 2211 or MA 3212.</span>": "MA 2211 OR MA 3212"
+    },
+    {
+        ": Matrices and Linear Algebra (MA 2071, or equivalent).": "MA 2071 OR equivalent"
+    },
+    {
+        ": At least one course in graph theory, combinatoricsor optimization (e.g., MA 2271, MA 2273 or MA 3231).This course will be offered in 2020-21, and in alternating years thereafter.": "MA 2271 OR MA 2273 OR MA 3231"
+    },
+    {
+        ": MA 2051.This course will be offered in 2020-21, and in alternating years thereafter.": "MA 2051"
+    },
+    {
+        ": MA 2631.": "MA 2631"
+    },
+    {
+        ": MA 2073.": "MA 2073"
+    },
+    {
+        ": at least one course focused on proof-based mathematics (e.g., MA 1971 Bridge to Higher Mathematics, MA1033 Theoretical Calculus III).": "MA 1971 OR MA 1033"
+    },
+    {
+        ": introductory knowledge in real analysis (e.g., MA 3831 Principles of Real Analysis I, or equivalent).": "MA 3831 OR equivalent"
+    },
+    {
+        ": An introduction to mathematical statistics (MA3631 or equivalent).": "MA 3631 OR equivalent"
+    },
+    {
+        ": Interest in being an actuarial mathematics major.": ""
+    },
+    {
+        ": Vector calculus at the level of MA 2251.This course will be offered in 2019-20, and in alternating years thereafter.": "MA 2251"
+    },
+    {
+        ": MA 1024 and MA 2051.": "MA 1024 AND MA 2051"
+    },
+    {
+        ": MA 2071 and MA 3457/CS 4033. An ability towrite computer programs in a scientific language is assumed.This course will be offered in 2020-21, and in alternating years thereafter.": "MA 2071 AND MA 3457 OR CS 4033"
+    },
+    {
+        ": MA 1024 or and MA 2051.": "MA 1024 OR MA 2051"
+    },
+    {
+        ": MA 2251 and MA 3832.This course will be offered in 2020-21, and in alternating years thereafter.": "MA 2251 AND MA 3832"
+    },
+    {
+        ": MA 2631 or MA 3613, MA 3831, MA 3832.": "MA 2631 OR MA 3613 AND MA 3831 AND MA 3832"
+    },
+    {
+        ": MA 3631 or MA 4631.": "MA 3631 OR MA 4631"
+    },
+    {
+        ": Advanced Linear Algebra and Real Analysis (e.g.,MA 2073 Theoretical Linear Algebra and MA 3831 Principles of Real Analysis,or equivalent)": "MA 2073 AND MA 3831 OR equivalent"
+    },
+    {
+        ": computer-aided design (ES 1310), mechanics<br />(ES 2501, ES 2502), and manufacturing (ME 1800).": "ES 1310 AND ES 2501 AND ES 2502 AND ME 1800"
+    },
+    {
+        ": Statics (ES 2501), Stress Analysis (ES 2502), General Physics-Mechanics (PH 1110), Differential and Integral Calculus (MA 1021, MA 1022) or equivalents.": "ES 2501 AND ES 2502 AND PH 1110 AND (MA 1021 OR MA 1022)"
+    },
+    {
+        ":</b> prior knowledge of elementary calculus and physics, such as found in MA1021 (Calculus I), MA1022 (Calculus II), and PH1110 (General Physics \u2013 Mechanics).": "MA 1021 AND MA 1022 AND PH 1110"
+    },
+    {
+        ": ME 1800 Materials Selection and Manufacturing<br />Processes, and ES 2001 Introduction to Materials Science.": "ME 1800 AND ES 2001"
+    },
+    {
+        ": ME 1800 Materials Selection and ManufacturingProcesses, and ES 2001 Introduction to Materials Science.": "ME 1800 AND ES 2001"
+    },
+    {
+        ": Ordinary Differential Equations (MA 2051),<br />statics (ES 2501), dynamics (ES 2503).": "MA 2051 AND ES 2501 AND ES 2503"
+    },
+    {
+        ": Ordinary Differential Equations (MA 2051),statics (ES 2501), dynamics (ES 2503).": "MA 2051 AND ES 2501 AND ES 2503"
+    },
+    {
+        ": mechanics (ES 2501, ES 2502, ES 2503),<br />materials (ME 1800, ME 2820), computer programming (CS 1101 or CS 1102).": "ES 2501 AND ES 2502 AND ES 2503, ME 1800 AND ME 2820, CS 1101 OR CS 1102"
+    },
+    {
+        ": Introductory fluid mechanics (ES 3004, or equivalent).": "ES 3004 OR equivalent"
+    },
+    {
+        ": Ordinary Differential Equations (MA 2051),<br />statics (ES 2501), dynamics (ES 2503).<br />This course will be offered in 2020-21, and in alternating years thereafter.": "MA 2051 AND ES 2501 AND ES 2503"
+    },
+    {
+        ": mechanics (ES 2501, ES 2502, ES 2503), design (ME 2300), materials (ME 1800) and electrical engineering (ECE 2010).": "ES 2501 AND ES 2502 AND ES 2503 AND ME 2300 AND ME 1800 AND ECE 2010"
+    },
+    {
+        ": manufacturing (ME 1800), materials processing<br />(ME 2820), elementary computer/logic device programming.": "ME 1800 AND ME 2820"
+    },
+    {
+        ": mathematics (MA 2051), thermo-fluids (ES 3001, ES 3003, ES 3004), mechanics (ES 2501, ES 2502, ES 2503), materials (ES 2001).": "MA 2051 AND ES 3001 AND ES 3003 AND ES 3004 AND ES 2501 AND ES 2502 AND ES 2503 AND ES 2001"
+    },
+    {
+        ": introductory heat transfer (ES3003 or<br />equivalent), introductory stress and dynamic mechanics (ES 2502 &amp; ES 2503 or<br />equivalents), introductory electrical and computer engineering (ES2010 or<br />equivalent) and introductory materials (such as ES 2001 or equivalent).": "ES 3003 OR ES 2502 AND ES 2503 OR ES 2010 OR ES 2001"
+    },
+    {
+        ": mechanisms (ME 3310, ME 3311), stress<br />analysis (ES 3502), design (ME 3320), thermo-fluids (ES 3001, ES 3003,<br />ES 3004), materials (ES 2001), manufacturing (ME 1800).": "ME 3310 AND ME 3311 AND ES 3502 AND ME 3320 AND ES 3001 AND ES 3003 AND ES 3004 AND ES 2001 AND ME 1800"
+    },
+    {
+        ": mechanisms (ME 3310, ME 3311), stressanalysis (ES 3502), design (ME 3320), thermo-fluids (ES 3001, ES 3003,ES 3004), materials (ES 2001), manufacturing (ME 1800).": "ME 3310 AND ME 3311 AND ES 3502 AND ME 3320 AND ES 3001 AND ES 3003 AND ES 3004 AND ES 2001 AND ME 1800"
+    },
+    {
+        ": mathematics (MA 2051, MA 2071), fluids (ES 3004), thermodynamics (ES 3001), mechanics (ES 2501, ES 2503).": "MA 2051 AND MA 2071 AND ES 3004 AND ES 3001 AND ES 2501 AND ES 2503"
+    },
+    {
+        ": materials science (ES 2001), stress analysis (ES 2502), dynamics (ES 2503) or equivalents.": "ES 2001 OR ES 2502 OR ES 2503"
+    },
+    {
+        ": ES 2001 (Introduction to Materials Science), ES 1310 (Introduction to Computer Aided Design), ES2501 (Introduction to Static Systems), ES2502 (Stress Analysis), and ES2503 (Introduction to Dynamic Systems).": "ES 2001 AND ES 1310 AND ES 2501 AND ES 2502 AND ES 2503"
+    },
+    {
+        ": Knowledge in thermodynamics (ES 3001), fluid<br />mechanics (ES 3004), heat transfer (ES 3003), and introduction to design<br />(ME 2300)": "ES 3001 AND ES 3004 AND ES 3003 AND ME 2300"
+    },
+    {
+        ": differential and integral calculus, and ordinary differential equations (MA 2051 or equivalent), and thermodynamics, fluid mechanics and heat transfer (ES 3001, 3004, 3003 or equivalents).<br />Students may not receive credit for both ME 4424 and ME 442X.": "MA 2051 AND ES 3001 OR ES 3004 OR ES 3003"
+    },
+    {
+        ": knowledge in thermodynamics, fluid mechanics,<br />heat transfer and introduction to design (ES 3001, ES 3004 and ES 3003,<br />ME 2300 or equivalent).": "ES 3001 AND ES 3004 AND ES 3003 AND (ME 2300 OR equivalent)"
+    },
+    {
+        ": knowledge in thermodynamics, fluid mechanics,heat transfer and introduction to design (ES 3001, ES 3004 and ES 3003,ME 2300 or equivalent).": "ES 3001 AND ES 3003 AND ES 3004 AND ME 2300 OR equivalent"
+    },
+    {
+        ": MA 2051, ES 2001, ES 2502, ES 3003,<br />ME 3901, and an introduction to design.<br />This course will be offered in 2020-21, and in alternating years thereafter.": "MA 2051 AND ES 2001 AND ES 2502 AND ES 3003 AND ME 3901 AND introduction to design"
+    },
+    {
+        ": Ordinary Differential Equations (MA 2501),<br />Statics (ES 2501), Dynamics (ES 2503).": "MA 2501 AND ES 2501 AND ES 2503"
+    },
+    {
+        ": Mathematics (MA 2051, MA 2071), Mechanics<br />(ES 2501 &amp; ES 2502 or CE 2000 &amp; CE 2001).": "MA 2051 AND MA 2071 AND (ES 2501 AND ES 2502 OR CE 2000 AND CE 2001)"
+    },
+    {
+        ": ES 2001 or equivalent . This course will be offered in 2019-20, and in alternating years thereafter.": "ES 2001 OR equivalent"
+    },
+    {
+        ": materials (ES 2001). This course will be offered in 2019-20, and in alternating years thereafter.": "\"\""
+    },
+    {
+        ": materials (ES 2001, ME 2820).": "ES 2001 AND ME 2820"
+    },
+    {
+        ": ES 2001 Introduction to Materials or equivalent Some sections of this course may be offered as Writing Intensive (WI).": "ES 2001 OR equivalent"
+    },
+    {
+        ": RBE 500, RBE 501.": "RBE 500 AND RBE 501"
+    },
+    {
+        ": Familiarity with ordinary differential equations, introductory control theory, fundamentals of linear algebra, and the analysis of signals and systems is recommended. Familiarity with Matlab\u00ae is strongly recommended.)": "MA 2071 AND PH 1110"
+    },
+    {
+        ": Undergraduate level stress analysis and wave fundamentals, such as ES 2502, PH 1140. Knowledge of vibrations such as ME 4506 is preferred but not required.": "ES 2502 AND PH 1140"
+    },
+    {
+        ": mechanics, materials, physics, knowledge of a high-level computer programming language. Students cannot receive credit for this course if they have taken the Special Topics (ME 593J) version of the same course or ME 534.": "None"
+    },
+    {
+        ": ES2001 or equivalent. Note: Students cannot receive credit for this course if they have taken the Special Topics version of the same course.": "ES 2001 OR equivalent"
+    },
+    {
+        ": Basic knowledge of programming (Equivalent to CS 1004 or other introductory programming courses)": "CS 1004"
+    },
+    {
+        ": CS 2119 or equivalent knowledge.": "CS 2119 OR equivalent knowledge"
+    },
+    {
+        ": Previous knowledge in data management, such as that provided by MIS 3720 Business Data Management or CS 3431 Database Systems I.": "MIS 3720 OR CS 3431"
+    },
+    {
+        ": MIS 3720.": "MIS 3720"
+    },
+    {
+        ": BUS 3010, CS 2102 (or CS 2103) or ability to program in a higher level programming language.": "BUS 3010 AND (CS 2102 OR CS 2103) OR ability to program in a higher level programming language."
+    },
+    {
+        ": BUS 2070 or OIE 2850.": "BUS 2070 OR OIE 2850"
+    },
+    {
+        ": ML 1022": "ML 1022"
+    },
+    {
+        ": ML 2011": "ML 2011"
+    },
+    {
+        ": ML 2012": "ML 2012"
+    },
+    {
+        ": ML 2021": "ML 2021"
+    },
+    {
+        ": Students must have completed the basic course or ROTC Leadership Training course and have signed a personal contract with the US Army. Department Head approval is required.": "MA 1021 OR ROTC Leadership Training AND Department Head approval"
+    },
+    {
+        ": ML 3011": "ML 3011"
+    },
+    {
+        ": ML 3021": "ML 3021"
+    },
+    {
+        ": ML 4023": "ML 4023"
+    },
+    {
+        ": CH 1020, PH 1120, and ES 2001 or equivalent. Note: Students cannot receive credit for this course if they have taken the Special Topics version of the same course.": "CH 1020 AND PH 1120 AND ES 2001 OR equivalent"
+    },
+    {
+        ":<br />ES 2001 Introduction to Materials or equivalent.": "ES 2001 OR equivalent"
+    },
+    {
+        ": ES 2001 Introduction to Materials or equivalent.": "ES 2001 OR equivalent"
+    },
+    {
+        ": No prerequisites. A basic reading knowledge of music is helpful, but not required.": ""
+    },
+    {
+        ": some basic knowledge of reading music": ""
+    },
+    {
+        ": No previous experience is necessary": ""
+    },
+    {
+        ": understanding of basic music theory through coursework (e.g. MU 1511, Introduction to Music or MU 1611, Fundamentals of Music) or equivalent experience.": "MU 1511 OR MU 1611"
+    },
+    {
+        "for this course is MU 1100 (Foundations of Music Theory and Aural Skills) or its equivalent": "MU 1100 OR equivalent"
+    },
+    {
+        ": a basic understanding of music notation and the fundamentals of music. This course will be offered in 2020-21, and in alternating years thereafter.": "\"\""
+    },
+    {
+        ": Fundamentals of Music I and / or Fundamentals of Music II, experience with programming and electronic circuits is helpful. This course will be offered in 2020-21, and in alternating years thereafter.": "FUNDAMENTALS OF MUSIC I OR FUNDAMENTALS OF MUSIC II"
+    },
+    {
+        ": A basic reading knowledge of music and simultaneous enrollment in the corresponding large music ensemble": "None"
+    },
+    {
+        ": Fundamentals of Music I and/or Fundamentals of Music II.": "FUNDAMENTALS OF MUSIC I OR FUNDAMENTALS OF MUSIC II"
+    },
+    {
+        ": Basic knowledge of reading music, such as personal experience,participation in ensembles, or music courses (MU 1611: Fundamentals of Music I, or MU 1511:Introduction to Music). Credit may not be received for both MU 2510 and MU 3510.": "MU 1611 OR MU 1511"
+    },
+    {
+        ": No prerequisites. </span><span>One </span><span>previous</span><span> course in music, U.S. history, or Africana Studies is strongly recommended. </span></span><span> </span></div><div><span> </span></div><div><span> </span></div>": "None"
+    },
+    {
+        ": knowledge of basic musicianship skills such as melody, harmony, and rhythm, as well as familiarity with at least one digital audio workstation or notation software.This course will be offered in 2020-21, and in alternating years thereafter.": "None"
+    },
+    {
+        ": MU 1611 (Fundamentals of Music) This course will be offered in 2020-21, and in alternating years thereafter.": "None"
+    },
+    {
+        ": MU 1611 (Fundamentals of Music) This course will be offered in 2020-21, and in alternating years thereafter": "MU 1611"
+    },
+    {
+        ": some previous exposure to analytical problem solving as found in OIE 2081 or MA 2210.": "OIE 2081 OR MA 2210"
+    },
+    {
+        ": BUS 3020 and OIE 2081": "BUS 3020 AND OIE 2081"
+    },
+    {
+        ": MA 1020, MA 1021, MA 2611 and BUS 3020.": "MA 1020 AND MA 1021 AND MA 2611 AND BUS 3020"
+    },
+    {
+        ": BUS 3020 and MA 2612 or consent of the<br />instructor.": "BUS 3020 AND MA 2612 OR consent of the instructor."
+    },
+    {
+        ": </span><span>S</span><span>tatistical knowledge equivalent to MA 2611.</span><span>\u202f</span></span><span> </span><span> </span></div>": "MA 2611"
+    },
+    {
+        ": CS 1004 and MA 2612.": "CS 1004 AND MA 2612"
+    },
+    {
+        ": Knowledge of calculus and introductory probability and statistics.": "MA 1021 AND MA 1024"
+    },
+    {
+        ": BUS 2080, BUS 3020, OIE 3410,and OIE 3510.": "BUS 2080 AND BUS 3020 AND OIE 3410 AND OIE 3510"
+    },
+    {
+        ": BUS 3020 and one of the following: BUS 2070 or OIE 2850 or consent of the professor.": "BUS 3020 AND (BUS 2070 OR OIE 2850)"
+    },
+    {
+        ": concurrent study of MA 1021 .Students may not receive credit for both PH 1110 and PH 1111 .": "MA 1021 AND (PH 1110 OR PH 1111)"
+    },
+    {
+        ": concurrent study of MA 1021 .<br />Students may not receive credit for both PH 1110 and PH 1111 .": "MA 1021 AND (PH 1110 OR PH 1111)"
+    },
+    {
+        ": concurrent study of MA 1021 .<br />Students may not receive credit for both PH 1110 and PH 1111.": "MA 1021 AND (PH 1110 OR PH 1111)"
+    },
+    {
+        ": concurrent study of MA 1021 .Students may not receive credit for both PH 1110 and PH 1111.": "MA 1021 AND (PH 1110 OR PH 1111)"
+    },
+    {
+        ": concurrent study of MA 1023 (or higher).Students with limited prior college-level calculus preparation are advised to take PH 1110.Students may not receive credit for both PH 1111 and PH 1110 .": "MA 1023 OR HIGHER AND PH 1110 AND NOT (PH 1111 AND PH 1110)"
+    },
+    {
+        ": working knowledge of the material presented in<br />PH 1110 or PH 1111 and concurrent study of MA 1022.<br />Students may not receive credit for both PH 1120 and PH 1121.": "PH 1110 OR PH 1111 AND MA 1022"
+    },
+    {
+        ": working knowledge of the material presented inPH 1110 or PH 1111 and concurrent study of MA 1022.Students may not receive credit for both PH 1120 and PH 1121.": "PH 1110 OR PH 1111 AND MA 1022"
+    },
+    {
+        ": working knowledge of material covered in  PH 1111 and concurrent study of MA 1024 (or higher).Students concurrently taking MA 1022 or MA 1023 are advised to take PH 1120.Students may not receive credit for both PH 1121 and PH 1120 .": "PH 1111 AND MA 1024 OR MA 1022 OR MA 1023"
+    },
+    {
+        ": working knowledge of material covered in PH 1111 and concurrent study of MA 1024 (or higher).<br />Students concurrently taking MA 1022 or MA 1023 are advised to take PH 1120.<br />Students may not receive credit for both PH 1121 and PH 1120 .": "PH 1111 AND MA 1024 OR MA 1022 OR MA 1023 AND (PH 1120 OR PH 1121)"
+    },
+    {
+        ": working knowledge of material covered in PH 1111 and concurrent study of MA 1024 (or higher).<br />Students concurrently taking MA 1022 or MA 1023 are advised to take PH 1120.<br />Students may not receive credit for both PH 1121 and PH 1120.": "PH 1111 AND (MA 1024 OR MA 1022 OR MA 1023)"
+    },
+    {
+        ": working knowledge of material covered in PH 1111 and concurrent study of MA 1024 (or higher).Students concurrently taking MA 1022 or MA 1023 are advised to take PH 1120.Students may not receive credit for both PH 1121 and PH 1120.": "PH 1111 AND (MA 1024 OR MA 1022 OR MA 1023) AND (PH 1120 OR PH 1121)"
+    },
+    {
+        ": familiarity with material covered in PH 1110 and<br />PH 1120 (or PH 1111 and PH 1121) and completion of MA 1021 and MA 1022.": "PH 1110 AND PH 1120 OR PH 1111 AND PH 1121 AND MA 1021 AND MA 1022"
+    },
+    {
+        ": familiarity with material covered in PH 1110 andPH 1120 (or PH 1111 and PH 1121) and completion of MA 1021 and MA 1022.": "(PH 1110 AND PH 1120) OR (PH 1111 AND PH 1121) AND MA 1021 AND MA 1022"
+    },
+    {
+        ": working knowledge of the material covered in<br />PH 1110 and PH 1120 (or PH 1111 and PH 1121) and completion of<br />MA 1021, MA 1022 and MA 1023.": "PH 1110 AND PH 1120 OR (PH 1111 AND PH 1121) AND MA 1021 AND MA 1022 AND MA 1023"
+    },
+    {
+        ": General Physics - Mechanics (PH1110) or Principles of Physics - Mechanics (PH1111), General Physics Electricity and Magnetism (PH1120) or Introductory Physics \u2013 Electricity and Magnetism (PH1121), completion or concurrent study of Calculus I (MA 1021) or Calculus II (MA 1022)": "PH 1110 OR PH 1111 AND PH 1120 OR PH 1121 AND (MA 1021 OR MA 1022)"
+    },
+    {
+        ": introductory mechanics and multi-variable calculus": "PH 1110 AND MA 1021"
+    },
+    {
+        ": PH 1110, PH 1120, PH 1130, PH 1140, MA 1021, MA 1022, MA 1023, MA 1024 and concurrent registration in or completion of MA 2051.": "PH 1110 AND PH 1120 AND PH 1130 AND PH 1140 AND MA 1021 AND MA 1022 AND MA 1023 AND MA 1024 AND (MA 2051)"
+    },
+    {
+        ": introductory electricity and magnetism, vectoralgebra, integral theorems of vector calculus as covered in MA 2251.": "MA 2251"
+    },
+    {
+        "is PH 1110, PH 1120, PH 1130 and PH 1140 (or their equivalents).This course will be offered in 2020-21, and in alternating years thereafter.": "PH 1110 AND PH 1120 AND PH 1130 AND PH 1140"
+    },
+    {
+        "is PH 1110 (or PH 1111), PH 1120 (or PH 1121),<br />and especially PH 1130.<br />Suggested background: PH 1140.<br />This course will be offered in 2019-20, and in alternating years thereafter.": "PH 1110 OR PH 1111 AND PH 1120 OR PH 1121 AND PH 1130. Suggested background: PH 1140."
+    },
+    {
+        ": a working knowledge of mechanics (PH 1110 or 1111), electrodynamics (PH 1120 or 1121), modern physics (PH 1130), and differential and integral calculus (MA 1021 and MA 1022).This course will be offered in 2020-21, and in alternating years thereafter.": "PH 1110 OR PH 1111 AND PH 1120 OR PH 1121 AND PH 1130 AND MA 1021 AND MA 1022"
+    },
+    {
+        ": PH 1110/1111, PH 1120/1121. PH 1130, PH 1140, and one or more of the courses PH 2501, PH 2502, or PH 3504. No prior laboratory background is expected.This course will be offered in 2020-21, and in alternating years thereafter.": "PH 1110 OR PH 1111 AND PH 1120 OR PH 1121 AND PH 1130 AND PH 1140 AND (PH 2501 OR PH 2502 OR PH 3504)"
+    },
+    {
+        ": the Introductory Physics course sequence or equivalent. No prior laboratory background beyond that experience is required.Students who have received credit for PH 2600 or PH 3600 may not receive credit for PH 2651.": "PH 2600 OR PH 3600 AND NOT PH 2651"
+    },
+    {
+        ": knowledge of quantum mechanics and thermodynamics at the level of ES 3001.": "ES 3001"
+    },
+    {
+        ": Junior standing, MA 4451, and completion of the introductory physics sequence, including the introduction to the 20th century physics.Suggested background: knowledge (or concurrent study) of linear algebra, Fourier series, and Fourier transforms.": "JUNIOR STANDING AND MA 4451 AND COMPLETION OF INTRODUCTORY PHYSICS SEQUENCE AND MA 2071 AND FOURIER SERIES AND FOURIER TRANSFORMS."
+    },
+    {
+        ": PH 3401.": "PH 3401"
+    },
+    {
+        ": knowledge of mechanics and electrodynamics at the intermediate level.This course will be offered in 2020-21, and in alternating years thereafter.": "\"\""
+    },
+    {
+        ": prior knowledge of quantum mechanics at an intermediate level.Suggested background: knowledge of statistical physics is helpful.This course will be offered in 2020-21, and in alternating years thereafter.": "None"
+    },
+    {
+        ":</span> <span>PH 2201 (Intermediate Mechanics II)</span>": "\"\""
+    },
+    {
+        ": Students should have mathematical preparation in ordinary differential equations, vector and tensor analysis, complex variables and linear algebra. In addition, they should have taken an undergraduate course in quantum mechanics (at the level of PH3401 at WPI).": "MA 2071 AND PH 3401"
+    },
+    {
+        ": This course is intended as stand-alone in nature, </span><span>introducing the concepts of quantum states through experiments, and as such </span><span>prior coursework in quantum mechanics is not necessary. It is recommended </span><span>that students have taken PH1130 (or equivalent), so that the concept of a photon </span><span>is already familiar.</span>": "PH 1130 OR equivalent"
+    },
+    {
+        "for this course is a bachelor\u2019s degree in science or engineering. Students who have successfully completed PH 2510, the undergraduate version of this course, may not earn credit for PH 561.": "BACHELOR\u2019S DEGREE IN SCIENCE OR ENGINEERING AND NOT PH 2510"
+    },
+    {
+        ": A bachelor\u2019s degree in science, technology, engineering, or mathematics.": "\"\""
+    },
+    {
+        ": PSY 1400.": "PSY 1400"
+    },
+    {
+        ": Introductory psychology (PSY 1400 or equivalent).<br />Students may not receive credit for both PSY 1412 and PSY 141X.": "PSY 1400 OR PSY 1412 OR PSY 141X"
+    },
+    {
+        ": Introduction to Psychological Science (PSY 1400) and/or Social Psychology (PSY 2402).": "PSY 1400 OR PSY 2402"
+    },
+    {
+        ": Introduction to Psychological Science (PSY 1400), Social Psychology (PSY 2402), and/or Psychology of Gender (PSY 3407).": "PSY 1400 AND PSY 2402 AND PSY 3407"
+    },
+    {
+        ": PSY2402: Social Psychology and/or PSY3408: Health Psychology": "PSY 2402 OR PSY 3408"
+    },
+    {
+        ": PSY 2402: Social Psychology, PSY2403: Cognitive Psychology, and applied statistics (MA 2610 or MA 2611).": "PSY 2402 AND PSY 2403 AND (MA 2610 OR MA 2611)"
+    },
+    {
+        ": one 2000-level PsychologicalScience courses (or equivalent). This course may be repeated for different topics.": "2000-level Psychological Science course OR equivalent"
+    },
+    {
+        ": knowledge of key terms and concepts as given inPY/RE 1731 and PY/RE 2731.This course will be offered in 2015-16, and in alternating years thereafter.": "PY 1731 AND PY 2731"
+    },
+    {
+        ": knowledge of key terms and concepts as given in<br />PY/RE 1731 and PY/RE 2731.<br />This course will be offered in 2019-20, and in alternating years thereafter.": "PY 1731 AND PY 2731"
+    },
+    {
+        ": familiarity with basic concepts in philosophy (as inPY/RE 1731).": "PY 1731"
+    },
+    {
+        ": PY/RE 1731, Introduction to Philosophy and<br />Religion or PY/RE 2731, Introduction to Ethics.": "PY 1731 OR PY 2731"
+    },
+    {
+        ": PY/RE 1731, Introduction to Philosophy and<br />Religion.<br />This course will be offered in 2020-21, and in alternating years thereafter.": "PY 1731"
+    },
+    {
+        ": familiarity with basic religious concepts and terms (asin PY/RE 1731).This course will be offered in 2020-21, and in alternating years thereafter.": "PY 1731"
+    },
+    {
+        ": mechanics (PH 1110/ PH 1111).": "PH 1110 OR PH 1111"
+    },
+    {
+        ": Knowledge of Embedded Systems, such as covered in ECE 2049. Knowledge of statics, such as covered in ES 2501. Ability to use CAD to design parts, such as found in ES 1310.": "ECE 2049 AND ES 2501 AND ES 1310"
+    },
+    {
+        ": Knowledge of Embedded Systems, such as covered in ECE 2049.": "ECE 2049"
+    },
+    {
+        ": RBE 1001; fundamentals of electronics, such as found in ECE 2010; and programming experience, such as covered in CS 2119, CS 2102/3, CS 2301/3, or ECE 2039.": "RBE 1001 AND ECE 2010 AND (CS 2119 OR CS 2102 OR CS 2103 OR CS 2301 OR CS 2303 OR ECE 2039)"
+    },
+    {
+        ": RBE 2002, ECE 2049, CS 2102, MA 2051, and<br />MA 2071.": "RBE 2002 AND ECE 2049 AND CS 2102 AND MA 2051 AND MA 2071"
+    },
+    {
+        ": RBE 2002, ECE 2049, CS 2102, MA 2051, andMA 2071.": "RBE 2002 AND ECE 2049 AND CS 2102 AND MA 2051 AND MA 2071"
+    },
+    {
+        ": RBE 3001, ES 3011, MA 2621, or MA 2631.": "RBE 3001 OR ES 3011 OR MA 2621 OR MA 2631"
+    },
+    {
+        ": A general knowledge of robots and robotic systems.<br />Students may not receive credit for both RBE 3100 and RBE 310X.": "RBE 3100 OR RBE 310X"
+    },
+    {
+        ": A general knowledge of robots and robotic systems.Students may not receive credit for both RBE 3100 and RBE 310X.": "RBE 3100 OR RBE 310X"
+    },
+    {
+        ": Knowledge of robot kinematics, wrench spaces, and rigid body transformations as presented in RBE 3001. Familiarity with robotic simulation software as presented in RBE 3002.": "RBE 3001 AND RBE 3002"
+    },
+    {
+        ": RBE 1001, RBE 3100": "RBE 1001 AND RBE 3100"
+    },
+    {
+        ": RBE 3002": "RBE 3002"
+    },
+    {
+        ":</span><span> </span></i><span><span>Proficiency</span><span> in </span><span>p</span><span>rogramming (Preferably in </span><span>Python</span><span>)</span><span>, </span><span>multi-variate</span><span> </span><span>c</span><span>alculus</span><span> (MA1024)</span><span>, </span><span>l</span><span>inear</span><span> </span><span>a</span><span>lgebra</span><span> (MA2071/2072)</span><span>,</span><span> and </span><span>p</span><span>robability </span><span>(MA</span><span> 2621/2631</span><span>)</span><span>.</span></span><span> </span></div>": "PROFICIENCY IN PROGRAMMING AND MA 1024 AND (MA 2071 OR MA 2072) AND (MA 2621 OR MA 2631)"
+    },
+    {
+        ": RBE 3001, ES 3011, and computer programming": "RBE 3001 AND ES 3011 AND computer programming"
+    },
+    {
+        ": C&#43;&#43;/Python/Matlab programming; Linear algebra; Probability and statistics; Calculus.": "MA 1021 AND MA 2071 AND PH 1112 AND PH 1113"
+    },
+    {
+        ": RBE 300, RBE 301": "RBE 300 AND RBE 301"
+    },
+    {
+        ": Machine Learning or Intro to AI.": "MACHINE LEARNING OR INTRO TO AI"
+    },
+    {
+        ": RBE 501 and RBE 502": "RBE 501 AND RBE 502"
+    },
+    {
+        ": RBE 549": "RBE 549"
+    },
+    {
+        ": knowledge of key terms and concepts as given in<br />PY/RE 1731.": "PY 1731"
+    },
+    {
+        ": SP 1523.This course is closed to native speakers of Spanish and heritage speakers except withwritten permission from the instructor.": "\"\""
+    },
+    {
+        ": Elementary Spanish II . </span><span>This course is closed to native speakers of Spanish and heritage speakers except with </span><span>written permission from the instructor.</span>": ""
+    },
+    {
+        ": SP 2521.<br /><br />This course is closed to native speakers of Spanish and heritage speakers except with written permission from the instructor.": "SP 2521"
+    },
+    {
+        ": Intermediate Spanish II.<br />This course is closed to native speakers of Spanish except with written permission from the instructor.": ""
+    },
+    {
+        ": SP 3521.This course satisfies the Inquiry Practicum requirement.This course is closed to native speakers of Spanish except with written permission from the instructor.": "SP 3521"
+    },
+    {
+        ": SP 3521 (Advanced Spanish I) and SP 3522 (Advanced Spanish II) or equivalent.<br /><br />This course will be offered in 2015-16, and in alternating years thereafter.<br />This course satisfies the Inquiry Practicum requirement.": "SP 3521 AND SP 3522 OR equivalent"
+    },
+    {
+        ": SP 3522 and SP 3528.\n\nThis course will be offered in 2020-21, and in alternating years thereafter.\n\nThis course satisfies the Inquiry Practicum requirement.": "SP 3522 AND SP 3528"
+    },
+    {
+        ":</b> Acceptance into the Global Health Graduate program or permission of instructor.": ""
+    },
+    {
+        ": previous courses in global public health, and </span><span>completion or concurrent registration with a global public health-related MQP, </span><span>IQP or ISU.</span><span>This course will be offered in 2021-22, and in alternating years thereafter</span><span>.</span>": "None"
+    },
+    {
+        ": Some theatre or acting experience is desirable but the course issuitable for anyone with interest in the subject.<i>Students may not receive credit for TH 2100 and TH 1100.</i>": "TH 2100 OR TH 1100"
+    },
+    {
+        "</u>: TH1100 (Introduction to Acting) or TH2100(Fundamentals of Acting)": "TH 1100 OR TH 2100"
+    },
+    {
+        ": This course is suitable for anyone interested in environmental/performance design. TH 2400: Fundamentals of Theatrical Production Design provides useful (though not essential) preparation for this course": "TH 2400"
+    },
+    {
+        ": Basic knowledge of rhetorical writing (e.g., WR 1010, Elements of Writing, WR 1011, Writing About Science & Technology, or WR 1020, Introduction to Rhetoric.": "WR 1010 OR WR 1011 OR WR 1020"
+    },
+    {
+        ": Basic knowledge of rhetorical writing (e.g., WR 1010, Elements of Writing, WR 1011, Writing About Science &amp; Technology, or WR 1020, Introduction to Rhetoric.": "WR 1010 OR WR 1011 OR WR 1020"
+    },
+    {
+        ": WR 1010 or WR 1011": "WR 1010 OR WR 1011"
+    },
+    {
+        ": WR 1010": "WR 1010"
+    },
+    {
+        ": One introductory course (1000 level) in professional writing in which students have translated scientific writing for diverse audiences (e.g.: WR 1011, Writing about Science &amp; Technology). Foundational life sciences courses with emphasis in anatomy and physiology are also recommended.": "WR 1011"
+    },
+    {
+        ": WR 1010 Elements of Writing This course will be offered in 2019-20, and in alternating years thereafter .": "WR 1010"
+    },
+    {
+        ": Introduction to Rhetoric": "None"
+    },
+    {
+        ": WR 1010, or equivalent writing course.": "WR 1010 OR equivalent writing course"
+    },
+    {
+        ": WR 1010 Elements of Writing or equivalent writing courses.": "WR 1010 OR equivalent writing courses"
+    },
+    {
+        ": WR 1010 Elements of Writing, WR 2310 Rhetoric of Visual Design, WR 3112 Rhetorical Theory.": "WR 1010 AND WR 2310 AND WR 3112"
+    },
+    {
+        ": Prior courses or projects (GPS, IQP) in health, medicine, or science writing. Exposure to anatomy and physiology would be helpful. The course is designed for 3rd and 4th year students with a strong interest in pursuing careers or continued education in medicine or public health.": "None"
+    }
+]
