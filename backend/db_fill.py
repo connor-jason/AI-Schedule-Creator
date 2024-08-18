@@ -4,7 +4,7 @@ import re
 from datetime import datetime
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models import Course, Prerequisite, School, Department, PrerequisiteGroup, SameCredit, Section
+from models import Course, Prerequisite, School, Department, PrerequisiteGroup, SameCredit, Section, Subject, CourseSubject
 from openai import OpenAI
 
 # Set up the database connection
@@ -12,6 +12,8 @@ DATABASE_URL = "sqlite:///WPI_COURSE_LISTINGS.db"
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
 session = Session()
+
+print("filling that john")
 
 # Load the JSON data from the file
 with open('WPI_course_catalog.json', 'r') as file:
@@ -127,6 +129,17 @@ def parse_prerequisites(prerequisite_text):
 
     return reformatted_prerequisites
 
+def create_or_get_subjects(subject_names):
+    subjects = []
+    for name in subject_names:
+        subject = session.query(Subject).filter_by(name=name.strip()).first()
+        if not subject:
+            subject = Subject(name=name.strip())
+            session.add(subject)
+            session.flush()
+        subjects.append(subject)
+    return subjects
+
 # Process each course entry from the JSON data
 count = 1
 for entry in data.get('Report_Entry', []):
@@ -180,7 +193,6 @@ for entry in data.get('Report_Entry', []):
         'credits': credits,
         'level': entry.get('Academic_Level', ''),
         'description': description,
-        'subject': entry.get('Subject', ''),
         'department_id': None,  # To be set after checking for the department
         'school_id': None,      # To be set after checking for the school
     }
@@ -201,6 +213,11 @@ for entry in data.get('Report_Entry', []):
         session.add(department)
         session.commit()  # Commit to get the department ID
 
+    # Extract and process subjects
+    subject_string = entry.get('Subject', '')
+    subject_names = [s.strip() for s in subject_string.replace(',', ';').split(';')]
+    subjects = create_or_get_subjects(subject_names)
+
     # If the course does not exist, create it
     if not course:
         # Update course data with foreign key references
@@ -208,7 +225,12 @@ for entry in data.get('Report_Entry', []):
         course_data['department_id'] = department.id
         course = Course(**course_data)
         session.add(course)
-        session.commit()
+        session.flush()
+
+    # Associate subjects with the course
+    for subject in subjects:
+        course_subject = CourseSubject(course_id=course.course_id, subject_id=subject.id)
+        session.add(course_subject)
 
     # Create a new Section entry
     section_data = {
@@ -253,3 +275,5 @@ for entry in data.get('Report_Entry', []):
 
 # Close the session
 session.close()
+
+print("filled that john")

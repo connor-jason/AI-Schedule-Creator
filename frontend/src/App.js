@@ -2,8 +2,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
 function App() {
+    // State variables
     const [courses, setCourses] = useState([]);
-    const [sections, setSections] = useState([]);  // Add state for sections
+    const [sections, setSections] = useState([]);
     const [filterOptions, setFilterOptions] = useState({});
     const [selectedFilters, setSelectedFilters] = useState({
         delivery_mode: [],
@@ -13,7 +14,7 @@ function App() {
     const [course, setCourse] = useState(null);
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:5000/courses')
+        axios.get('http://127.0.0.1:5000/all_courses')
             .then(response => {
                 console.log('Courses fetched:', response.data);
                 setCourses(response.data);
@@ -27,7 +28,7 @@ function App() {
             })
             .catch(error => console.error('Error fetching filter options:', error));
 
-        axios.get('http://127.0.0.1:5000/sections')  // Fetch sections
+        axios.get('http://127.0.0.1:5000/sections')
             .then(response => {
                 console.log('Sections fetched:', response.data);
                 setSections(response.data);
@@ -35,32 +36,38 @@ function App() {
             .catch(error => console.error('Error fetching sections:', error));
     }, []);
 
-    useEffect(() => {
-        console.log('Component re-rendered');
-    }, [selectedFilters, courses]);
+// Callback function to filter courses based on selected filters
+const filteredCourses = useCallback(() => {
+    console.log('Filtering courses');
+    
+    // Base case: if no filters are selected, return all courses
+    if (Object.values(selectedFilters).every(arr => arr.length === 0)) {
+        return [];
+    }
+    
+    return courses.filter(course => {
+        // Filter sections for the current course
+        const courseSections = sections.filter(section => section.course_id === course.course_id);
+        
+        return courseSections.some(section => (
+            (selectedFilters.delivery_mode.length === 0 || selectedFilters.delivery_mode.includes(section.delivery_mode)) &&
+            (selectedFilters.offering_period.length === 0 || selectedFilters.offering_period.includes(section.offering_period))
+        )) &&
+        (selectedFilters.subject.length === 0 || selectedFilters.subject.some(sub => course.subjects.includes(sub)));
+    });
+}, [courses, sections, selectedFilters]); // Dependencies to recalculate filteredCourses when any of these change
 
-    const filteredCourses = useCallback(() => {
-        console.log('Filtering courses');
-        if (Object.values(selectedFilters).every(arr => arr.length === 0)) {
-            return [];
-        }
-        return courses.filter(course => {
-            const courseSections = sections.filter(section => section.course_id === course.course_id);
-            return courseSections.some(section => (
-                (selectedFilters.delivery_mode.length === 0 || selectedFilters.delivery_mode.includes(section.delivery_mode)) &&
-                (selectedFilters.offering_period.length === 0 || selectedFilters.offering_period.includes(section.offering_period))
-            )) &&
-            (selectedFilters.subject.length === 0 || selectedFilters.subject.includes(course.subject));
-        });
-    }, [courses, sections, selectedFilters]);
 
+    // Function to handle changes in filter checkboxes
     const handleFilterChange = (category, value) => {
         console.log('Checkbox clicked:', category, value);
         setSelectedFilters(prev => {
-            const updated = JSON.parse(JSON.stringify(prev)); // Create a deep copy
+            const updated = JSON.parse(JSON.stringify(prev)); // Create a deep copy to avoid mutating state directly
             if (updated[category].includes(value)) {
+                // If the value is already selected, remove it
                 updated[category] = updated[category].filter(item => item !== value);
             } else {
+                // If the value is not selected, add it
                 updated[category].push(value);
             }
             console.log('Updated filters:', updated);
@@ -68,6 +75,7 @@ function App() {
         });
     };
 
+    // fetch details of a specific course
     const fetchCourse = (courseId) => {
         axios.get(`http://127.0.0.1:5000/course/${courseId}`)
             .then(response => {
@@ -76,6 +84,7 @@ function App() {
             .catch(error => console.error('Error fetching course:', error));
     };
 
+    // display current filter and course info
     const debugInfo = (
         <div key={JSON.stringify(selectedFilters)} style={{border: '1px solid red', margin: '10px', padding: '10px'}}>
             <h3>Debug Info:</h3>
@@ -91,6 +100,7 @@ function App() {
             {debugInfo}
             <h1>Course List</h1>
             <div>
+                {/* Render filter options */}
                 {Object.keys(filterOptions).map(category => (
                     <div key={category}>
                         <h2>{category.replace('_', ' ').toUpperCase()}</h2>
@@ -116,6 +126,7 @@ function App() {
                 ))}
             </div>
             <ul>
+                {/* Render filtered courses */}
                 {filteredCourses().map(course => (
                     <li key={course.course_id}>
                         {course.title}
@@ -123,6 +134,7 @@ function App() {
                     </li>
                 ))}
             </ul>
+            {/* Render course details if a course is selected */}
             {course && (
                 <div>
                     <h2>Course Details</h2>

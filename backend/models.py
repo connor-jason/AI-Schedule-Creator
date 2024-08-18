@@ -23,21 +23,20 @@ class Department(Base):
 class Course(Base):
     __tablename__ = 'courses'
     
-    course_id = Column(String, primary_key=True)  # Unique course identifier (e.g., "PSY 4400")
-    title = Column(String, nullable=False)  # Title of the course (e.g., "Survey Design and Methodology")
-    credits = Column(Float)  # Credits for the course (e.g., 3.0)
-    level = Column(String)  # Academic level (e.g., "Undergraduate")
-    description = Column(String)  # Course description
-    subject = Column(String)  # Course subject (e.g., "Psychology")
-    department_id = Column(Integer, ForeignKey('departments.id'), nullable=False)  # Link to department
-    school_id = Column(Integer, ForeignKey('schools.id'), nullable=False)  # Link to school
+    course_id = Column(String, primary_key=True)
+    title = Column(String, nullable=False)
+    credits = Column(Float)
+    level = Column(String)
+    description = Column(String)
+    department_id = Column(Integer, ForeignKey('departments.id'), nullable=False)
+    school_id = Column(Integer, ForeignKey('schools.id'), nullable=False)
 
     department = relationship("Department", back_populates="courses")
     school = relationship("School", back_populates="courses")
     sections = relationship("Section", back_populates="course")
     prerequisites = relationship("PrerequisiteGroup", back_populates="course")
     same_credits = relationship("SameCredit", back_populates="course")
-    prerequisites = relationship("PrerequisiteGroup", back_populates="course")
+    subjects = relationship("CourseSubject", back_populates="course")
 
 
 class Section(Base):
@@ -60,6 +59,25 @@ class Section(Base):
     course = relationship("Course", back_populates="sections")
 
 
+class Subject(Base):
+    __tablename__ = 'subjects'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String, nullable=False, unique=True)
+    courses = relationship("CourseSubject", back_populates="subject")
+
+
+class CourseSubject(Base):
+    __tablename__ = 'course_subjects'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    course_id = Column(String, ForeignKey('courses.course_id'), nullable=False)
+    subject_id = Column(Integer, ForeignKey('subjects.id'), nullable=False)
+    
+    course = relationship("Course", back_populates="subjects")
+    subject = relationship("Subject", back_populates="courses")
+
+
 class PrerequisiteGroup(Base):
     __tablename__ = 'prerequisite_groups'
     
@@ -68,6 +86,7 @@ class PrerequisiteGroup(Base):
     prerequisites = relationship("Prerequisite", back_populates="prerequisite_group")  # Link to Prerequisite
 
     course = relationship("Course", back_populates="prerequisites")
+
 
 class Prerequisite(Base):
     __tablename__ = 'prerequisites'
