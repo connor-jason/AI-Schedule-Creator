@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 from sqlalchemy import create_engine, distinct
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, scoped_session
 from models import Base, CourseSubject, School, Department, Course, Section, PrerequisiteGroup, Prerequisite, SameCredit, Subject
 
 app = Flask(__name__)
@@ -11,16 +11,16 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 # Database setup
 DATABASE_URL = 'sqlite:///WPI_COURSE_LISTINGS.db'
 engine = create_engine(DATABASE_URL)
-Session = sessionmaker(bind=engine)
-session = Session()
+Session = scoped_session(sessionmaker(bind=engine))
 
-def filter_courses_by_prerequisites(courses, my_prerequisites):
+def filter_courses_by_prerequisites(courses, my_prerequisites, session):
     """
     Filter out courses that do not meet their prerequisite groups.
 
     Parameters:
     - courses: List of Course objects to check
     - my_prerequisites: List of course IDs and/or prerequisites that the user has
+    - session: Scoped session object
 
     Returns:
     - A list of Course objects that meet all prerequisite groups
@@ -52,13 +52,14 @@ def filter_courses_by_prerequisites(courses, my_prerequisites):
 
     return filtered_courses
 
-def remove_same_credit_courses(courses, my_prerequisites):
+def remove_same_credit_courses(courses, my_prerequisites, session):
     """
     Remove courses that have the same credit as any of the courses in my_prerequisites.
 
     Parameters:
     - courses: List of Course objects to check
     - my_prerequisites: List of course IDs for prerequisites taken
+    - session: Scoped session object
 
     Returns:
     - A filtered list of Course objects without courses that have the same credit as prerequisites
@@ -75,61 +76,81 @@ def remove_same_credit_courses(courses, my_prerequisites):
 
     return filtered_courses
 
-
 @app.route('/all_courses', methods=['GET'])
 def get_courses():
-    courses = session.query(Course).all()
-    data = []
-    for course in courses:
-        course_data = course.__dict__
-        course_data.pop('_sa_instance_state', None)
-        course_data['subjects'] = [cs.subject.name for cs in session.query(CourseSubject).filter_by(course_id=course.course_id).join(Subject).all()]
-        data.append(course_data)
-    
-    return jsonify(data)
+    session = Session()
+    try:
+        courses = session.query(Course).all()
+        data = []
+        for course in courses:
+            course_data = course.__dict__.copy()
+            course_data.pop('_sa_instance_state', None)
+            course_data['subjects'] = [cs.subject.name for cs in session.query(CourseSubject).filter_by(course_id=course.course_id).join(Subject).all()]
+            data.append(course_data)
+        
+        return jsonify(data)
+    finally:
+        Session.remove()
 
-
-connor = ["CS 1102", "CS 2103", "INTL 2100", "MA 1023", "MA 1024", "PH 1110", 
-                   "WPE 1601", "CS 2303", "CS 3733", "MA 2611", "MA 2621", "RE 1731", 
-                   "WR 2010", "BB 1025", "CS 3431", "PSY 1402", "MA 1021", "MA 1022", 
-                   "CS 1000", "EN 1000", "PSY 1400", "BB 1025", "CS 3431", "IMGD 2000", "PSY 1402"]
 @app.route('/filtered_courses/<my_prerequisites>', methods=['GET'])
 def get_filtered_courses(my_prerequisites):
-    all_courses = session.query(Section).all()
-    all_courses = filter_courses_by_prerequisites(all_courses, my_prerequisites)
-    all_courses = remove_same_credit_courses(all_courses, my_prerequisites)
-    
-    data = [course.__dict__ for course in all_courses]
-    for item in data:
-        item.pop('_sa_instance_state', None)
-    
-    return jsonify(data)
+    session = Session()
+    try:
+        prerequisites = session.query(Course).filter(Course.course_id.in_(my_prerequisites.split(','))).all()
+        
+        all_courses = session.query(Course).all()
+        all_courses = filter_courses_by_prerequisites(all_courses, prerequisites, session)
+        all_courses = remove_same_credit_courses(all_courses, prerequisites, session)
+        
+        data = []
+        for course in all_courses:
+            course_data = course.__dict__.copy()
+            course_data.pop('_sa_instance_state', None)
+            course_data['subjects'] = [cs.subject.name for cs in session.query(CourseSubject).filter_by(course_id=course.course_id).join(Subject).all()]
+            data.append(course_data)
+        
+        return jsonify(data)
+    finally:
+        Session.remove()
+
 
 @app.route('/course/<course_id>', methods=['GET'])
 def get_course(course_id):
-    course = session.query(Course).filter_by(course_id=course_id).first()
-    if course:
-        data = course.__dict__
-        data.pop('_sa_instance_state', None)
-        return jsonify(data)
-    return jsonify({'error': 'Course not found'}), 404
+    session = Session()
+    try:
+        course = session.query(Course).filter_by(course_id=course_id).first()
+        if course:
+            data = course.__dict__.copy()
+            data.pop('_sa_instance_state', None)
+            return jsonify(data)
+        return jsonify({'error': 'Course not found'}), 404
+    finally:
+        Session.remove()
 
 @app.route('/sections', methods=['GET'])
 def get_sections():
-    sections = session.query(Section).all()
-    data = [section.__dict__ for section in sections]
-    for item in data:
-        item.pop('_sa_instance_state', None)
-    return jsonify(data)
+    session = Session()
+    try:
+        sections = session.query(Section).all()
+        data = [section.__dict__.copy() for section in sections]
+        for item in data:
+            item.pop('_sa_instance_state', None)
+        return jsonify(data)
+    finally:
+        Session.remove()
 
 @app.route('/filter-options', methods=['GET'])
 def get_filter_options():
-    filters = {
-        "delivery_mode": [row[0] for row in session.query(distinct(Section.delivery_mode)).all() if row[0]],
-        "offering_period": [row[0] for row in session.query(distinct(Section.offering_period)).all() if row[0]],
-        "subject": [row[0] for row in session.query(distinct(Subject.name)).join(CourseSubject).join(Course).all() if row[0]]
-    }
-    return jsonify(filters)
+    session = Session()
+    try:
+        filters = {
+            "delivery_mode": [row[0] for row in session.query(distinct(Section.delivery_mode)).all() if row[0]],
+            "offering_period": [row[0] for row in session.query(distinct(Section.offering_period)).all() if row[0]],
+            "subject": [row[0] for row in session.query(distinct(Subject.name)).join(CourseSubject).join(Course).all() if row[0]]
+        }
+        return jsonify(filters)
+    finally:
+        Session.remove()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
