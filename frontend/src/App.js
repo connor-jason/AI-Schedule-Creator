@@ -5,36 +5,43 @@ import SearchCourses from './components/SearchCourses';
 import FilterOptions from './components/FilterOptions';
 import AvailableCourses from './components/AvailableCourses';
 import GenerateSchedules from './components/GenerateSchedules';
-
-const defaultTakenCourseIds = [
-    "CS 1102", "CS 2103", "INTL 2100", "MA 1023", "MA 1024", "PH 1110",
-    "WPE 1601", "CS 2303", "CS 3733", "MA 2611", "MA 2621", "RE 1731",
-    "WR 2010", "BB 1025", "CS 3431", "PSY 1402", "MA 1021", "MA 1022",
-    "CS 1000", "EN 1000", "PSY 1400", "BB 1025", "CS 3431", "IMGD 2000", "PSY 1402"
-];
+import UploadFile from './components/UploadFile';
+import SelectYear from './components/SelectYear';
+import SelectTerm from './components/SelectTerm';
+import EnterDescription from './components/EnterDescription';
+import './App.css';
 
 function App() {
     const [all_courses, setCourses] = useState([]);
     const [sections, setSections] = useState([]);
-    // filters the user selects
     const [selectedFilters, setSelectedFilters] = useState({
-        delivery_mode: [],
-        level: [],
+        delivery_mode: ["In-Person"], // assume people want in person classes
         offering_period: [],
-        subject: [],
-    });
-    // available options from db
+        level: [],
+        subject: []
+    });    
     const [filterOptions, setFilterOptions] = useState({
         delivery_mode: [],
-        level: [],
         offering_period: [],
-        subject: [],
-    });
+        level: [],
+        subject: []
+    });    
     const [course, setCourse] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
     const [availableCourses, setAvailableCourses] = useState([]);
     const [takenCourses, setTakenCourses] = useState([]);
     const [takenCourseIds, setTakenCourseIds] = useState([]);
+    const [currentStep, setCurrentStep] = useState(1);
+    const [selectedYear, setSelectedYear] = useState('');
+    const [selectedTerm, setSelectedTerm] = useState('');
+    const [description, setDescription] = useState('');
+
+    const defaultTakenCourseIds = [
+        "CS 1102", "CS 2103", "INTL 2100", "MA 1023", "MA 1024", "PH 1110",
+        "WPE 1601", "CS 2303", "CS 3733", "MA 2611", "MA 2621", "RE 1731",
+        "WR 2010", "BB 1025", "CS 3431", "PSY 1402", "MA 1021", "MA 1022",
+        "CS 1000", "EN 1000", "PSY 1400", "BB 1025", "CS 3431", "IMGD 2000", "PSY 1402"
+    ];
 
     useEffect(() => {
         axios.get('http://127.0.0.1:5001/all_courses')
@@ -135,15 +142,74 @@ function App() {
         setTakenCourseIds(takenCourseIds.filter(id => id !== courseId));
     };
 
+    const handleFileUpload = (file) => {
+        setCurrentStep(2);
+    };
+    
+    const handleYearSelected = (year) => {
+        setSelectedYear(year);
+        setCurrentStep(3);
+    };
+
+    const handleLevelChanged = (levels) => {
+        setSelectedFilters(prev => ({
+            ...prev,
+            level: levels
+        }));
+    };
+    
+    const handleTermSelected = (term) => {
+        setSelectedTerm(term);
+        setSelectedFilters(prev => ({
+            ...prev,
+            offering_period: [term]
+        }));
+        setCurrentStep(4);
+    };
+    
+    const handleDescriptionSubmitted = (desc) => {
+        setDescription(desc);
+        setCurrentStep(5);
+    };
+    
     return (
         <div className="App">
-            <DebugInfo
-                selectedFilters={selectedFilters}
-                filteredCourses={filteredCourses}
-                courses={availableCourses}
+    
+        {currentStep === 1 && (
+            <UploadFile onFileUpload={handleFileUpload} />
+        )}
+    
+        {currentStep === 2 && (
+            <SelectYear 
+            onYearSelected={handleYearSelected} 
+            onLevelChanged={handleLevelChanged} 
             />
-            <h1>Course List</h1>
+        )}
+    
+        {currentStep === 3 && (
+            <SelectTerm
+            onTermSelected={handleTermSelected}
+            termOptions={filterOptions.offering_period}
+            />
+        )}
+    
+        {currentStep === 4 && (
+            <EnterDescription onDescriptionSubmitted={handleDescriptionSubmitted} />
+        )}
+    
+    {currentStep === 5 && (
+        <div>
+            {/* Display gathered user data */}
+            <div className="user-data-summary">
+                <h2>User Input Summary</h2>
+                <p><strong>Selected Year:</strong> {selectedYear}</p>
+                <p><strong>Selected Term:</strong> {selectedTerm}</p>
+                <p><strong>Description:</strong> {description}</p>
+                <p><strong>Taken Courses:</strong> {takenCourses.map(course => course.title).join(', ')}</p>
+                <p><strong>Selected Filters:</strong> {JSON.stringify(selectedFilters)}</p>
+            </div>
 
+            {/* Render search, filters, available courses, and schedule generation */}
             <SearchCourses
                 courses={all_courses}
                 searchTerm={searchTerm}
@@ -164,9 +230,18 @@ function App() {
                 fetchCourse={fetchCourse}
             />
 
-            <GenerateSchedules availableCourses={filteredCourses()} />
+            <GenerateSchedules
+                availableCourses={filteredCourses()}
+                takenCourseIds={takenCourseIds}
+                selectedYear={selectedYear}
+                selectedTerm={selectedTerm}
+                description={description}
+            />
+        </div>
+    )}
+
         </div>
     );
-}
-
-export default App;
+    }
+    
+    export default App;

@@ -157,7 +157,6 @@ for entry in data.get('Report_Entry', []):
     credits = float(entry.get('Credits', 0)) if entry.get('Credits') else 0
     description = entry.get('Course_Description', '').strip()
     description = BeautifulSoup(description, "html.parser").get_text()
-    description = re.sub(r'^Cat\s*\.[I]{1,3}', '', description)
 
     # Extract recommended background
     rec_background = []

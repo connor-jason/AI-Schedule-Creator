@@ -1,4 +1,5 @@
-from flask import Flask, jsonify
+import os
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 from sqlalchemy import create_engine, distinct
 from sqlalchemy.orm import sessionmaker, scoped_session
@@ -129,6 +130,30 @@ def generate_schedules(courses):
     finally:
         Session.remove()
         
+# Ensure the upload folder exists
+UPLOAD_FOLDER = 'uploads'
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    # Check if the request has the file part
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part'}), 400
+    
+    file = request.files['file']
+    
+    # If user does not select a file, the browser also submits an empty part without filename
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+
+    # ensure its a xlsx file
+    if file and file.filename.endswith('.xlsx'):
+        filepath = os.path.join(UPLOAD_FOLDER, file.filename)
+        file.save(filepath)
+        return jsonify({'message': 'File successfully uploaded'}), 200
+    
+    return jsonify({'error': 'File type not allowed'}), 400
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
