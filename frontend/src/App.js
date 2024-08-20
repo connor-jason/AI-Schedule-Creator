@@ -98,10 +98,17 @@ function App() {
     };
 
     const fetchCourse = (courseId) => {
-        axios.get(`http://127.0.0.1:5001/course/${courseId}`)
-            .then(response => setCourse(response.data))
-            .catch(error => console.error('Error fetching course:', error));
+        return axios.get(`http://127.0.0.1:5001/course/${courseId}`)
+            .then(response => {
+                const { course_id, title, credits, level, description } = response.data;
+                return { course_id, title, credits, level, description };
+            })
+            .catch(error => {
+                console.error('Error fetching course:', error);
+                return null;
+            });
     };
+    
 
     const fetchAvailableCourses = useCallback(() => {
         const takenCourseIdsString = takenCourseIds.join(',');
