@@ -4,6 +4,7 @@ import DebugInfo from './components/Debug';
 import SearchCourses from './components/SearchCourses';
 import FilterOptions from './components/FilterOptions';
 import AvailableCourses from './components/AvailableCourses';
+import GenerateSchedules from './components/GenerateSchedules';
 
 const defaultTakenCourseIds = [
     "CS 1102", "CS 2103", "INTL 2100", "MA 1023", "MA 1024", "PH 1110",
@@ -15,15 +16,19 @@ const defaultTakenCourseIds = [
 function App() {
     const [all_courses, setCourses] = useState([]);
     const [sections, setSections] = useState([]);
+    // filters the user selects
     const [selectedFilters, setSelectedFilters] = useState({
         delivery_mode: [],
+        level: [],
         offering_period: [],
-        subject: []
+        subject: [],
     });
+    // available options from db
     const [filterOptions, setFilterOptions] = useState({
         delivery_mode: [],
+        level: [],
         offering_period: [],
-        subject: []
+        subject: [],
     });
     const [course, setCourse] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
@@ -43,8 +48,16 @@ function App() {
             })
             .catch(error => console.error('Error fetching courses:', error));
     
-        axios.get('http://127.0.0.1:5001/filter-options')
-            .then(response => setFilterOptions(response.data))
+            axios.get('http://127.0.0.1:5001/filter-options')
+            .then(response => {
+                // Sort subjects alphabetically
+                const sortedSubjects = response.data.subject.sort((a, b) => a.localeCompare(b));
+                setFilterOptions(prevOptions => ({
+                    ...prevOptions,
+                    ...response.data,
+                    subject: sortedSubjects
+                }));
+            })
             .catch(error => console.error('Error fetching filter options:', error));
     
         axios.get('http://127.0.0.1:5001/sections')
@@ -56,7 +69,7 @@ function App() {
         console.log('Filtering courses');
         
         if (Object.values(selectedFilters).every(arr => arr.length === 0)) {
-            return [];
+            return availableCourses;
         }
         
         return availableCourses.filter(course => {
@@ -64,7 +77,8 @@ function App() {
             
             return courseSections.some(section => (
                 (selectedFilters.delivery_mode?.length === 0 || selectedFilters.delivery_mode.includes(section.delivery_mode)) &&
-                (selectedFilters.offering_period?.length === 0 || selectedFilters.offering_period.includes(section.offering_period))
+                (selectedFilters.offering_period?.length === 0 || selectedFilters.offering_period.includes(section.offering_period)) &&
+                (selectedFilters.level?.length === 0 || selectedFilters.level.includes(course.level))
             )) &&
             (selectedFilters.subject?.length === 0 || selectedFilters.subject.some(sub => course.subjects?.includes(sub)));
         });
@@ -142,6 +156,8 @@ function App() {
                 availableCourses={filteredCourses()}
                 fetchCourse={fetchCourse}
             />
+
+            <GenerateSchedules availableCourses={filteredCourses()} />
         </div>
     );
 }

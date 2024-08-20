@@ -2,7 +2,8 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 from sqlalchemy import create_engine, distinct
 from sqlalchemy.orm import sessionmaker, scoped_session
-from models import Base, CourseSubject, School, Department, Course, Section, PrerequisiteGroup, Prerequisite, SameCredit, Subject
+from functions_for_api import filter_courses_by_prerequisites, generate_valid_combinations, get_course_subject, remove_same_credit_courses
+from models import Base, CourseSubject, Course, Section, Subject
 
 app = Flask(__name__)
 CORS(app)
@@ -12,69 +13,6 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 DATABASE_URL = 'sqlite:///WPI_COURSE_LISTINGS.db'
 engine = create_engine(DATABASE_URL)
 Session = scoped_session(sessionmaker(bind=engine))
-
-def filter_courses_by_prerequisites(courses, my_prerequisites, session):
-    """
-    Filter out courses that do not meet their prerequisite groups.
-
-    Parameters:
-    - courses: List of Course objects to check
-    - my_prerequisites: List of course IDs and/or prerequisites that the user has
-    - session: Scoped session object
-
-    Returns:
-    - A list of Course objects that meet all prerequisite groups
-    """
-    filtered_courses = []
-
-    for course in courses:
-        # Check all prerequisite groups for this course
-        prerequisite_groups = session.query(PrerequisiteGroup).filter(PrerequisiteGroup.parent_course_id == course.course_id).all()
-
-        meets_all_groups = True  # Flag to check if all groups are met
-
-        for group in prerequisite_groups:
-            # Get all prerequisites for the current group
-            prerequisites = [prerequisite.course_id for prerequisite in group.prerequisites if prerequisite.course_id]
-
-            # Check if the group contains only non-numeric words
-            if all(not any(char.isdigit() for char in prerequisite) for prerequisite in prerequisites):
-                # If all items in the group are non-numeric words, assume the requirement is met
-                continue
-
-            # Check if at least one prerequisite from this group is satisfied
-            if not any(prerequisite in my_prerequisites for prerequisite in prerequisites):
-                meets_all_groups = False
-                break  # Exit loop early if one group is not met
-
-        if meets_all_groups:
-            filtered_courses.append(course)
-
-    return filtered_courses
-
-def remove_same_credit_courses(courses, my_prerequisites, session):
-    """
-    Remove courses that have the same credit as any of the courses in my_prerequisites.
-
-    Parameters:
-    - courses: List of Course objects to check
-    - my_prerequisites: List of course IDs for prerequisites taken
-    - session: Scoped session object
-
-    Returns:
-    - A filtered list of Course objects without courses that have the same credit as prerequisites
-    """
-    prerequisite_ids = set(my_prerequisites)
-    filtered_courses = []
-
-    for course in courses:
-        # Retrieve courses with the same credit
-        same_credit_courses = session.query(SameCredit).filter(SameCredit.parent_course_id == course.course_id).all()
-
-        if not any(same_credit.course_id in prerequisite_ids for same_credit in same_credit_courses):
-            filtered_courses.append(course)
-
-    return filtered_courses
 
 @app.route('/all_courses', methods=['GET'])
 def get_courses():
@@ -96,17 +34,22 @@ def get_courses():
 def get_filtered_courses(my_prerequisites):
     session = Session()
     try:
-        prerequisites = session.query(Course).filter(Course.course_id.in_(my_prerequisites.split(','))).all()
+        prerequisite_course_ids = my_prerequisites.split(',')
         
         all_courses = session.query(Course).all()
-        all_courses = filter_courses_by_prerequisites(all_courses, prerequisites, session)
-        all_courses = remove_same_credit_courses(all_courses, prerequisites, session)
+        filtered_courses = filter_courses_by_prerequisites(all_courses, prerequisite_course_ids, session)
+        filtered_courses = remove_same_credit_courses(filtered_courses, prerequisite_course_ids, session)
         
         data = []
-        for course in all_courses:
-            course_data = course.__dict__.copy()
-            course_data.pop('_sa_instance_state', None)
-            course_data['subjects'] = [cs.subject.name for cs in session.query(CourseSubject).filter_by(course_id=course.course_id).join(Subject).all()]
+        for course in filtered_courses:
+            course_data = {
+                'course_id': course.course_id,
+                'title': course.title,
+                'credits': course.credits,
+                'level': course.level,
+                'description': course.description,
+                'subjects': [cs.subject.name for cs in session.query(CourseSubject).filter_by(course_id=course.course_id).join(Subject).all()]
+            }
             data.append(course_data)
         
         return jsonify(data)
@@ -146,11 +89,46 @@ def get_filter_options():
         filters = {
             "delivery_mode": [row[0] for row in session.query(distinct(Section.delivery_mode)).all() if row[0]],
             "offering_period": [row[0] for row in session.query(distinct(Section.offering_period)).all() if row[0]],
-            "subject": [row[0] for row in session.query(distinct(Subject.name)).join(CourseSubject).join(Course).all() if row[0]]
+            "subject": [row[0] for row in session.query(distinct(Subject.name)).join(CourseSubject).join(Course).all() if row[0]],
+            "level": [row[0] for row in session.query(distinct(Course.level)).all() if row[0]]
         }
         return jsonify(filters)
     finally:
         Session.remove()
+
+@app.route('/generate_schedules/<courses>', methods=['GET'])
+def generate_schedules(courses):
+    session = Session()
+    try:
+        course_list = courses.split(',')
+        sections = session.query(Section).filter(Section.course_id.in_(course_list)).filter(Section.section_id.notlike('%Interest%')).filter(Section.course_id.notlike('%X%')).all()
+        
+        # Generate schedules with 3 courses, prioritizing different subjects
+        schedules = generate_valid_combinations(sections, combination_size=3, session=session)
+
+        # Convert schedules and sections to serializable format
+        def section_to_dict(section):
+            return {
+                'course_id': section.course_id,
+                'section_id': section.section_id,
+                'meeting_patterns': section.meeting_patterns,
+                'instructional_format': section.instructional_format,
+                'cluster_id': section.cluster_id,
+                'subject': get_course_subject(section.course_id, session)
+            }
+        
+        # Convert each schedule to a dictionary
+        schedules_data = []
+        for schedule in schedules:
+            schedule_data = []
+            for section in schedule:
+                schedule_data.append(section_to_dict(section))
+            schedules_data.append(schedule_data)
+
+        return jsonify(schedules_data)
+    finally:
+        Session.remove()
+        
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)

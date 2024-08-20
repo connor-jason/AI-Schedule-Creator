@@ -45,6 +45,8 @@ class Section(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)  
     section_id = Column(String)  # Unique identifier for the section (e.g., "PSY 4400-A01")
     course_id = Column(String, ForeignKey('courses.course_id'), nullable=False)  # Link to course
+    cluster_id = Column(String)  # Unique identifier for the section
+    instructional_format = Column(String)  # Format of instruction (e.g., "Lecture")
     offering_period = Column(String)  # The term in which the section is offered (e.g., "2024 Fall A Term")
     section_status = Column(String)  # Status of the section (e.g., "Open")
     enrolled_capacity = Column(Integer)  # Enrolled capacity for the section

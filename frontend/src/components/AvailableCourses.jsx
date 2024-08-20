@@ -10,7 +10,7 @@ function AvailableCourses({ availableCourses, fetchCourse }) {
                         {course.title} ({course.course_id})
                         <button onClick={() => fetchCourse(course.course_id)}>View Details</button>
                     </li>
-                ))}
+                ))}x
             </ul>
         </div>
     );

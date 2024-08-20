@@ -6,6 +6,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models import Course, Prerequisite, School, Department, PrerequisiteGroup, SameCredit, Section, Subject, CourseSubject
 from openai import OpenAI
+from bs4 import BeautifulSoup
 
 # Set up the database connection
 DATABASE_URL = "sqlite:///WPI_COURSE_LISTINGS.db"
@@ -13,7 +14,7 @@ engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-print("filling that john")
+print("filling that jawn")
 
 # Load the JSON data from the file
 with open('WPI_course_catalog.json', 'r') as file:
@@ -154,7 +155,8 @@ for entry in data.get('Report_Entry', []):
 
     # Extract other course details
     credits = float(entry.get('Credits', 0)) if entry.get('Credits') else 0
-    description = entry.get('Course_Description', '').replace('<p>', '').replace('</p>', '').replace('Cat. I', '').strip()
+    description = entry.get('Course_Description', '').strip()
+    description = BeautifulSoup(description, "html.parser").get_text()
 
     # Extract recommended background
     rec_background = []
@@ -234,9 +236,11 @@ for entry in data.get('Report_Entry', []):
 
     # Create a new Section entry
     section_data = {
-        'section_id': section,  # Assuming section is unique (e.g., "PSY 4400-A01")
+        'section_id': section.split(' ')[0],  # Assuming section is unique (e.g., "PSY 4400-A01")
         'course_id': course_id,
+        'cluster_id': entry.get('CF_LRV_Cluster_Ref_ID', ''),
         'offering_period': entry.get('Offering_Period', ''),
+        'instructional_format': entry.get('Instructional_Format', ''),
         'delivery_mode': entry.get('Delivery_Mode', ''),
         'location': entry.get('Locations', ''),
         'start_date': parse_date(entry.get('Course_Section_Start_Date', '')),
@@ -276,4 +280,4 @@ for entry in data.get('Report_Entry', []):
 # Close the session
 session.close()
 
-print("filled that john")
+print("filled that jawn")

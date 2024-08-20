@@ -1675,5 +1675,329 @@
     },
     {
         ": Prior courses or projects (GPS, IQP) in health, medicine, or science writing. Exposure to anatomy and physiology would be helpful. The course is designed for 3rd and 4th year students with a strong interest in pursuing careers or continued education in medicine or public health.": "None"
+    },
+    {
+        ": AB1531 or instructor approval; this course is closed to nativespeakers of Arabic and heritage speakers except with written permission from the instructor.": "AB 1531 OR instructor approval"
+    },
+    {
+        ": AB1531 & AB1532 or instructor approval; this course is closed tonative speakers of Arabic and heritage speakers except with written permission from theinstructor.": "AB 1531 AND AB 1532 OR instructor approval"
+    },
+    {
+        ": AB1531, AB1532 & AB1533 or instructor approval; this courseis closed to native speakers of Arabic and heritage speakers except with written permission fromthe instructor.  Students cannot receive credit for both AB 210X and AB 2531.": "AB 1531 AND AB 1532 AND AB 1533 OR instructor approval"
+    },
+    {
+        ": AB1531, AB1532, AB1533 & AB2531 or instructor approval;this course is closed to native speakers of Arabic and heritage speakers except with writtenpermission from the instructor.Students cannot receive credit for both AB 220X and AB 2532.": "AB 1531 AND AB 1532 AND AB 1533 AND (AB 2531 OR instructor approval)"
+    },
+    {
+        ": AB1531, AB1532, AB1533, AB2531 & AB2532 or instructorapproval; this course is closed to native speakers of Arabic and heritage speakers except withwritten permission from the instructor.Students cannot receive credit for both AB 230X and AB 2533.": "AB 1531 AND AB 1532 AND AB 1533 AND AB 2531 AND AB 2532 OR instructor approval"
+    },
+    {
+        ": differential equations (MA2051 or equivalent), dynamics (ES 2503, PH 2101 or equivalent), thermodynamics (ES 3001, PH 2101, CH 3510 or equivalent). Students may not receive credit for both AE 2110 and AE 3602.": "MA 2051 OR equivalent AND ES 2503 OR PH 2101 OR equivalent AND ES 3001 OR PH 2101 OR CH 3510 OR equivalent."
+    },
+    {
+        ": ordinary differential equations (MA 2051 or equivalent), introductory dynamics (ES 2503, PH 2201 or equivalent), and linear algebra (MA 2071 or equivalent).Students may not receive credit for both AE 2310 and either AE/ME 3703 or AE 3713.": "MA 2051 OR equivalent AND ES 2503 OR PH 2201 OR equivalent AND MA 2071 OR equivalent."
+    },
+    {
+        ": multivariable calculus (MA 1024 or equivalent), differential equations (MA 2051 or equivalent), dynamics (ES 2503, PH 2201 or equivalent). Students may not receive credit for both AE 2320 and AE 2713.": "MA 1024 OR MA 2051 AND ES 2503 OR PH 2201"
+    },
+    {
+        ": differential, integral, multivariable calculus (MA 1021, MA 1022, MA 1024 or equivalent), mechanics (PH 1110, PH 1111, or equivalent). Students may not receive credit for both AE 2410 and AE 2712.": "MA 1021 AND MA 1022 AND (MA 1024 OR equivalent) AND (PH 1110 OR PH 1111 OR equivalent)"
+    },
+    {
+        ": thermodynamics (ES 3001, CH 3510 or equivalent), incompressible fluid dynamics (AE 2110 or equivalent). Students may not receive credit for both AE 3110 and AE 3410.": "ES 3001 OR CH 3510 AND AE 2110."
+    },
+    {
+        ": incompressible and compressible fluid dynamics (AE 2110, AE 3110 or equivalent). Students may not receive credit for both AE 3120 and AE 3711.": "AE 2110 AND (AE 3110 OR equivalent)"
+    },
+    {
+        ": introductory material science (ES 2001), and introductory stress analysis (AE 2410 or equivalent). Students may not receive credit for both AE 3430 and AE 4717.": "ES 2001 AND AE 2410 OR equivalent"
+    },
+    {
+        ": thermodynamics (ES 3001, CH 3510, PH 2101 or equivalent), compressible fluid dynamics (AE/ME 3110 or equivalent).Students may not receive credit for both AE 4210 and either AE 4710 or AE 4711.": "ES 3001 AND CH 3510 AND (PH 2101 OR equivalent) AND AE/ME 3110 OR equivalent AND NOT (AE 4210 AND (AE 4710 OR AE 4711))"
+    },
+    {
+        ": controls (AE 2310 or equivalent), attitude and position kinematics (AE 4733 or equivalent). Students may not receive credit for both AE 4310 and AE 4723.": "AE 2310 OR AE 4733 AND (AE 4310 OR AE 4723)"
+    },
+    {
+        ": dynamics (ES 2503, PH 2201, PH2202 or equivalent), control (AE 2310 or equivalent), aerospace structures (AE 3420 or equivalent). Students may not receive credit for both AE 4410 and AE 4712.": "ES 2503 AND PH 2201 AND (PH 2202 OR equivalent) AND AE 2310 AND AE 3420"
+    },
+    {
+        ": astronautics (AE 2320 or equivalent), space environments (AE/PH 2550), spacecraft dynamics and control (AE 4320 or equivalent), telecommunications (AE 3310),space structures (AE 3420 or equivalent), rocket propulsion (AE 4220 or equivalent). Students may not receive credit for both AE 4520 and AE 4771.": "AE 2320 OR AE 2550 AND AE 4320 OR AE 3310 AND AE 3420 OR AE 4220"
+    },
+    {
+        ": Basic knowledge of 3D modeling, texturing and animation (IMGD 2101 and IMGD 2201 or equivalent).Students may not receive credit for both IMGD 204X and AR/IMGD 2048.": "IMGD 2101 AND (IMGD 2201 OR equivalent)"
+    },
+    {
+        ": Basic 3D modeling skills (AR 1101)This course will be offered in 2020-21, and in alternating years thereafter.": "AR 1101"
+    },
+    {
+        ": Introductory architectural design (AREN 2002 or equivalent).Students may not receive credit for both AREN 2004 and AREN 3005": "AREN 2002 OR equivalent AND NOT (AREN 2004 AND AREN 3005)"
+    },
+    {
+        ": Building Physics and HVAC system design (AREN 3024 and AREN 3003) and Architectural Design (AREN 2002, AREN 2004, and AREN 3002 or equivalent).Students may not receive credit for both AREN 3020 and AREN 3025": "AREN 3024 AND AREN 3003 AND AREN 2002 AND AREN 2004 AND (AREN 3002 OR equivalent)"
+    },
+    {
+        ": Building Physics and HVAC system design (AREN 3024 and AREN 3003) and Architectural Design (AREN 2002, AREN 2004, and AREN 3002 or equivalent).Students may not receive credit for both AREN 3022 and AREN 3026": "AREN 3024 AND AREN 3003 AND AREN 2002 AND AREN 2004 AND (AREN 3002 OR equivalent)"
+    },
+    {
+        ": High school biology . Programming experience is not required .": "High school biology"
+    },
+    {
+        ": a working knowledge of concepts in biochemistry and molecular genetics (CH 4110 and 4120, or equivalent, and CH 4130 or BB 3950 or equivalent)": "CH 4110 AND CH 4120 OR EQUIVALENT AND (CH 4130 OR BB 3950 OR EQUIVALENT)"
+    },
+    {
+        ": CS 2102 or CS 2103, CS 2223, MA 2610 orMA 2611, and one or more biology courses.This course will be offered in 2019-20, and in alternating years thereafter": "CS 2102 OR CS 2103 AND CS 2223 AND (MA 2610 OR MA 2611) AND one or more biology courses"
+    },
+    {
+        ": MA 2612, MA 2631 (or MA 2621), and one or more biology courses.This course is offered in 2019-20, and in alternating years thereafter.": "MA 2612 AND (MA 2631 OR MA 2621) AND one or more biology courses"
+    },
+    {
+        ": Basic calculus and differential equations, basic chemistry and physics.": "MA 1021 AND PH 1110 AND CH 1010"
+    },
+    {
+        ": ME 3501 and fluid mechanics equivalent to ES 3004.This course will be offered in 2020-21, and in alternating years thereafter.": "ME 3501 AND ES 3004"
+    },
+    {
+        ": AREN 2023.This course will be offered in 2020-21, and in alternating years thereafter.": ""
+    },
+    {
+        ": CE 1030 and CE 2001.Some sections of this course may be offered as Writing Intensive (WI).": "CE 1030 AND CE 2001"
+    },
+    {
+        ": CE 2000 and CE 2001.Suggested background: GE 2341.": "CE 2000 AND CE 2001 AND GE 2341"
+    },
+    {
+        ": Recommended background: CE 2001, CE 3041, ES 3004. Suggested background: GE 2341.": "CE 2001 AND CE 3041 AND ES 3004 OR GE 2341"
+    },
+    {
+        ": ES 3004.This course will be offered in 2020-21, and in alternating years thereafter.": "ES 3004"
+    },
+    {
+        ": familiarity with transport phenomena, such as in ES 3004 (Fluid Mechanics) and ES 3002 (Mass Transfer), and familiarity with reaction kinetics and reactor design, such as through CHE 3201 (Kinetics and Reactor Design). Background such as CE 3059 (Environmental Engineering), CE 3060 (Water Treatment), or CE3061 (Wastewater Treatment) is suggested.This course will be offered in 2020-21, and in alternating years thereafter": "ES 3004 AND ES 3002 AND CHE 3201 AND (CE 3059 OR CE 3060 OR CE 3061)"
+    },
+    {
+        ": a solid foundation in elementary physics andcalculus.This course is normally for students in their third year.": "None"
+    },
+    {
+        ": Elementary college chemistry and calculus.Students may not receive credit towards CHE distribution requirements for both CHE 2011 and CM 2001.": "CHE 2011 AND MA 1021"
+    },
+    {
+        ": Elementary college chemistry and calculus and some familiarity with the topics listed in CHE 2011.Students may not receive credit towards CHE distribution requirements for both CHE 2012 and ES 3000.": "CHE 2011 AND MA 1021"
+    },
+    {
+        ": Elementary college chemistry and calculus and some familiarity with the topics listed in CHE 2011, CHE 2012, and CHE 2013.Students may not receive credit towards CHE distribution requirements for both CHE 2014 and CM 2002.Some sections of this course may be offered as Writing Intensive (WI).": "CHE 2011 AND CHE 2012 AND CHE 2013 AND MA 1021"
+    },
+    {
+        ": knowledge of chemistry (CH 1010, 1020, 1030), differential and integral calculus, and chemical processes (CHE 2011).Students may not receive credit for both CHE 3702 and CHE 320X.This course will be offered in 2019-20, and in alternating years thereafter.": "CH 1010 AND CH 1020 AND CH 1030 AND MA 1021 AND CHE 2011"
+    },
+    {
+        ": familiarity with techniques and procedures of chemical engineering design (CHE 4403), working knowledge of thermodynamics, heat, mass and momentum transfer, inorganic and organic chemistry, chemical kinetics and reactor design.This course meets the requirements for a core course and a Capstone Design course in chemical engineering. Students may not receive core credit for both CHE 4404 and CHE 4410.": "CHE 4403 AND (CHE 4404 OR CHE 4410)"
+    },
+    {
+        ": CN 1542.This course is closed to native speakers of Chinese and heritage speakers, except with written permission from the coordinator of the Chinese track.": "CN 1542"
+    },
+    {
+        ": CN 1543.This course is closed to native speakers of Chinese and heritage speakers, except with written permission from the coordinator of the Chinese track.": "CN 1543"
+    },
+    {
+        ": CN 2541 Intermediate Chinese I or the equivalent.This course is closed to native speakers of Chinese and heritage speakers except with written permission from the instructor.": "CN 2541 OR equivalent"
+    },
+    {
+        ": CN 2541.This course is closed to native speakers of Chinese and heritage speakers, except with written permission from the coordinator of the Chinese track.": "CN 2541"
+    },
+    {
+        ": CN 2542 or the equivalent.This course is closed to native speakers of Chinese and heritage speakers except with written permission from the instructor.": "CN 2542 OR equivalent"
+    },
+    {
+        ": CN 2542.This course satisfies the Inquiry Practicum requirement.This course is closed to native speakers of Chinese and heritage speakers, except with written permission from the coordinator of the Chinese track.": "CN 2542"
+    },
+    {
+        ": CN 3541 Advanced Intermediate Chinese I or equivalent.Students may not receive credit for both CN 3542 and CN 354X.": "CN 3541 OR equivalent AND NOT CN 3542 AND NOT CN 354X"
+    },
+    {
+        ": CS 2301 or CS 2303, or a significant knowledge of C/C++.": "CS 2301 OR CS 2303 OR C/C++ knowledge"
+    },
+    {
+        ": Knowledge of Machine Learning (CS 4342 ), Linear Algebra (such as MA 2071) and Probability (MA 2621 or MA 2631)": "CS 4342 AND MA 2071 AND (MA 2621 OR MA 2631)"
+    },
+    {
+        ": Algorithms (CS 2223 or equivalent), and some knowledge of probability.This course will be offered in 2020-21, and in alternating years thereafter.": "CS 2223 OR equivalent"
+    },
+    {
+        ": CS 2303 and CS 3733.This course will be offered in 2020-21, and in alternating years thereafter.": "CS 2303 AND CS 3733"
+    },
+    {
+        ": Multivariate Calculus (MA 1024 or MA 1034), Linear Algebra (such as MA 2071), Probability (MA 2621 or MA 2631), and Algorithms (CS 2223).Students may not earn credit for both CS 453X and CS 4342.Undergraduate credit may not be earned both for this course and for CS 539.": "MA 1024 OR MA 1034 AND MA 2071 AND MA 2621 OR MA 2631 AND CS 2223"
+    },
+    {
+        ": MA 2611, CS 2223, and CS 3431, or CS 3733.This course will be offered in 2019-20, and in alternating years thereafter.": "MA 2611 AND CS 2223 AND (CS 3431 OR CS 3733)"
+    },
+    {
+        ": CS 3013, CS 3516, and knowledge of probability. The course assumes a familiarity with operating systems including Unix or Linux and significant experience with C/C++.This course will be offered in 2019-20, and in alternating years thereafter.": "CS 3013 AND CS 3516 AND (knowledge of probability)"
+    },
+    {
+        ": Proficiency in programming in Java, including classes, inheritance, exceptions, interfaces, and polymorphism (CS 2102 or equivalent).Students may not earn credit for both CS 403X and CS 4518.": "CS 2102 OR equivalent AND NOT (CS 403X AND CS 4518)"
+    },
+    {
+        ": CS 2303, CS 3133, and experience programming in a functional language (as provided by CS 1101 or CS 1102).Undergraduate credit may not be earned for both this course and CS 536.This course will be offered in 2019-20, and in alternating years thereafter.": "CS 2303 AND CS 3133 AND (CS 1101 OR CS 1102)"
+    },
+    {
+        ": CS 4731.This course will be offered in 2020-21, and in alternating years thereafter.": "\"\""
+    },
+    {
+        ": Experience in expressing algorithms in a modern programming language (e.g., ECE 2049 or CS 2301).Suggested background: Discrete mathematics (CS 2022/MA 2201 or equivalent).": "ECE 2049 OR CS 2301 AND CS 2022 OR MA 2201"
+    },
+    {
+        ": Linear Algebra (MA 2071 or equivalent), AppliedStatistics and Regression (MA 2612 or equivalent), Probability (MA 2631 orequivalent). The ability to write computer programs in a scientific language isassumed.": "MA 2071 OR MA 2612 OR MA 2631"
+    },
+    {
+        ": ECE 2312 \u201cDiscrete-Time Signal and System Analysis\u201d; ECE 2305 \u201cIntroduction to Communications and Networks\u201d.  Suggested Background: ECE 2049 \u201cEmbedded Computing in Engineering Design\u201d.": "ECE 2049"
+    },
+    {
+        ": Working knowledge of economic principles or system dynamics concepts as covered in an introductory economics or system dynamics course such as ECON 1110, ECON 1120, SS1505 or SD1510.": "ECON 1110 OR ECON 1120 OR SS1505 OR SD1510"
+    },
+    {
+        ": Basic knowledge of fire behavior and control (FP 3070 or equivalent).Students cannot receive credit for both FP 4001 and FP 580S": "FP 3070 OR FP 4001 AND FP 580S"
+    },
+    {
+        ": GN 3511.This course satisfies the Inquiry Practicum requirement.": "GN 3511"
+    },
+    {
+        ": GN 3511 (Advanced German I) and GN 3512(Advanced German II) or equivalent.This course satisfies the Inquiry Practicum requirement.This course will be offered in 2020-21, and in alternating years thereafter.": "GN 3511 AND GN 3512 OR equivalent"
+    },
+    {
+        ": previous courses on Asia such as HU 1412, HI 2328, HI 2343, or RE 2724. Some sections of this course may be offered as Writing Intensive (WI).": "HU 1412 OR HI 2328 OR HI 2343 OR RE 2724"
+    },
+    {
+        ": SP 2521 and SP 2522 .This course will be offered in 2020-21, and in alternating years thereafter.": "SP 2521 AND SP 2522"
+    },
+    {
+        ": IMGD 1000.This course will be offered in 2016-17, and in alternating years thereafter.": ""
+    },
+    {
+        ": IMGD 1001, and either CS 2301 or CS 2303.This course will be offered in 2015-16, and in alternating years thereafter.": "IMGD 1001 AND (CS 2301 OR CS 2303)"
+    },
+    {
+        ": IMGD 1002, or equivalent knowledge.Students may not receive credit for both IMGD 4700 and IMGD 403X.This course will be offered in 2016-17, and in alternating years thereafter.": "IMGD 1002 OR equivalent knowledge"
+    },
+    {
+        ": Composition for non-native speakers of English(ISE 1801) or equivalent skills.This course satisfies the Inquiry Seminar requirement.Note: Students who have taken ISE 380X may not receive credit for thiscourse.This course will be offered in 2019-2020, and in alternate years thereafter.": "ISE 1801 OR equivalent skills"
+    },
+    {
+        ": JP200X or equivalent.": "JP 200X OR equivalent"
+    },
+    {
+        ": JP210X or equivalent.": "JP 210X OR equivalent"
+    },
+    {
+        ": Differential and integral calculus (MA1021 and MA 1022, or equivalent).Note: Students can receive credit for this class and MA1023 Calculus III.": "MA 1021 AND MA 1022 OR equivalent"
+    },
+    {
+        ": At least one actuarial course, such as MA 2211 or MA 3212.": "MA 2211 OR MA 3212"
+    },
+    {
+        ": computer-aided design (ES 1310), mechanics(ES 2501, ES 2502), and manufacturing (ME 1800).": "ES 1310 AND ES 2501 AND ES 2502 AND ME 1800"
+    },
+    {
+        ": prior knowledge of elementary calculus and physics, such as found in MA1021 (Calculus I), MA1022 (Calculus II), and PH1110 (General Physics \u2013 Mechanics).": "MA 1021 OR MA 1022 AND PH 1110"
+    },
+    {
+        ": mechanics (ES 2501, ES 2502, ES 2503),materials (ME 1800, ME 2820), computer programming (CS 1101 or CS 1102).": "ES 2501 AND ES 2502 AND ES 2503, ME 1800 AND ME 2820, CS 1101 OR CS 1102"
+    },
+    {
+        ": Ordinary Differential Equations (MA 2051),statics (ES 2501), dynamics (ES 2503).This course will be offered in 2020-21, and in alternating years thereafter.": "MA 2051 AND ES 2501 AND ES 2503"
+    },
+    {
+        ": manufacturing (ME 1800), materials processing(ME 2820), elementary computer/logic device programming.": "ME 1800 AND ME 2820"
+    },
+    {
+        ": introductory heat transfer (ES3003 orequivalent), introductory stress and dynamic mechanics (ES 2502 & ES 2503 orequivalents), introductory electrical and computer engineering (ES2010 orequivalent) and introductory materials (such as ES 2001 or equivalent).": "ES 3003 OR ES 2502 AND ES 2503 OR ES 2010 OR ES 2001"
+    },
+    {
+        ": Knowledge in thermodynamics (ES 3001), fluidmechanics (ES 3004), heat transfer (ES 3003), and introduction to design(ME 2300)": "ES 3001 AND ES 3004 AND ES 3003 AND ME 2300"
+    },
+    {
+        ": differential and integral calculus, and ordinary differential equations (MA 2051 or equivalent), and thermodynamics, fluid mechanics and heat transfer (ES 3001, 3004, 3003 or equivalents).Students may not receive credit for both ME 4424 and ME 442X.": "MA 2051 AND ES 3001 OR ES 3004 OR ES 3003"
+    },
+    {
+        ": MA 2051, ES 2001, ES 2502, ES 3003,ME 3901, and an introduction to design.This course will be offered in 2020-21, and in alternating years thereafter.": "MA 2051 AND ES 2001 AND ES 2502 AND ES 3003 AND ME 3901 AND introduction to design"
+    },
+    {
+        ": Ordinary Differential Equations (MA 2501),Statics (ES 2501), Dynamics (ES 2503).": "MA 2501 AND ES 2501 AND ES 2503"
+    },
+    {
+        ": Mathematics (MA 2051, MA 2071), Mechanics(ES 2501 & ES 2502 or CE 2000 & CE 2001).": "MA 2051 AND MA 2071, ES 2501 AND ES 2502 OR CE 2000 AND CE 2001"
+    },
+    {
+        ":ES 2001 Introduction to Materials or equivalent.": "ES 2001 OR equivalent"
+    },
+    {
+        ": No prerequisites. One previous course in music, U.S. history, or Africana Studies is strongly recommended.": "\"\""
+    },
+    {
+        ": BUS 3020 and MA 2612 or consent of theinstructor.": "BUS 3020 AND MA 2612 OR consent of the instructor."
+    },
+    {
+        ": Statistical knowledge equivalent to MA 2611.": "MA 2611"
+    },
+    {
+        ": working knowledge of material covered in PH 1111 and concurrent study of MA 1024 (or higher).Students concurrently taking MA 1022 or MA 1023 are advised to take PH 1120.Students may not receive credit for both PH 1121 and PH 1120 .": "PH 1111 AND MA 1024 OR MA 1022 OR MA 1023"
+    },
+    {
+        ": working knowledge of the material covered inPH 1110 and PH 1120 (or PH 1111 and PH 1121) and completion ofMA 1021, MA 1022 and MA 1023.": "(PH 1110 AND PH 1120) OR (PH 1111 AND PH 1121) AND MA 1021 AND MA 1022 AND MA 1023"
+    },
+    {
+        "is PH 1110 (or PH 1111), PH 1120 (or PH 1121),and especially PH 1130.Suggested background: PH 1140.This course will be offered in 2019-20, and in alternating years thereafter.": "PH 1110 OR PH 1111 AND PH 1120 OR PH 1121 AND PH 1130. Suggested background: PH 1140."
+    },
+    {
+        ": PH 2201 (Intermediate Mechanics II)": "\"\""
+    },
+    {
+        ": This course is intended as stand-alone in nature, introducing the concepts of quantum states through experiments, and as such prior coursework in quantum mechanics is not necessary. It is recommended that students have taken PH1130 (or equivalent), so that the concept of a photon is already familiar.": "PH 1130"
+    },
+    {
+        ": Introductory psychology (PSY 1400 or equivalent).Students may not receive credit for both PSY 1412 and PSY 141X.": "PSY 1400 OR equivalent"
+    },
+    {
+        ": knowledge of key terms and concepts as given inPY/RE 1731 and PY/RE 2731.This course will be offered in 2019-20, and in alternating years thereafter.": "PY 1731 AND PY 2731"
+    },
+    {
+        ": PY/RE 1731, Introduction to Philosophy andReligion or PY/RE 2731, Introduction to Ethics.": "PY 1731 OR PY 2731"
+    },
+    {
+        ": PY/RE 1731, Introduction to Philosophy andReligion.This course will be offered in 2020-21, and in alternating years thereafter.": "PY 1731 OR RE 1731"
+    },
+    {
+        ": Proficiency in programming (Preferably in Python), multi-variate calculus (MA1024), linear algebra (MA2071/2072), and probability (MA 2621/2631).": "Programming (Python) AND MA 1024 AND MA 2071 OR MA 2072 AND MA 2621 OR MA 2631"
+    },
+    {
+        ": C++/Python/Matlab programming; Linear algebra; Probability and statistics; Calculus.": "MA 1021 AND MA 2071 AND (C++ OR Python OR Matlab) AND Probability AND Statistics"
+    },
+    {
+        ": knowledge of key terms and concepts as given inPY/RE 1731.": "PY 1731"
+    },
+    {
+        ": Elementary Spanish II . This course is closed to native speakers of Spanish and heritage speakers except with written permission from the instructor.": ""
+    },
+    {
+        ": SP 2521.This course is closed to native speakers of Spanish and heritage speakers except with written permission from the instructor.": "SP 2521"
+    },
+    {
+        ": Intermediate Spanish II.This course is closed to native speakers of Spanish except with written permission from the instructor.": "None"
+    },
+    {
+        ": SP 3521 (Advanced Spanish I) and SP 3522 (Advanced Spanish II) or equivalent.This course will be offered in 2015-16, and in alternating years thereafter.This course satisfies the Inquiry Practicum requirement.": "SP 3521 AND SP 3522 OR equivalent"
+    },
+    {
+        ": previous courses in global public health, and completion or concurrent registration with a global public health-related MQP, IQP or ISU.This course will be offered in 2021-22, and in alternating years thereafter.": "None"
+    },
+    {
+        ": Some theatre or acting experience is desirable but the course issuitable for anyone with interest in the subject.Students may not receive credit for TH 2100 and TH 1100.": "TH 2100 OR TH 1100"
+    },
+    {
+        ": TH1100 (Introduction to Acting) or TH2100(Fundamentals of Acting)": "TH 1100 OR TH 2100"
+    },
+    {
+        ": One introductory course (1000 level) in professional writing in which students have translated scientific writing for diverse audiences (e.g.: WR 1011, Writing about Science & Technology). Foundational life sciences courses with emphasis in anatomy and physiology are also recommended.": "WR 1011"
     }
 ]
