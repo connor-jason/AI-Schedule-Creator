@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const UploadFile = ({ onFileUpload }) => {
+const UploadFile = ({ handleFileUpload }) => {
     const [file, setFile] = useState(null);
     const [loading, setLoading] = useState(false); // For showing a loading state if needed
 
@@ -23,8 +23,12 @@ const UploadFile = ({ onFileUpload }) => {
                     }
                 });
 
-                if (response.status === 200) {
-                    onFileUpload(file); // Move to the next step
+                if (response.status === 200) {  
+                    // Assuming the API returns a dict in response.data
+                    const data = JSON.stringify(response.data);
+
+                    // Pass the API response data to the parent component
+                    handleFileUpload(data);
                 } else {
                     alert('File upload failed, please try again.');
                 }

@@ -1,10 +1,13 @@
+import json
 import os
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import pandas as pd
 from sqlalchemy import create_engine, distinct
 from sqlalchemy.orm import sessionmaker, scoped_session
-from functions_for_api import filter_courses_by_prerequisites, generate_valid_combinations, get_course_subject, remove_same_credit_courses
+from functions_for_api import call_openai_api, filter_courses_by_prerequisites, generate_valid_combinations, get_course_subject, parse_xlsx_file, remove_same_classes, remove_same_credit_courses
 from models import Base, CourseSubject, Course, Section, Subject
+import re
 
 app = Flask(__name__)
 CORS(app)
@@ -40,6 +43,7 @@ def get_filtered_courses(my_prerequisites):
         all_courses = session.query(Course).all()
         filtered_courses = filter_courses_by_prerequisites(all_courses, prerequisite_course_ids, session)
         filtered_courses = remove_same_credit_courses(filtered_courses, prerequisite_course_ids, session)
+        filtered_courses = remove_same_classes(filtered_courses, prerequisite_course_ids, session)
         
         data = []
         for course in filtered_courses:
@@ -135,7 +139,7 @@ UPLOAD_FOLDER = 'uploads'
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
-@app.route('/upload', methods=['POST'])
+@app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
     # Check if the request has the file part
     if 'file' not in request.files:
@@ -145,15 +149,66 @@ def upload_file():
     
     # If user does not select a file, the browser also submits an empty part without filename
     if file.filename == '':
+        os.remove(filepath)
         return jsonify({'error': 'No selected file'}), 400
 
     # ensure its a xlsx file
-    if file and file.filename.endswith('.xlsx'):
-        filepath = os.path.join(UPLOAD_FOLDER, file.filename)
-        file.save(filepath)
-        return jsonify({'message': 'File successfully uploaded'}), 200
+    if file and not file.filename.endswith('.xlsx'):
+        os.remove(filepath)
+        return jsonify({'error': 'File type not allowed'}), 400
     
-    return jsonify({'error': 'File type not allowed'}), 400
+    filepath = os.path.join(UPLOAD_FOLDER, file.filename)
+    file.save(filepath)
+    req_dict = parse_xlsx_file(filepath)
+    os.remove(filepath)
+    return jsonify(req_dict)
+
+@app.route('/call_ai', methods=['GET'])
+def call_ai():
+    session = Session()
+    try:
+        # Pulling headers from the request
+        available_courses_header = request.headers.get('Available-Courses')
+        taken_course_ids_header = request.headers.get('Taken-Course-Ids')
+        selected_year = request.headers.get('Selected-Year')
+        description = request.headers.get('Description')
+        req_list = request.headers.get('Requirements')
+
+        # Convert the headers into more usable data
+        if available_courses_header:
+            available_courses = [course for course in session.query(Course).filter(Course.course_id.in_(available_courses_header.split(','))).all()]
+            available_courses = [(course.course_id + "-" + course.title + ": " + course.description + " ") for course in available_courses]
+        else:
+            available_courses = []
+
+        if taken_course_ids_header:
+            try:
+                taken_course_ids_list = json.loads(taken_course_ids_header)
+                taken_courses = [course for course in session.query(Course).filter(Course.course_id.in_(taken_course_ids_list)).all()]
+                taken_courses = [(course.course_id + "-" + course.title) for course in taken_courses]
+            except json.JSONDecodeError:
+                taken_courses = []
+        else:
+            taken_courses = []
+
+        response = call_openai_api(available_courses, taken_courses, selected_year, description, req_list)
+
+        print(response)
+
+        # Find all the strings between "[" and "]"
+        class_lists = re.findall(r'\[(.*?)\]', response)
+        
+        # Convert each match to a list containing the string
+        class_lists = ["[" + match + "]" for match in class_lists]
+
+        # Print the list of strings
+        set(class_lists)
+        print(class_lists)
+
+        return jsonify(class_lists), 200
+    finally:
+        Session.remove()
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)

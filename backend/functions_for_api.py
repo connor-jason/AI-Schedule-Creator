@@ -1,7 +1,28 @@
 from datetime import datetime
 from itertools import combinations, product
 import re
+import pandas as pd
 from models import Base, CourseSubject, School, Department, Course, Section, PrerequisiteGroup, Prerequisite, SameCredit, Subject
+from itertools import combinations, product
+from openai import OpenAI
+
+def remove_same_classes(courses, my_prerequisites, session): 
+    """
+    Remove courses that have the same title or course_id as the prerequisites.
+
+    Parameters:
+    - courses: List of Course objects to check
+    - my_prerequisites: List of course IDs for prerequisites taken
+    - session: Scoped session object
+
+    Returns:
+    - A filtered list of Course objects without courses that exclude prerequisites
+    """
+    prereqs = session.query(Course).filter(Course.course_id.in_(my_prerequisites)).all()
+    filtered_courses = [course for course in courses if not any(course.course_id in prereq.course_id or course.title in prereq.title for prereq in prereqs)]
+
+    return filtered_courses
+
 
 def filter_courses_by_prerequisites(courses, my_prerequisites, session):
     """
@@ -42,6 +63,7 @@ def filter_courses_by_prerequisites(courses, my_prerequisites, session):
 
     return filtered_courses
 
+
 def remove_same_credit_courses(courses, my_prerequisites, session):
     """
     Remove courses that have the same credit as any of the courses in my_prerequisites.
@@ -66,6 +88,7 @@ def remove_same_credit_courses(courses, my_prerequisites, session):
 
     return filtered_courses
 
+
 def parse_meeting_times(meeting_patterns):
     """
     Parse meeting patterns into a list of tuples with day, start time, and end time.
@@ -82,6 +105,7 @@ def parse_meeting_times(meeting_patterns):
     time_format = "%I:%M %p"
     
     return [(day, datetime.strptime(start_time, time_format).time(), datetime.strptime(end_time, time_format).time()) for day, start_time, end_time in matches]
+
 
 def sections_interfere(section1, section2):
     """
@@ -107,6 +131,7 @@ def sections_interfere(section1, section2):
                 
     return False
 
+
 def group_sections_by_cluster(sections):
     """
     Group sections by their cluster_id.
@@ -125,7 +150,6 @@ def group_sections_by_cluster(sections):
             clusters[section.cluster_id].append(section)
     return clusters
 
-from itertools import combinations, product
 
 def generate_valid_combinations(sections, combination_size=3, session=None):
     """
@@ -185,9 +209,72 @@ def generate_valid_combinations(sections, combination_size=3, session=None):
 
     return valid_combinations
 
+
 def get_course_subject(course_id, session):
     course_subject = session.query(CourseSubject).filter_by(course_id=course_id).first()
     if course_subject:
         subject = session.query(Subject).filter_by(id=course_subject.subject_id).first()
         return subject.name if subject else None
     return None
+
+
+def parse_xlsx_file(filepath):
+    """
+    Parse an Excel file and return a dictionary with aggregated data.
+
+    Parameters:
+    - filepath: Path to a FileStorage object from Flask
+
+    Returns:
+    - A dictionary with aggregated data from the Excel file
+    """
+    # Read the Excel file
+    df = pd.read_excel(filepath, skiprows=7, skipfooter=1)
+
+    df = df[df['Status'] != 'Satisfied']
+    df = df.loc[~df['Requirement'].str.contains('WPI Total Credits Required', na=False)]
+    df = df.loc[~df['Requirement'].str.contains('WPI Residency Requirement', na=False)]
+    df = df.loc[df['Remaining'].notna()]
+    df = df.drop(columns=['Grade', 'Academic Period', 'Credits', 'Registrations Used'])
+
+    # Group by 'Requirement' and aggregate other columns
+    grouped_df = df.groupby('Requirement').agg({
+        'Status': lambda x: ', '.join(set(x)),
+        'Remaining': lambda x: ', '.join(set(x))
+    })
+
+    # Convert DataFrame to dictionary
+    result_dict = grouped_df.to_dict(orient='index')
+
+    return result_dict
+
+def call_openai_api(available_courses, taken_courses, selected_year, description, req_list):
+    # Set your OpenAI API key
+    client = OpenAI(api_key="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")
+
+    # The prompt for OpenAI API
+    prompt = f"""
+    I want you to act as a course schedule picker. 
+    Based on the information about the student, including their year: [{selected_year}] and description about what they are looking for: "{description}", 
+    analyze their list of courses they have already taken: [{taken_courses}], and choose multiple combinations of 3 classes from the list of classes they are eligible to take: {available_courses}. 
+    When deciding which courses to recommend, consider the requirements they have remaining in order to complete their degree: [{req_list}]. Do not recommend courses that do not fulfill any of these requirements.
+    Recommend classes in areas the student has shown interest in and that will help them progress in their major. Prioritize schedules that offer balance, but appropriately cater to their degree requirements.
+    Avoid suggesting Varsity or Club sports unless explicitly mentioned in the description or taken in the past. Include enough varied combinations until you are confident that the student will have a good selection to choose from.
+    Please include justifications for each class you recommend and why they go well with other classes, as well as for this specific student. At the end of your response, format a summary of your combinations in dictionary format: 1: [course_id 1, course_id 2, course_id 3], etc.
+    """
+
+    # Send the prompt to the OpenAI API
+    completion = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {
+                    'role': 'system',
+                    'content': (
+                        prompt
+                    ),
+                },
+            ]
+        )
+
+    response = completion.choices[0].message.content
+    return response

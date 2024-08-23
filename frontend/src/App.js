@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import DebugInfo from './components/Debug';
 import SearchCourses from './components/SearchCourses';
 import FilterOptions from './components/FilterOptions';
 import AvailableCourses from './components/AvailableCourses';
@@ -26,7 +25,6 @@ function App() {
         level: [],
         subject: []
     });    
-    const [course, setCourse] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
     const [availableCourses, setAvailableCourses] = useState([]);
     const [takenCourses, setTakenCourses] = useState([]);
@@ -35,6 +33,7 @@ function App() {
     const [selectedYear, setSelectedYear] = useState('');
     const [selectedTerm, setSelectedTerm] = useState('');
     const [description, setDescription] = useState('');
+    const [reqList, setReqList] = useState(null);
 
     const defaultTakenCourseIds = [
         "CS 1102", "CS 2103", "INTL 2100", "MA 1023", "MA 1024", "PH 1110",
@@ -116,7 +115,6 @@ function App() {
             });
     };
     
-
     const fetchAvailableCourses = useCallback(() => {
         const takenCourseIdsString = takenCourseIds.join(',');
         axios.get(`http://127.0.0.1:5001/filtered_courses/${takenCourseIdsString}`)
@@ -142,7 +140,8 @@ function App() {
         setTakenCourseIds(takenCourseIds.filter(id => id !== courseId));
     };
 
-    const handleFileUpload = (file) => {
+    const handleFileUpload = (data) => {
+        setReqList(data);
         setCurrentStep(2);
     };
     
@@ -176,7 +175,7 @@ function App() {
         <div className="App">
     
         {currentStep === 1 && (
-            <UploadFile onFileUpload={handleFileUpload} />
+            <UploadFile handleFileUpload={handleFileUpload} />
         )}
     
         {currentStep === 2 && (
@@ -234,9 +233,10 @@ function App() {
                 availableCourses={filteredCourses()}
                 takenCourseIds={takenCourseIds}
                 selectedYear={selectedYear}
-                selectedTerm={selectedTerm}
                 description={description}
+                reqList={reqList}
             />
+
         </div>
     )}
 

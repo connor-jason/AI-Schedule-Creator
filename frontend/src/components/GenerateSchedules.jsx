@@ -1,22 +1,33 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function GenerateSchedules({ availableCourses }) {
-    const [schedules, setSchedules] = useState([]);
+function GenerateSchedules({ availableCourses, takenCourseIds, selectedYear, description, reqList }) {
+    const [result, setResult] = useState(''); // State to store the returned string
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const handleGenerateSchedules = () => {
         setLoading(true);
         setError(null);
+        setResult('');
 
         // Create a comma-separated list of course_ids
         const courseIds = availableCourses.map(course => course.course_id).join(',');
 
-        // Send a GET request with the available courses
-        axios.get(`http://127.0.0.1:5001/generate_schedules/${courseIds}`)
+        // Add all the relevant data to the headers
+        const headers = {
+            'Content-Type': 'application/json',
+            'Available-Courses': JSON.stringify(courseIds), // Available courses as a JSON string
+            'Taken-Course-Ids': JSON.stringify(takenCourseIds), // Taken courses as a JSON string
+            'Selected-Year': selectedYear, // Selected year
+            'Description': description, // Description
+            'Requirements': JSON.stringify(reqList), // API response as a JSON string
+        };
+
+        // Send a GET request with the headers
+        axios.get('http://127.0.0.1:5001/call_ai', { headers })
             .then(response => {
-                setSchedules(response.data); // Directly set response data as schedules
+                setResult(response.data); // Store the string in result
                 setLoading(false);
             })
             .catch(err => {
@@ -34,22 +45,7 @@ function GenerateSchedules({ availableCourses }) {
 
             {error && <p>{error}</p>}
 
-            {schedules.length > 0 && (
-                <div>
-                    {schedules.map((schedule, index) => (
-                        <div key={index}>
-                            <h3>Schedule {index + 1}</h3>
-                            <ul>
-                                {schedule.map((course, idx) => (
-                                    <li key={idx}>
-                                        {course.course_id}-{course.section_id} {course.instructional_format}: {course.meeting_patterns}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                </div>
-            )}
+            {result && <p>{result}</p>}
         </div>
     );
 }
