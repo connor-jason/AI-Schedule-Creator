@@ -254,14 +254,20 @@ def call_openai_api(available_courses, taken_courses, selected_year, description
 
     # The prompt for OpenAI API
     prompt = f"""
-    I want you to act as a course schedule picker. 
-    Based on the information about the student, including their year: [{selected_year}] and description about what they are looking for: "{description}", 
-    analyze their list of courses they have already taken: [{taken_courses}], and choose multiple combinations of 3 classes from the list of classes they are eligible to take: {available_courses}. 
+    I want you to act as a course schedule picker.
+    Based on the information about the student, including their year: [{selected_year}] and a description of what they are looking for: "{description}", analyze their list of courses they have already taken: [{taken_courses}], and choose multiple combinations of 3 classes from the list of classes they are eligible to take: {available_courses}.
     When deciding which courses to recommend, consider the requirements they have remaining in order to complete their degree: [{req_list}]. Do not recommend courses that do not fulfill any of these requirements.
     Recommend classes in areas the student has shown interest in and that will help them progress in their major. Prioritize schedules that offer balance, but appropriately cater to their degree requirements.
-    Avoid suggesting Varsity or Club sports unless explicitly mentioned in the description or taken in the past. Include enough varied combinations until you are confident that the student will have a good selection to choose from.
-    Please include justifications for each class you recommend and why they go well with other classes, as well as for this specific student. At the end of your response, format a summary of your combinations in dictionary format: 1: [course_id 1, course_id 2, course_id 3], etc.
+    Avoid suggesting Varsity or Club sports unless explicitly mentioned in the description or taken in the past.
+    Please provide your recommendations with justifications for each course in the list and why they complement other classes for this specific student.
+    Important: At the end of your response, format the final output in plain dictionary format like so:
+    {{
+    1: ["course_id_1", "course_id_2", "course_id_3"],
+    2: ["course_id_4", "course_id_5", "course_id_6"]
+    }}
+    Do not include any additional text or explanations inside the dictionary section. The dictionary section should be machine-readable and in pure Python list format.
     """
+
 
     # Send the prompt to the OpenAI API
     completion = client.chat.completions.create(

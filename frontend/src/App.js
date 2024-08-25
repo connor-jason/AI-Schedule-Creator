@@ -8,22 +8,22 @@ import UploadFile from './components/UploadFile';
 import SelectYear from './components/SelectYear';
 import SelectTerm from './components/SelectTerm';
 import EnterDescription from './components/EnterDescription';
-import './App.css';
+import './index.css';
 
 function App() {
     const [all_courses, setCourses] = useState([]);
     const [sections, setSections] = useState([]);
-    const [selectedFilters, setSelectedFilters] = useState({
-        delivery_mode: ["In-Person"], // assume people want in person classes
-        offering_period: [],
-        level: [],
-        subject: []
-    });    
     const [filterOptions, setFilterOptions] = useState({
         delivery_mode: [],
         offering_period: [],
         level: [],
         subject: []
+    });    
+    const [selectedFilters, setSelectedFilters] = useState({
+        delivery_mode: ["In-Person"], // assume people want in person classes
+        offering_period: [],
+        level: [],
+        subject: [],
     });    
     const [searchTerm, setSearchTerm] = useState('');
     const [availableCourses, setAvailableCourses] = useState([]);
@@ -54,7 +54,7 @@ function App() {
             })
             .catch(error => console.error('Error fetching courses:', error));
     
-            axios.get('http://127.0.0.1:5001/filter-options')
+        axios.get('http://127.0.0.1:5001/filter-options')
             .then(response => {
                 // Sort subjects alphabetically
                 const sortedSubjects = response.data.subject.sort((a, b) => a.localeCompare(b));
@@ -62,6 +62,12 @@ function App() {
                     ...prevOptions,
                     ...response.data,
                     subject: sortedSubjects
+                }));
+    
+                // Set selectedFilters.subject to include all subjects by default
+                setSelectedFilters(prevFilters => ({
+                    ...prevFilters,
+                    subject: sortedSubjects // Default all subjects to be checked
                 }));
             })
             .catch(error => console.error('Error fetching filter options:', error));
@@ -172,74 +178,41 @@ function App() {
     };
     
     return (
-        <div className="App">
-    
-        {currentStep === 1 && (
-            <UploadFile handleFileUpload={handleFileUpload} />
-        )}
-    
-        {currentStep === 2 && (
-            <SelectYear 
-            onYearSelected={handleYearSelected} 
-            onLevelChanged={handleLevelChanged} 
-            />
-        )}
-    
-        {currentStep === 3 && (
-            <SelectTerm
-            onTermSelected={handleTermSelected}
-            termOptions={filterOptions.offering_period}
-            />
-        )}
-    
-        {currentStep === 4 && (
-            <EnterDescription onDescriptionSubmitted={handleDescriptionSubmitted} />
-        )}
-    
-    {currentStep === 5 && (
-        <div>
-            {/* Display gathered user data */}
-            <div className="user-data-summary">
-                <h2>User Input Summary</h2>
-                <p><strong>Selected Year:</strong> {selectedYear}</p>
-                <p><strong>Selected Term:</strong> {selectedTerm}</p>
-                <p><strong>Description:</strong> {description}</p>
-                <p><strong>Taken Courses:</strong> {takenCourses.map(course => course.title).join(', ')}</p>
-                <p><strong>Selected Filters:</strong> {JSON.stringify(selectedFilters)}</p>
+        <div className="App app-bg">
+            <div className="min-h-screen flex flex-col items-center justify-center p-10">
+                    {currentStep === 1 && (
+                        <div id="glass" className="w-[80vw] h-[80vh] flex items-center justify-center p-16">
+                            <UploadFile handleFileUpload={handleFileUpload} className="z-10" />
+                        </div>
+                    )}
+                    {currentStep === 2 && (
+                        <div id="glass" className="w-[80vw] h-[80vh] flex items-center justify-center p-16">
+                            <SelectYear onYearSelected={handleYearSelected} onLevelChanged={handleLevelChanged} />
+                        </div>
+                    )}
+                    {currentStep === 3 && (
+                        <div id="glass" className="w-[80vw] h-[80vh] flex items-center justify-center p-16">
+                            <SelectTerm onTermSelected={handleTermSelected} termOptions={filterOptions.offering_period} />
+                        </div>
+                    )}
+                    {currentStep === 4 && (
+                        <div id="glass" className="w-[80vw] h-[80vh] flex items-center justify-center p-16">
+                            <EnterDescription onDescriptionSubmitted={handleDescriptionSubmitted} />
+                        </div>
+                    )}
+                {currentStep === 5 && (
+                    <div className="flex flex-row">
+                        <div id="glass" className="w-[45vw] h-[80vh] p-16 m-5">
+                            <GenerateSchedules availableCourses={availableCourses} takenCourseIds={takenCourseIds} selectedYear={selectedYear} description={description} reqList={reqList} />
+                        </div>
+                        <div id="glass" className="w-[45vw] h-[80vh] p-16 m-5">
+                            <SearchCourses courses={all_courses} searchTerm={searchTerm} handleSearchChange={setSearchTerm} addTakenCourse={addTakenCourse} removeTakenCourse={removeTakenCourse} takenCourses={takenCourses} />
+                            <FilterOptions filterOptions={filterOptions} selectedFilters={selectedFilters} handleFilterChange={handleFilterChange} />
+                            <AvailableCourses availableCourses={filteredCourses()} fetchCourse={fetchCourse} />
+                        </div>
+                    </div>
+                )}
             </div>
-
-            {/* Render search, filters, available courses, and schedule generation */}
-            <SearchCourses
-                courses={all_courses}
-                searchTerm={searchTerm}
-                handleSearchChange={setSearchTerm}
-                addTakenCourse={addTakenCourse}
-                removeTakenCourse={removeTakenCourse}
-                takenCourses={takenCourses}
-            />
-
-            <FilterOptions
-                filterOptions={filterOptions}
-                selectedFilters={selectedFilters}
-                handleFilterChange={handleFilterChange}
-            />
-
-            <AvailableCourses
-                availableCourses={filteredCourses()}
-                fetchCourse={fetchCourse}
-            />
-
-            <GenerateSchedules
-                availableCourses={filteredCourses()}
-                takenCourseIds={takenCourseIds}
-                selectedYear={selectedYear}
-                description={description}
-                reqList={reqList}
-            />
-
-        </div>
-    )}
-
         </div>
     );
     }

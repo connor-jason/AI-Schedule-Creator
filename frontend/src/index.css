@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,21 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#glass {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.app-bg {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQwIDMyMCI+CiAgPHBhdGggZmlsbD0iIzAwQjREOCIgZmlsbC1vcGFjaXR5PSIxIiBkPSJNMCwxMjhMMTEuNCwxMjhDMjIuOSwxMjgsNDYsMTI4LDY5LDEyOEM5MS40LDEyOCwxMTQsMTI4LDEzNywxMTcuM0MxNjAsMTA3LDE4Myw4NSwyMDYsMTEyQzIyOC42LDEzOSwyNTEsMjEzLDI3NCwyNDBDMjk3LjEsMjY3LDMyMCwyNDUsMzQzLDIwMi43QzM2NS43LDE2MCwzODksOTYsNDExLDk2QzQzNC4zLDk2LDQ1NywxNjAsNDgwLDE3MC43QzUwMi45LDE4MSw1MjYsMTM5LDU0OSwxMzguN0M1NzEuNCwxMzksNTk0LDE4MSw2MTcsMTg2LjdDNjQwLDE5Miw2NjMsMTYwLDY4NiwxNDRDNzA4LjYsMTI4LDczMSwxMjgsNzU0LDExMkM3NzcuMSw5Niw4MDAsNjQsODIzLDk2Qzg0NS43LDEyOCw4NjksMjI0LDg5MSwyMjkuM0M5MTQuMywyMzUsOTM3LDE0OSw5NjAsMTAxLjNDOTgyLjksNTMsMTAwNiw0MywxMDI5LDgwQzEwNTEuNCwxMTcsMTA3NCwyMDMsMTA5NywyMzQuN0MxMTIwLDI2NywxMTQzLDI0NSwxMTY2LDIzNC43QzExODguNiwyMjQsMTIxMSwyMjQsMTIzNCwyMDhDMTI1Ny4xLDE5MiwxMjgwLDE2MCwxMzAzLDEyOEMxMzI1LjcsOTYsMTM0OSw2NCwxMzcxLDY5LjNDMTM5NC4zLDc1LDE0MTcsMTE3LDE0MjksMTM4LjdMMTQ0MCwxNjBMMTQ0MCwwTDE0MjguNiwwQzE0MTcuMSwwLDEzOTQsMCwxMzcxLDBDMTM0OC42LDAsMTMyNiwwLDEzMDMsMEMxMjgwLDAsMTI1NywwLDEyMzQsMEMxMjExLjQsMCwxMTg5LDAsMTE2NiwwQzExNDIuOSwwLDExMjAsMCwxMDk3LDBDMTA3NC4zLDAsMTA1MSwwLDEwMjksMEMxMDA1LjcsMCw5ODMsMCw5NjAsMEM5MzcuMSwwLDkxNCwwLDg5MSwwQzg2OC42LDAsODQ2LDAsODIzLDBDODAwLDAsNzc3LDAsNzU0LDBDNzMxLjQsMCw3MDksMCw2ODYsMEM2NjIuOSwwLDY0MCwwLDYxNywwQzU5NC4zLDAsNTcxLDAsNTQ5LDBDNTI1LjcsMCw1MDMsMCw0ODAsMEM0NTcuMSwwLDQzNCwwLDQxMSwwQzM4OC42LDAsMzY2LDAsMzQzLDBDMzIwLDAsMjk3LDAsMjc0LDBDMjUxLjQsMCwyMjksMCwyMDYsMEMxODIuOSwwLDE2MCwwLDEzNywwQzExNC4zLDAsOTEsMCw2OSwwQzQ1LjcsMCwyMywwLDExLDBMMCwwWiI+PC9wYXRoPgo8L3N2Zz4K");
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }

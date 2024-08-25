@@ -1,3 +1,4 @@
+import ast
 import json
 import os
 from flask import Flask, jsonify, request
@@ -195,17 +196,19 @@ def call_ai():
 
         print(response)
 
-        # Find all the strings between "[" and "]"
-        class_lists = re.findall(r'\[(.*?)\]', response)
-        
-        # Convert each match to a list containing the string
-        class_lists = ["[" + match + "]" for match in class_lists]
+        dict_match = re.search(r'\{.*\}', response, re.DOTALL)
+        if dict_match:
+            dict_text = dict_match.group()
+        else:
+            raise ValueError("No dictionary text found in the response")
 
-        # Print the list of strings
-        set(class_lists)
-        print(class_lists)
+        # Convert the dictionary text to a Python dictionary
+        try:
+            course_combinations = ast.literal_eval(dict_text)
+        except (ValueError, SyntaxError) as e:
+            raise ValueError(f"Error parsing dictionary: {e}")
 
-        return jsonify(class_lists), 200
+        return jsonify(course_combinations), 200
     finally:
         Session.remove()
 
