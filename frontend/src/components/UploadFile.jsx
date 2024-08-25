@@ -45,12 +45,14 @@ const UploadFile = ({ handleFileUpload }) => {
     };
 
     return (
-        <div>
+        <div className="flex flex-col items-center justify-center">
             <h2>Upload Academic Progress .xlsx File</h2>
-            <input type="file" accept=".xlsx" onChange={handleFileChange} />
-            <button onClick={handleUpload} disabled={loading}>
-                {loading ? 'Uploading...' : 'Next'}
-            </button>
+            <div>
+                <input type="file" accept=".xlsx" onChange={handleFileChange} className="my-2 mr-2"/>
+                <button onClick={handleUpload} disabled={loading} className="border border-black rounded px-3 py-1">
+                    {loading ? 'Uploading...' : 'Next'}
+                </button>
+            </div>
         </div>
     );
 };

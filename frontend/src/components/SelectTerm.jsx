@@ -18,7 +18,7 @@ const handleNext = () => {
 return (
     <div>
     <h2>Which Term Would You Like to Generate Schedules For?</h2>
-    <select value={selectedTerm} onChange={handleTermChange}>
+    <select value={selectedTerm} onChange={handleTermChange} className="border border-black rounded px-3 py-1 my-2 mr-2">
         <option value="">Select Term</option>
         {termOptions.map((term) => (
         <option key={term} value={term}>
@@ -26,7 +26,7 @@ return (
         </option>
         ))}
     </select>
-    <button onClick={handleNext}>Next</button>
+    <button onClick={handleNext} className="border border-black rounded px-3 py-1">Next</button>
     </div>
 );
 };
