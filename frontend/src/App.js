@@ -202,13 +202,44 @@ function App() {
                     )}
                 {currentStep === 5 && (
                     <div className="flex flex-row">
-                        <div id="glass" className="w-[45vw] h-[80vh] p-16 m-5">
+                        <div id="glass" className="w-[45vw] h-[80vh] p-6 m-5">
                             <GenerateSchedules availableCourses={availableCourses} takenCourseIds={takenCourseIds} selectedYear={selectedYear} description={description} reqList={reqList} />
                         </div>
-                        <div id="glass" className="w-[45vw] h-[80vh] p-16 m-5">
-                            <SearchCourses courses={all_courses} searchTerm={searchTerm} handleSearchChange={setSearchTerm} addTakenCourse={addTakenCourse} removeTakenCourse={removeTakenCourse} takenCourses={takenCourses} />
-                            <FilterOptions filterOptions={filterOptions} selectedFilters={selectedFilters} handleFilterChange={handleFilterChange} />
-                            <AvailableCourses availableCourses={filteredCourses()} fetchCourse={fetchCourse} />
+                        <div id="glass" className="w-[45vw] h-[80vh] p-6 m-5 flex">
+                            <div id="bento-grid">
+                                <div className="left-stack">
+                                    <div className="item">
+                                        <SearchCourses
+                                        courses={all_courses}
+                                        searchTerm={searchTerm}
+                                        handleSearchChange={setSearchTerm}
+                                        addTakenCourse={addTakenCourse}
+                                        removeTakenCourse={removeTakenCourse}
+                                        takenCourses={takenCourses}
+                                        />
+                                    </div>
+
+                                    <div className="item">
+                                        <AvailableCourses
+                                        availableCourses={filteredCourses()}
+                                        fetchCourse={fetchCourse()}
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="right-stack">
+                                    {Object.entries(filterOptions).map(([category, options]) => (
+                                        <div className="item" key={category}>
+                                            <FilterOptions
+                                                category={category}
+                                                options={options}
+                                                selectedFilters={selectedFilters}
+                                                handleFilterChange={handleFilterChange}
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 )}
