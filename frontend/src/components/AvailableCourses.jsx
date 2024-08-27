@@ -3,19 +3,18 @@ import React, { useState } from 'react';
 function AvailableCourses({ availableCourses, fetchCourse }) {
     const [selectedCourse, setSelectedCourse] = useState(null);
 
-    const handleViewDetails = async (courseId) => {
-        const courseData = await fetchCourse(courseId);
-        setSelectedCourse(courseData);
-    };
+    // const handleViewDetails = async (courseId) => {
+    //     const courseData = await fetchCourse(courseId);
+    //     setSelectedCourse(courseData);
+    // };
 
     return (
         <div>
-            <h2>Available Courses</h2>
             <ul>
                 {availableCourses.map(course => (
                     <li key={course.course_id}>
                         {course.title} ({course.course_id})
-                        <button onClick={() => handleViewDetails(course.course_id)}>View Details</button>
+                        {/* <button onClick={() => handleViewDetails(course.course_id)}>View Details</button> */}
                     </li>
                 ))}
             </ul>

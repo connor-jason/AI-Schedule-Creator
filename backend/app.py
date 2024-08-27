@@ -196,19 +196,21 @@ def call_ai():
 
         print(response)
 
-        dict_match = re.search(r'\{.*\}', response, re.DOTALL)
-        if dict_match:
-            dict_text = dict_match.group()
-        else:
-            raise ValueError("No dictionary text found in the response")
+        return jsonify(response), 200
 
-        # Convert the dictionary text to a Python dictionary
-        try:
-            course_combinations = ast.literal_eval(dict_text)
-        except (ValueError, SyntaxError) as e:
-            raise ValueError(f"Error parsing dictionary: {e}")
+        # dict_match = re.search(r'\{.*\}', response, re.DOTALL)
+        # if dict_match:
+        #     dict_text = dict_match.group()
+        # else:
+        #     raise ValueError("No dictionary text found in the response")
 
-        return jsonify(course_combinations), 200
+        # # Convert the dictionary text to a Python dictionary
+        # try:
+        #     course_combinations = ast.literal_eval(dict_text)
+        # except (ValueError, SyntaxError) as e:
+        #     raise ValueError(f"Error parsing dictionary: {e}")
+
+        # return jsonify(course_combinations), 200
     finally:
         Session.remove()
 

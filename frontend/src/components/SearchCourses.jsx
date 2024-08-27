@@ -1,20 +1,8 @@
 import React from 'react';
 
-function SearchCourses({ courses, searchTerm, handleSearchChange, addTakenCourse, removeTakenCourse, takenCourses }) {
-    const searchedCourses = courses.filter(course => 
-        course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        course.course_id.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-
+function SearchCourses({ searchedCourses, takenCourses, addTakenCourse, removeTakenCourse }) {
     return (
-        <div>
-            <h2>Search and Select Taken Courses</h2>
-            <input
-                type="text"
-                placeholder="Search for courses..."
-                value={searchTerm}
-                onChange={(e) => handleSearchChange(e.target.value)}
-            />
+        <div className="scrollable-content">
             <ul>
                 {searchedCourses.slice(0, 10).map(course => (
                     <li key={course.course_id}>

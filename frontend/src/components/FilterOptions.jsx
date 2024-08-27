@@ -8,7 +8,6 @@ function FilterOptions({ category, options, selectedFilters, handleFilterChange 
 
     return (
         <div>
-            <h2>{category.replace('_', ' ').toUpperCase()}</h2>
             {options.map(value => (
                 <div key={value}>
                     <input

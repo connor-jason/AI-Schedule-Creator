@@ -109,17 +109,19 @@ function App() {
         });
     };
 
-    const fetchCourse = (courseId) => {
-        return axios.get(`http://127.0.0.1:5001/course/${courseId}`)
-            .then(response => {
-                const { course_id, title, credits, level, description } = response.data;
-                return { course_id, title, credits, level, description };
-            })
-            .catch(error => {
-                console.error('Error fetching course:', error);
-                return null;
-            });
-    };
+    const handleSearchChange = (value) => setSearchTerm(value);
+
+    // const fetchCourse = (courseId) => {
+    //     return axios.get(`http://127.0.0.1:5001/course/${courseId}`)
+    //         .then(response => {
+    //             const { course_id, title, credits, level, description } = response.data;
+    //             return { course_id, title, credits, level, description };
+    //         })
+    //         .catch(error => {
+    //             console.error('Error fetching course:', error);
+    //             return null;
+    //         });
+    // };
     
     const fetchAvailableCourses = useCallback(() => {
         const takenCourseIdsString = takenCourseIds.join(',');
@@ -145,6 +147,11 @@ function App() {
         setTakenCourses(takenCourses.filter(c => c.course_id !== courseId));
         setTakenCourseIds(takenCourseIds.filter(id => id !== courseId));
     };
+
+    const searchedCourses = all_courses.filter(course =>
+        course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        course.course_id.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     const handleFileUpload = (data) => {
         setReqList(data);
@@ -179,7 +186,7 @@ function App() {
     
     return (
         <div className="App app-bg">
-            <div className="min-h-screen flex flex-col items-center justify-center p-10">
+            <div className="min-h-screen flex flex-col items-center justify-center">
                     {currentStep === 1 && (
                         <div id="glass" className="w-[80vw] h-[80vh] flex items-center justify-center p-16">
                             <UploadFile handleFileUpload={handleFileUpload} className="z-10" />
@@ -202,40 +209,51 @@ function App() {
                     )}
                 {currentStep === 5 && (
                     <div className="flex flex-row">
-                        <div id="glass" className="w-[45vw] h-[80vh] p-6 m-5">
-                            <GenerateSchedules availableCourses={availableCourses} takenCourseIds={takenCourseIds} selectedYear={selectedYear} description={description} reqList={reqList} />
+                        <div id="glass" className="w-[45vw] h-[90vh] p-6 m-5">
+                            <GenerateSchedules availableCourses={filteredCourses()} takenCourseIds={takenCourseIds} selectedYear={selectedYear} description={description} reqList={reqList} />
                         </div>
-                        <div id="glass" className="w-[45vw] h-[80vh] p-6 m-5 flex">
+                        <div id="glass" className="w-[45vw] h-[90vh] p-6 m-5 flex">
                             <div id="bento-grid">
                                 <div className="left-stack">
-                                    <div className="item">
-                                        <SearchCourses
-                                        courses={all_courses}
-                                        searchTerm={searchTerm}
-                                        handleSearchChange={setSearchTerm}
+                                <div className="item">
+                                    <h2 className="font-bold">Search and Select Taken Courses</h2>
+                                    <input
+                                        type="text"
+                                        placeholder="Search for courses..."
+                                        value={searchTerm}
+                                        onChange={(e) => handleSearchChange(e.target.value)}
+                                    />
+                                    <SearchCourses
+                                        searchedCourses={searchedCourses}
+                                        takenCourses={takenCourses}
                                         addTakenCourse={addTakenCourse}
                                         removeTakenCourse={removeTakenCourse}
-                                        takenCourses={takenCourses}
-                                        />
-                                    </div>
+                                    />
+                                </div>
 
                                     <div className="item">
-                                        <AvailableCourses
-                                        availableCourses={filteredCourses()}
-                                        fetchCourse={fetchCourse()}
-                                        />
+                                        <h2 className="font-bold">Available Courses</h2>
+                                        <div className="scrollable-content">
+                                            <AvailableCourses
+                                                availableCourses={filteredCourses()}
+                                                // fetchCourse={fetchCourse()}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div className="right-stack">
                                     {Object.entries(filterOptions).map(([category, options]) => (
                                         <div className="item" key={category}>
-                                            <FilterOptions
-                                                category={category}
-                                                options={options}
-                                                selectedFilters={selectedFilters}
-                                                handleFilterChange={handleFilterChange}
-                                            />
+                                            <h2 className="font-bold">{category.replace(/_/g, ' ').replace(/\b\w/g, (match) => match.toUpperCase())}</h2>
+                                            <div className="scrollable-content">
+                                                <FilterOptions
+                                                    category={category}
+                                                    options={options}
+                                                    selectedFilters={selectedFilters}
+                                                    handleFilterChange={handleFilterChange}
+                                                />
+                                            </div>
                                         </div>
                                     ))}
                                 </div>

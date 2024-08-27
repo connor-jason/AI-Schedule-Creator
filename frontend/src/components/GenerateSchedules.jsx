@@ -45,7 +45,7 @@ function GenerateSchedules({ availableCourses, takenCourseIds, selectedYear, des
 
             {error && <p>{error}</p>}
 
-            {result && <p>{Object.entries(result)}</p>}
+            {result && <p>{result}</p>}
         </div>
     );
 }
