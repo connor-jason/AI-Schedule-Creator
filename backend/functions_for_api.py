@@ -249,7 +249,6 @@ def parse_xlsx_file(filepath):
     return result_dict
 
 def call_openai_api(available_courses, taken_courses, selected_year, description, req_list):
-    # Set your OpenAI API key
     client = OpenAI(api_key="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")
 
     # The prompt for OpenAI API
@@ -267,17 +266,26 @@ def call_openai_api(available_courses, taken_courses, selected_year, description
     # }}
     # Do not include any additional text or explanations inside the dictionary section. The dictionary section should be machine-readable and in pure Python list format.
     # """
+    # prompt = f"""
+    # I want you to act as a course schedule picker.
+    # Based on the information about the student, including their year: [{selected_year}] and a description of what they are looking for: "{description}", analyze their list of courses they have already taken: [{taken_courses}], to build a profile for the student.
+    # Next, look at the courses they have the opportunity to take: {available_courses} and and choose multiple combinations of 3 classes from the list of classes they are eligible to take.
+    # When deciding which courses to recommend, consider the requirements they have remaining in order to complete their degree: [{req_list}]. Do not recommend courses that do not fulfill any of these requirements.
+    # Recommend classes in areas the student has shown interest in and that will help them progress in their major. Prioritize schedules that offer balance, but appropriately cater to their degree requirements.
+    # Avoid suggesting Varsity or Club sports unless explicitly mentioned in the description or taken in the past.
+    # For each schedule, list the three courses and then provide with a brief justification for why each course in the list complements each other for this specific students interests and background.
+    # No yapping.
+    # """
     prompt = f"""
     I want you to act as a course schedule picker.
-    Based on the information about the student, including their year: [{selected_year}] and a description of what they are looking for: "{description}", analyze their list of courses they have already taken: [{taken_courses}], to build a profile for the student.
-    Next, look at the courses they have the opportunity to take: {available_courses} and and choose multiple combinations of 3 classes from the list of classes they are eligible to take.
-    When deciding which courses to recommend, consider the requirements they have remaining in order to complete their degree: [{req_list}]. Do not recommend courses that do not fulfill any of these requirements.
-    Recommend classes in areas the student has shown interest in and that will help them progress in their major. Prioritize schedules that offer balance, but appropriately cater to their degree requirements.
-    Avoid suggesting Varsity or Club sports unless explicitly mentioned in the description or taken in the past.
-    For each schedule, list the three courses and then provide with a brief justification for why each course in the list complements each other for this specific students interests and background.
-    No yapping.
+    Based on the student's year: [{selected_year}] and their description: "{description}", analyze their taken courses: [{taken_courses}] to build a student profile.
+    Next, examine the available courses: {available_courses} and suggest multiple combinations of 3 classes the student is eligible to take.
+    Ensure the courses meet their remaining degree requirements: [{req_list}]. Avoid recommending Varsity or Club sports unless specified or previously taken.
+    For each schedule, list the three courses and provide a **brief** justification for how they align with the student's interests and degree progress. Keep the justifications short and to the point.
+    Format:
+    1. COURSE_CODE_1, COURSE_CODE_2, COURSE_CODE_3 - [Justification]
+    2. COURSE_CODE_1, COURSE_CODE_2, COURSE_CODE_3 - [Justification]
     """
-
 
     # Send the prompt to the OpenAI API
     completion = client.chat.completions.create(
@@ -293,4 +301,20 @@ def call_openai_api(available_courses, taken_courses, selected_year, description
         )
 
     response = completion.choices[0].message.content
-    return response
+
+    print(response)
+    
+    return parse_response(response)
+
+# Function to parse the OpenAI response into a structured format
+def parse_response(response):
+    schedules = []
+    lines = response.split('\n')
+    for line in lines:
+        if line.strip():
+            schedule_and_justification = line.split('-')
+            if len(schedule_and_justification) == 2:
+                schedule = schedule_and_justification[0].strip()
+                justification = schedule_and_justification[1].strip()
+                schedules.append({"schedule": schedule, "justification": justification})
+    return schedules

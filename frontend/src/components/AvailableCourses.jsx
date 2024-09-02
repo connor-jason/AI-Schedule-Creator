@@ -9,7 +9,9 @@ function AvailableCourses({ availableCourses, fetchCourse }) {
     // };
 
     return (
-        <div>
+        <>
+        <h2 className="font-bold">Available Courses</h2>
+        <div className="scrollable-content">
             <ul>
                 {availableCourses.map(course => (
                     <li key={course.course_id}>
@@ -30,6 +32,7 @@ function AvailableCourses({ availableCourses, fetchCourse }) {
                 </div>
             )}
         </div>
+        </>
     );
 }
 

@@ -5,11 +5,13 @@ function GenerateSchedules({ availableCourses, takenCourseIds, selectedYear, des
     const [result, setResult] = useState(''); // State to store the returned string
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [selectedEntry, setSelectedEntry] = useState('');
 
     const handleGenerateSchedules = () => {
         setLoading(true);
         setError(null);
         setResult('');
+        setSelectedEntry('');
 
         // Create a comma-separated list of course_ids
         const courseIds = availableCourses.map(course => course.course_id).join(',');
@@ -45,7 +47,14 @@ function GenerateSchedules({ availableCourses, takenCourseIds, selectedYear, des
 
             {error && <p>{error}</p>}
 
-            {result && <p>{result}</p>}
+            <div className="flex flex-col">
+                {result && result.map(entry => (
+                    <button className="border border-black b-2 w-fit p-2" key={entry.id} onClick={() => setSelectedEntry(entry.justification)}>
+                        {entry.schedule}
+                    </button>
+                ))}
+                {selectedEntry && <p>{selectedEntry}</p>}
+            </div>
         </div>
     );
 }

@@ -38,11 +38,11 @@ code {
   height: 85vh; /* Set the height of the grid */
   display: grid;
   gap: 0.5vw;
-  grid-template-columns: 1fr 1fr; /* 2 equal columns */
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns: left, middle (2/3), right */
   grid-template-rows: 1fr 1fr; /* 2 equal rows */
   grid-template-areas: 
-    "left right"
-    "left right";
+    "left middle right"
+    "left middle right"
 }
 
 .item {
@@ -58,7 +58,14 @@ code {
   flex-direction: column;
   gap: 0.5vw;
   max-height: 100%; /* Limit the height of the stack */
-  overflow-y: auto; /* Scroll if the content overflows */
+}
+
+#bento-grid .middle-stack {
+  grid-area: middle;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  max-height: 100%; /* Limit the height of the stack */
 }
 
 #bento-grid .right-stack {
@@ -67,23 +74,31 @@ code {
   flex-direction: column;
   gap: 0.5vw;
   max-height: 100%; /* Limit the height of the stack */
-  overflow-y: auto; /* Scroll if the content overflows */
 }
 
 #bento-grid .item:nth-child(1),
 #bento-grid .item:nth-child(2) {
   flex: 1 1 auto;
-  max-height: 42vh; /* Limit the height of these items */
+  max-height: calc(83vh/2); /* Limit the height of these items */
 }
 
-#bento-grid .item:nth-child(3),
-#bento-grid .item:nth-child(4),
+#bento-grid .item:nth-child(3) {
+  flex: 2 1 auto;
+  max-height: calc(60vh); /* Limit the height of these items */
+}
+
+#bento-grid .item:nth-child(4) {
+  flex: 1 1 auto;
+  max-height: 23vh; /* Limit the height of these items */
+}
+
 #bento-grid .item:nth-child(5) {
   flex: 1 1 auto;
-  max-height: 25vh; /* Limit the height of these items */
+  max-height: 20vh; /* Limit the height of these items */
 }
 
 .scrollable-content {
   @apply overflow-y-auto;
-  max-height: calc(100% - 3rem); /* 2.5rem is the approximate height of the h2, adjust as needed */
+  padding: 2px;
+  max-height: calc(100% - 2rem);
 }

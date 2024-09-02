@@ -9,6 +9,7 @@ import SelectYear from './components/SelectYear';
 import SelectTerm from './components/SelectTerm';
 import EnterDescription from './components/EnterDescription';
 import './index.css';
+import RemoveNicheCourses from './components/RemoveNicheCourses';
 
 function App() {
     const [all_courses, setCourses] = useState([]);
@@ -25,11 +26,10 @@ function App() {
         level: [],
         subject: [],
     });    
-    const [searchTerm, setSearchTerm] = useState('');
     const [availableCourses, setAvailableCourses] = useState([]);
     const [takenCourses, setTakenCourses] = useState([]);
     const [takenCourseIds, setTakenCourseIds] = useState([]);
-    const [currentStep, setCurrentStep] = useState(1);
+    const [currentStep, setCurrentStep] = useState(5);
     const [selectedYear, setSelectedYear] = useState('');
     const [selectedTerm, setSelectedTerm] = useState('');
     const [description, setDescription] = useState('');
@@ -109,8 +109,6 @@ function App() {
         });
     };
 
-    const handleSearchChange = (value) => setSearchTerm(value);
-
     // const fetchCourse = (courseId) => {
     //     return axios.get(`http://127.0.0.1:5001/course/${courseId}`)
     //         .then(response => {
@@ -147,11 +145,6 @@ function App() {
         setTakenCourses(takenCourses.filter(c => c.course_id !== courseId));
         setTakenCourseIds(takenCourseIds.filter(id => id !== courseId));
     };
-
-    const searchedCourses = all_courses.filter(course =>
-        course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        course.course_id.toLowerCase().includes(searchTerm.toLowerCase())
-    );
 
     const handleFileUpload = (data) => {
         setReqList(data);
@@ -209,36 +202,29 @@ function App() {
                     )}
                 {currentStep === 5 && (
                     <div className="flex flex-row">
-                        <div id="glass" className="w-[45vw] h-[90vh] p-6 m-5">
+                        <div id="glass" className="w-[30vw] h-[90vh] p-6 m-5">
                             <GenerateSchedules availableCourses={filteredCourses()} takenCourseIds={takenCourseIds} selectedYear={selectedYear} description={description} reqList={reqList} />
                         </div>
-                        <div id="glass" className="w-[45vw] h-[90vh] p-6 m-5 flex">
+                        <div id="glass" className="w-[65vw] h-[90vh] p-6 m-5 flex">
                             <div id="bento-grid">
                                 <div className="left-stack">
-                                <div className="item">
-                                    <h2 className="font-bold">Search and Select Taken Courses</h2>
-                                    <input
-                                        type="text"
-                                        placeholder="Search for courses..."
-                                        value={searchTerm}
-                                        onChange={(e) => handleSearchChange(e.target.value)}
-                                    />
                                     <SearchCourses
-                                        searchedCourses={searchedCourses}
+                                        all_courses={all_courses}
                                         takenCourses={takenCourses}
                                         addTakenCourse={addTakenCourse}
                                         removeTakenCourse={removeTakenCourse}
                                     />
                                 </div>
 
+                                <div className="middle-stack">
                                     <div className="item">
-                                        <h2 className="font-bold">Available Courses</h2>
-                                        <div className="scrollable-content">
-                                            <AvailableCourses
-                                                availableCourses={filteredCourses()}
-                                                // fetchCourse={fetchCourse()}
-                                            />
-                                        </div>
+                                        <AvailableCourses
+                                            availableCourses={filteredCourses()}
+                                            // fetchCourse={fetchCourse()}
+                                        />
+                                    </div>
+                                    <div className="item">
+                                        <RemoveNicheCourses />
                                     </div>
                                 </div>
 
