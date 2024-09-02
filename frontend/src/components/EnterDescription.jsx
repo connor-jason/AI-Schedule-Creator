@@ -18,7 +18,7 @@ return (
             value={description}
             onChange={handleDescriptionChange}
             maxLength={500}
-            className="border border-black rounded px-3 py-1 m-3"
+            className="border border-black rounded px-3 py-1 m-3 w-[30vw] h-[15vh] resize-none"
         />
         <button onClick={handleSubmit} className="border border-black rounded px-3 py-1 w-fit">Generate Schedules</button>
     </div>

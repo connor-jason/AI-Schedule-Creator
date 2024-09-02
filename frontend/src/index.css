@@ -90,12 +90,17 @@ code {
 /* Middle stack: 2/3 and 1/3 split */
 #bento-grid .middle-stack > *:first-child {
   flex: 2;
-  max-height: 66%;
+  max-height: 50%;
 }
 
 #bento-grid .middle-stack > *:nth-child(2) {
   flex: 1;
-  max-height: 33%;
+  max-height: 25%;
+}
+
+#bento-grid .middle-stack > *:nth-child(3) {
+  flex: 1;
+  max-height: 25%;
 }
 
 /* Right stack: allows it to grow naturally */
@@ -110,9 +115,3 @@ code {
   max-height: calc(100% - 2rem);
 }
 
-
-.scrollable-content {
-  @apply overflow-y-auto;
-  padding: 2px;
-  max-height: calc(100% - 2rem);
-}

@@ -10,6 +10,7 @@ import SelectTerm from './components/SelectTerm';
 import EnterDescription from './components/EnterDescription';
 import './index.css';
 import RemoveNicheCourses from './components/RemoveNicheCourses';
+import DescriptionBox from './components/DescriptionBox';
 
 function App() {
     const [all_courses, setCourses] = useState([]);
@@ -237,6 +238,9 @@ function App() {
                                         <RemoveNicheCourses 
                                             setNicheCourses={setNicheCourses}
                                         />
+                                    </div>
+                                    <div className="item">
+                                        <DescriptionBox description={description} setDescription={setDescription} />
                                     </div>
                                 </div>
 

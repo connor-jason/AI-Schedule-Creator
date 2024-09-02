@@ -282,6 +282,7 @@ def call_openai_api(available_courses, taken_courses, selected_year, description
     Next, examine the available courses: {available_courses} and suggest multiple combinations of 3 classes the student is eligible to take.
     Ensure the courses meet their remaining degree requirements: [{req_list}]. Avoid recommending Varsity or Club sports unless specified or previously taken.
     For each schedule, list the three courses and provide a **brief** justification for how they align with the student's interests and degree progress. Keep the justifications short and to the point.
+    **IMPORTANT**
     Format:
     1. COURSE_CODE_1, COURSE_CODE_2, COURSE_CODE_3 - [Justification]
     2. COURSE_CODE_1, COURSE_CODE_2, COURSE_CODE_3 - [Justification]
