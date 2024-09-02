@@ -38,11 +38,11 @@ code {
   height: 85vh; /* Set the height of the grid */
   display: grid;
   gap: 0.5vw;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 columns: left, middle (2/3), right */
+  grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns: left, middle, right */
   grid-template-rows: 1fr 1fr; /* 2 equal rows */
   grid-template-areas: 
     "left middle right"
-    "left middle right"
+    "left middle right";
 }
 
 .item {
@@ -57,7 +57,7 @@ code {
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
-  max-height: 100%; /* Limit the height of the stack */
+  height: 100%;
 }
 
 #bento-grid .middle-stack {
@@ -65,7 +65,7 @@ code {
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
-  max-height: 100%; /* Limit the height of the stack */
+  height: 100%;
 }
 
 #bento-grid .right-stack {
@@ -73,29 +73,43 @@ code {
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
-  max-height: 100%; /* Limit the height of the stack */
+  height: 100%;
 }
 
-#bento-grid .item:nth-child(1),
-#bento-grid .item:nth-child(2) {
-  flex: 1 1 auto;
-  max-height: calc(83vh/2); /* Limit the height of these items */
+/* Left stack: half and half split */
+#bento-grid .left-stack > *:first-child {
+  flex: 1;
+  max-height: 50%;
 }
 
-#bento-grid .item:nth-child(3) {
-  flex: 2 1 auto;
-  max-height: calc(60vh); /* Limit the height of these items */
+#bento-grid .left-stack > *:nth-child(2) {
+  flex: 1;
+  max-height: 50%;
 }
 
-#bento-grid .item:nth-child(4) {
-  flex: 1 1 auto;
-  max-height: 23vh; /* Limit the height of these items */
+/* Middle stack: 2/3 and 1/3 split */
+#bento-grid .middle-stack > *:first-child {
+  flex: 2;
+  max-height: 66%;
 }
 
-#bento-grid .item:nth-child(5) {
-  flex: 1 1 auto;
-  max-height: 20vh; /* Limit the height of these items */
+#bento-grid .middle-stack > *:nth-child(2) {
+  flex: 1;
+  max-height: 33%;
 }
+
+/* Right stack: allows it to grow naturally */
+#bento-grid .right-stack > * {
+  flex: 1;
+  max-height: 23vh;
+}
+
+.scrollable-content {
+  overflow-y: auto;
+  padding: 2px;
+  max-height: calc(100% - 2rem);
+}
+
 
 .scrollable-content {
   @apply overflow-y-auto;

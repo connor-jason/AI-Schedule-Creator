@@ -41,7 +41,7 @@ function GenerateSchedules({ availableCourses, takenCourseIds, selectedYear, des
 
     return (
         <div>
-            <button onClick={handleGenerateSchedules} disabled={loading}>
+            <button className="border border-black b-2 p-1" onClick={handleGenerateSchedules} disabled={loading}>
                 {loading ? 'Generating...' : 'Generate Schedules'}
             </button>
 
@@ -49,7 +49,7 @@ function GenerateSchedules({ availableCourses, takenCourseIds, selectedYear, des
 
             <div className="flex flex-col">
                 {result && result.map(entry => (
-                    <button className="border border-black b-2 w-fit p-2" key={entry.id} onClick={() => setSelectedEntry(entry.justification)}>
+                    <button className="border border-black b-2 w-fit p-1" key={entry.id} onClick={() => setSelectedEntry(entry.justification)}>
                         {entry.schedule}
                     </button>
                 ))}

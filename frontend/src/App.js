@@ -29,9 +29,10 @@ function App() {
     const [availableCourses, setAvailableCourses] = useState([]);
     const [takenCourses, setTakenCourses] = useState([]);
     const [takenCourseIds, setTakenCourseIds] = useState([]);
-    const [currentStep, setCurrentStep] = useState(5);
+    const [currentStep, setCurrentStep] = useState(1);
     const [selectedYear, setSelectedYear] = useState('');
     const [selectedTerm, setSelectedTerm] = useState('');
+    const [nicheCourses, setNicheCourses] = useState([]);
     const [description, setDescription] = useState('');
     const [reqList, setReqList] = useState(null);
 
@@ -80,13 +81,23 @@ function App() {
     const filteredCourses = useCallback(() => {
         console.log('Filtering courses');
         
-        if (Object.values(selectedFilters).every(arr => arr.length === 0)) {
+        if (Object.values(selectedFilters).every(arr => arr.length === 0) && nicheCourses.length === 0) {
             return availableCourses;
         }
-        
+
         return availableCourses.filter(course => {
             const courseSections = sections.filter(section => section.course_id === course.course_id);
             
+            // Check for niche courses
+            const isNicheExcluded = nicheCourses.some(niche => {
+                return course.title.toLowerCase().includes(niche.toLowerCase());
+            });
+
+            // Skip this course if it matches any niche criteria
+            if (isNicheExcluded) {
+                return false;
+            }
+
             return courseSections.some(section => (
                 (selectedFilters.delivery_mode?.length === 0 || selectedFilters.delivery_mode.includes(section.delivery_mode)) &&
                 (selectedFilters.offering_period?.length === 0 || selectedFilters.offering_period.includes(section.offering_period)) &&
@@ -94,8 +105,7 @@ function App() {
             )) &&
             (selectedFilters.subject?.length === 0 || selectedFilters.subject.some(sub => course.subjects?.includes(sub)));
         });
-    }, [availableCourses, sections, selectedFilters]);
-    
+    }, [availableCourses, sections, selectedFilters, nicheCourses]);
 
     const handleFilterChange = (category, value) => {
         setSelectedFilters(prev => {
@@ -133,7 +143,7 @@ function App() {
             fetchAvailableCourses();
         }
     }, [takenCourseIds, fetchAvailableCourses]);
-
+    
     const addTakenCourse = (course) => {
         if (!takenCourses.some(c => c.course_id === course.course_id)) {
             setTakenCourses([...takenCourses, course]);
@@ -202,10 +212,10 @@ function App() {
                     )}
                 {currentStep === 5 && (
                     <div className="flex flex-row">
-                        <div id="glass" className="w-[30vw] h-[90vh] p-6 m-5">
+                        <div id="glass" className="w-[30vw] h-[90vh] p-6 m-3">
                             <GenerateSchedules availableCourses={filteredCourses()} takenCourseIds={takenCourseIds} selectedYear={selectedYear} description={description} reqList={reqList} />
                         </div>
-                        <div id="glass" className="w-[65vw] h-[90vh] p-6 m-5 flex">
+                        <div id="glass" className="w-[65vw] h-[90vh] p-6 m-3 flex">
                             <div id="bento-grid">
                                 <div className="left-stack">
                                     <SearchCourses
@@ -224,7 +234,9 @@ function App() {
                                         />
                                     </div>
                                     <div className="item">
-                                        <RemoveNicheCourses />
+                                        <RemoveNicheCourses 
+                                            setNicheCourses={setNicheCourses}
+                                        />
                                     </div>
                                 </div>
 
