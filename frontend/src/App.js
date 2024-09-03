@@ -30,10 +30,10 @@ function App() {
     const [availableCourses, setAvailableCourses] = useState([]);
     const [takenCourses, setTakenCourses] = useState([]);
     const [takenCourseIds, setTakenCourseIds] = useState([]);
-    const [currentStep, setCurrentStep] = useState(1);
+    const [currentStep, setCurrentStep] = useState(5);
     const [selectedYear, setSelectedYear] = useState('');
     const [selectedTerm, setSelectedTerm] = useState('');
-    const [nicheCourses, setNicheCourses] = useState([]);
+    const [nicheCourses, setNicheCourses] = useState(['Varsity', 'Club']);
     const [description, setDescription] = useState('');
     const [reqList, setReqList] = useState(null);
 
@@ -214,7 +214,7 @@ function App() {
                 {currentStep === 5 && (
                     <div className="flex flex-row">
                         <div id="glass" className="w-[30vw] h-[90vh] p-6 m-3">
-                            <GenerateSchedules availableCourses={filteredCourses()} takenCourseIds={takenCourseIds} selectedYear={selectedYear} description={description} reqList={reqList} />
+                            <GenerateSchedules availableCourses={filteredCourses()} takenCourseIds={takenCourseIds} selectedYear={selectedYear} description={description} reqList={reqList} sections={sections} selectedFilters={selectedFilters} />
                         </div>
                         <div id="glass" className="w-[65vw] h-[90vh] p-6 m-3 flex">
                             <div id="bento-grid">

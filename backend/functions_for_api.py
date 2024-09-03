@@ -151,14 +151,15 @@ def group_sections_by_cluster(sections):
     return clusters
 
 
-def generate_valid_combinations(sections, combination_size=3, session=None):
+def generate_valid_combinations(sections, selected_filters, session, combination_size=3):
     """
-    Generate all valid combinations of sections based on their interference,
+    Generate all valid combinations of sections based on their interference and filters,
     prioritizing schedules with different subjects and including all instructional formats.
 
     Parameters:
     - sections: List of Section objects
     - combination_size: Number of courses in each combination (default is 3)
+    - selected_filters: Dictionary with selected filters (e.g., {'delivery_mode': ['In-Person'], ...})
     - session: SQLAlchemy session
 
     Returns:
@@ -167,6 +168,15 @@ def generate_valid_combinations(sections, combination_size=3, session=None):
     valid_combinations = []
     count = 0
 
+    # Apply selected filters
+    if selected_filters:
+        filters = selected_filters
+        print('hello1')
+        sections = [section for section in sections if (
+            (filters['delivery_mode'] and section.delivery_mode in filters['delivery_mode']) and
+            (filters['offering_period'] or section.offering_period in filters['offering_period'])
+        )]
+        print('hello2')
     # Group sections by course_id and instructional_format
     course_sections = {}
     for section in sections:
@@ -202,12 +212,13 @@ def generate_valid_combinations(sections, combination_size=3, session=None):
             if all(not sections_interfere(flat_combination[i], flat_combination[j])
                    for i in range(len(flat_combination))
                    for j in range(i + 1, len(flat_combination))):
-                valid_combinations.append(flat_combination)
+                valid_combinations.append([serialize_section(section) for section in flat_combination])
                 count += 1
                 if count >= 100:
                     return valid_combinations
 
     return valid_combinations
+
 
 
 def get_course_subject(course_id, session):
@@ -248,7 +259,7 @@ def parse_xlsx_file(filepath):
 
     return result_dict
 
-def call_openai_api(available_courses, taken_courses, selected_year, description, req_list):
+def call_openai_api(available_courses, taken_courses, selected_year, description, req_list, session, selected_filters):
     client = OpenAI(api_key="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")
 
     # The prompt for OpenAI API
@@ -281,11 +292,11 @@ def call_openai_api(available_courses, taken_courses, selected_year, description
     Based on the student's year: [{selected_year}] and their description: "{description}", analyze their taken courses: [{taken_courses}] to build a student profile.
     Next, examine the available courses: {available_courses} and suggest multiple combinations of 3 classes the student is eligible to take.
     Ensure the courses meet their remaining degree requirements: [{req_list}]. Avoid recommending Varsity or Club sports unless specified or previously taken.
-    For each schedule, list the three courses and provide a **brief** justification for how they align with the student's interests and degree progress. Keep the justifications short and to the point.
+    For each schedule, list the three courses and provide a **brief** justification for how they align with the student's interests and degree progress. Keep the justifications short and to the point. Do not include the course title, just course codes.
     **IMPORTANT**
     Format:
-    1. COURSE_CODE_1, COURSE_CODE_2, COURSE_CODE_3 - [Justification]
-    2. COURSE_CODE_1, COURSE_CODE_2, COURSE_CODE_3 - [Justification]
+    COURSE_CODE_1, COURSE_CODE_2, COURSE_CODE_3 - [Justification]
+    COURSE_CODE_1, COURSE_CODE_2, COURSE_CODE_3 - [Justification]
     """
 
     # Send the prompt to the OpenAI API
@@ -305,17 +316,61 @@ def call_openai_api(available_courses, taken_courses, selected_year, description
 
     print(response)
     
-    return parse_response(response)
+    return parse_response(response, session, selected_filters)
 
 # Function to parse the OpenAI response into a structured format
-def parse_response(response):
+def parse_response(response, session, selected_filters):
     schedules = []
     lines = response.split('\n')
+    
+    # Loop through each line to parse schedules and justifications
     for line in lines:
         if line.strip():
             schedule_and_justification = line.split('-')
             if len(schedule_and_justification) == 2:
+                # Extract the schedule and justification
                 schedule = schedule_and_justification[0].strip()
                 justification = schedule_and_justification[1].strip()
-                schedules.append({"schedule": schedule, "justification": justification})
+
+                # Split schedule into full course IDs by commas (without splitting on spaces)
+                course_ids = [course.strip() for course in schedule.split(',')]
+                
+                # Query sections from the Section table for the given course_ids
+                sections = session.query(Section).filter(Section.course_id.in_(course_ids)).all()
+                print(course_ids)
+                print(section.course_id for section in sections)
+
+                # Generate valid combinations of sections for the schedule
+                valid_combinations = generate_valid_combinations(sections, selected_filters, session)
+                
+                # Append the schedule data to the list
+                schedules.append({
+                    "schedule": course_ids,
+                    "justification": justification,
+                    "schedules": valid_combinations
+                })
+
+                print(schedules[-1].get("schedules"))  # Debugging print to show the schedules generated
+
     return schedules
+
+def serialize_section(section):
+    """
+    Convert a Section object into a serializable dictionary.
+    """
+    return {
+        "id": section.id,
+        "section_id": section.section_id,
+        "course_id": section.course_id,
+        "instructional_format": section.instructional_format,
+        "offering_period": section.offering_period,
+        "section_status": section.section_status,
+        "enrolled_capacity": section.enrolled_capacity,
+        "waitlist_capacity": section.waitlist_capacity,
+        "delivery_mode": section.delivery_mode,
+        "location": section.location,
+        "start_date": section.start_date.isoformat() if section.start_date else None,
+        "end_date": section.end_date.isoformat() if section.end_date else None,
+        "meeting_patterns": section.meeting_patterns,
+        "instructor": section.instructor
+    }

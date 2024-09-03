@@ -174,6 +174,7 @@ def call_ai():
         selected_year = request.headers.get('Selected-Year')
         description = request.headers.get('Description')
         req_list = request.headers.get('Requirements')
+        selected_filters_header = request.headers.get('Selected-Filters')  # Add this line
 
         # Convert the headers into more usable data
         if available_courses_header:
@@ -192,7 +193,15 @@ def call_ai():
         else:
             taken_courses = []
 
-        response = call_openai_api(available_courses, taken_courses, selected_year, description, req_list)
+        # Process selected filters
+        selected_filters = {}
+        if selected_filters_header:
+            try:
+                selected_filters = json.loads(selected_filters_header)
+            except json.JSONDecodeError:
+                selected_filters = {}
+
+        response = call_openai_api(available_courses, taken_courses, selected_year, description, req_list, session, selected_filters)
 
         print(response)
 
@@ -200,6 +209,7 @@ def call_ai():
 
     finally:
         Session.remove()
+
 
 
 if __name__ == '__main__':

@@ -24,9 +24,9 @@ function SearchCourses({ all_courses, takenCourses, addTakenCourse, removeTakenC
                 <div className="scrollable-content h-[calc(100%-3rem)]">
                     <ul>
                         {searchedCourses.slice(0, 10).map(course => (
-                            <li key={course.course_id}>
+                            <li className="px-2" key={course.course_id}>
                                 {course.title} ({course.course_id})
-                                <button className="border border-black b-2" onClick={() => addTakenCourse(course)}>Add</button>
+                                <button className="border border-black b-2 hover:underline rounded-xl px-1" onClick={() => addTakenCourse(course)}>Add</button>
                             </li>
                         ))}
                     </ul>
@@ -37,9 +37,9 @@ function SearchCourses({ all_courses, takenCourses, addTakenCourse, removeTakenC
             <div className="scrollable-content">
                 <ul>
                     {takenCourses.map(course => (
-                        <li key={course.course_id}>
+                        <li className="px-2" key={course.course_id}>
                             {course.title} ({course.course_id})
-                            <button className="border border-black b-2" onClick={() => removeTakenCourse(course.course_id)}>Remove</button>
+                            <button className="border border-black b-2 hover:underline rounded-xl px-1" onClick={() => removeTakenCourse(course.course_id)}>Remove</button>
                         </li>
                     ))}
                 </ul>
