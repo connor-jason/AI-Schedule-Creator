@@ -203,8 +203,6 @@ def call_ai():
 
         response = call_openai_api(available_courses, taken_courses, selected_year, description, req_list, session, selected_filters)
 
-        print(response)
-
         return jsonify(response), 200
 
     finally:

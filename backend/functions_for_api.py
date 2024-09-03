@@ -91,44 +91,36 @@ def remove_same_credit_courses(courses, my_prerequisites, session):
 
 def parse_meeting_times(meeting_patterns):
     """
-    Parse meeting patterns into a list of tuples with day, start time, and end time.
-
-    Parameters:
-    - meeting_patterns: A string with meeting patterns (e.g., "W | 12:00 PM - 12:50 PM; R | 2:00 PM - 3:50 PM")
-
-    Returns:
-    - A list of tuples (day, start_time, end_time)
+    Parse meeting patterns into a list of (day, start_time, end_time) tuples.
     """
-    pattern = r"([MTWTF|S]+) \| (\d{1,2}:\d{2} (?:AM|PM)) - (\d{1,2}:\d{2} (?:AM|PM))"
-    matches = re.findall(pattern, meeting_patterns)
-    
-    time_format = "%I:%M %p"
-    
-    return [(day, datetime.strptime(start_time, time_format).time(), datetime.strptime(end_time, time_format).time()) for day, start_time, end_time in matches]
-
+    patterns = meeting_patterns.split('\n')
+    result = []
+    for pattern in patterns:
+        if '|' in pattern:
+            days, times = pattern.split('|')
+            days = days.strip().split('-')
+            start_time, end_time = times.strip().split('-')
+            start_time = datetime.strptime(start_time.strip(), '%I:%M %p').time()
+            end_time = datetime.strptime(end_time.strip(), '%I:%M %p').time()
+            for day in days:
+                if day:  # Skip empty strings
+                    result.append((day, start_time, end_time))
+    return result
 
 def sections_interfere(section1, section2):
     """
     Check if two sections interfere with each other based on their meeting days and times.
-
-    Parameters:
-    - section1: Section object for the first section
-    - section2: Section object for the second section
-
-    Returns:
-    - True if the sections interfere, False otherwise
     """
     times1 = parse_meeting_times(section1.meeting_patterns)
     times2 = parse_meeting_times(section2.meeting_patterns)
     
-    days1 = set(day.strip() for day, _, _ in times1)
-    days2 = set(day.strip() for day, _, _ in times2)
-    
     for day1, start1, end1 in times1:
         for day2, start2, end2 in times2:
-            if days1 & days2 and not (end1 <= start2 or end2 <= start1):
-                return True
-                
+            if day1 == day2:  # Same day
+                # Check for time overlap
+                if (start1 < end2 and end1 > start2) or (start2 < end1 and end2 > start1):
+                    return True
+    
     return False
 
 
@@ -171,12 +163,16 @@ def generate_valid_combinations(sections, selected_filters, session, combination
     # Apply selected filters
     if selected_filters:
         filters = selected_filters
-        print('hello1')
+        for section in sections:
+            print(filters["delivery_mode"], section.delivery_mode)
+            print(filters["offering_period"], section.offering_period)
+            print(get_course_subject(section.course_id, session), filters["subject"])
+
         sections = [section for section in sections if (
-            (filters['delivery_mode'] and section.delivery_mode in filters['delivery_mode']) and
-            (filters['offering_period'] or section.offering_period in filters['offering_period'])
+            (section.delivery_mode in filters['delivery_mode']) and
+            (section.offering_period in filters['offering_period']) and
+            (get_course_subject(section.course_id, session) in filters['subject'])
         )]
-        print('hello2')
     # Group sections by course_id and instructional_format
     course_sections = {}
     for section in sections:
@@ -210,8 +206,8 @@ def generate_valid_combinations(sections, selected_filters, session, combination
             flat_combination = [s for sections in section_combination for s in sections]
             # Check each combination of sections for interference
             if all(not sections_interfere(flat_combination[i], flat_combination[j])
-                   for i in range(len(flat_combination))
-                   for j in range(i + 1, len(flat_combination))):
+                for i in range(len(flat_combination))
+                for j in range(i + 1, len(flat_combination))):
                 valid_combinations.append([serialize_section(section) for section in flat_combination])
                 count += 1
                 if count >= 100:
@@ -291,7 +287,7 @@ def call_openai_api(available_courses, taken_courses, selected_year, description
     I want you to act as a course schedule picker.
     Based on the student's year: [{selected_year}] and their description: "{description}", analyze their taken courses: [{taken_courses}] to build a student profile.
     Next, examine the available courses: {available_courses} and suggest multiple combinations of 3 classes the student is eligible to take.
-    Ensure the courses meet their remaining degree requirements: [{req_list}]. Avoid recommending Varsity or Club sports unless specified or previously taken.
+    Ensure the courses meet their remaining degree requirements: [{req_list}]. Avoid recommending Varsity or Club sports unless specified or previously taken. If they have already taken a 1000-level course or higher in a subject, do not recommend a 1000-level course.
     For each schedule, list the three courses and provide a **brief** justification for how they align with the student's interests and degree progress. Keep the justifications short and to the point. Do not include the course title, just course codes.
     **IMPORTANT**
     Format:
@@ -313,8 +309,6 @@ def call_openai_api(available_courses, taken_courses, selected_year, description
         )
 
     response = completion.choices[0].message.content
-
-    print(response)
     
     return parse_response(response, session, selected_filters)
 
@@ -331,14 +325,14 @@ def parse_response(response, session, selected_filters):
                 # Extract the schedule and justification
                 schedule = schedule_and_justification[0].strip()
                 justification = schedule_and_justification[1].strip()
+                if justification.startswith('[') and justification.endswith(']'):
+                    justification = justification[1:-1]
 
                 # Split schedule into full course IDs by commas (without splitting on spaces)
                 course_ids = [course.strip() for course in schedule.split(',')]
                 
                 # Query sections from the Section table for the given course_ids
                 sections = session.query(Section).filter(Section.course_id.in_(course_ids)).all()
-                print(course_ids)
-                print(section.course_id for section in sections)
 
                 # Generate valid combinations of sections for the schedule
                 valid_combinations = generate_valid_combinations(sections, selected_filters, session)
@@ -349,8 +343,6 @@ def parse_response(response, session, selected_filters):
                     "justification": justification,
                     "schedules": valid_combinations
                 })
-
-                print(schedules[-1].get("schedules"))  # Debugging print to show the schedules generated
 
     return schedules
 

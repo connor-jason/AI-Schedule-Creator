@@ -63,21 +63,19 @@ function GenerateSchedules({ availableCourses, takenCourseIds, selectedYear, des
             <div>
                 {schedules.map((schedule, index) => (
                     <div key={index}>
-                        <h4>Schedule {index + 1}</h4>
+                        <h1 className="font-bold">Schedule {index + 1}</h1>
                         <ul>
                             {schedule.map((section, idx) => (
                                 <li className="mb-5" key={idx}>
-                                    <strong>Course ID:</strong> {section.course_id} <br />
-                                    <strong>Section ID:</strong> {section.section_id} <br />
-                                    <strong>Instructor:</strong> {section.instructor} <br />
-                                    <strong>Location:</strong> {section.location} <br />
-                                    <strong>Meeting Patterns:</strong> {section.meeting_patterns} <br />
-                                    <strong>Start Date:</strong> {section.start_date} <br />
-                                    <strong>End Date:</strong> {section.end_date} <br />
-                                    <strong>Capacity:</strong> {section.enrolled_capacity} / {section.waitlist_capacity} <br />
-                                    <strong>Delivery Mode:</strong> {section.delivery_mode} <br />
-                                    <strong>Offering Period:</strong> {section.offering_period} <br />
-                                    <strong>Instructional Format:</strong> {section.instructional_format}
+                                    <p>Section: {section.course_id}-{section.section_id} </p> 
+                                    <p>Instructor: {section.instructor} </p> 
+                                    <p>Location: {section.location} </p> 
+                                    <p>Meeting Patterns: {section.meeting_patterns} </p> 
+                                    <p>Date: {section.start_date} - {section.end_date} </p> 
+                                    <p>Capacity: {section.enrolled_capacity} / {section.waitlist_capacity} </p> 
+                                    <p>Delivery Mode: {section.delivery_mode} </p> 
+                                    <p>Instructional Format: {section.instructional_format}</p> 
+                                    <p>Offering Period: {section.offering_period}</p>
                                 </li>
                             ))}
                         </ul>
@@ -97,7 +95,7 @@ function GenerateSchedules({ availableCourses, takenCourseIds, selectedYear, des
 
             <div className="flex flex-col">
                 {result && result.map((entry, index) => (
-                    <div key={index}>
+                    <div className="py-1" key={index}>
                         <button className="border border-black b-2 w-fit p-1" onClick={() => handleShowDetails(entry)}>
                             {entry.schedule.join(', ')}
                         </button>

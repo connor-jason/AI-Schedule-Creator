@@ -30,7 +30,7 @@ function App() {
     const [availableCourses, setAvailableCourses] = useState([]);
     const [takenCourses, setTakenCourses] = useState([]);
     const [takenCourseIds, setTakenCourseIds] = useState([]);
-    const [currentStep, setCurrentStep] = useState(5);
+    const [currentStep, setCurrentStep] = useState(1);
     const [selectedYear, setSelectedYear] = useState('');
     const [selectedTerm, setSelectedTerm] = useState('');
     const [nicheCourses, setNicheCourses] = useState(['Varsity', 'Club']);
@@ -43,6 +43,8 @@ function App() {
         "WR 2010", "BB 1025", "CS 3431", "PSY 1402", "MA 1021", "MA 1022",
         "CS 1000", "EN 1000", "PSY 1400", "BB 1025", "CS 3431", "IMGD 2000", "PSY 1402"
     ];
+
+    const NoNoSubjects = ["Air Science", "Arabic", "Art", "Chinese", "Co-Operative Education", "Education", "English as a Second Language", "Fire Protection", "First Year", "Interdisciplinary", "Interdisciplinary - Graduate", "International Students - English", "Japanese", "Military Leadership", "Music", "Spanish", "Theatre", "Wellness and Physical Education"]
 
     useEffect(() => {
         axios.get('http://127.0.0.1:5001/all_courses')
@@ -69,7 +71,7 @@ function App() {
                 // Set selectedFilters.subject to include all subjects by default
                 setSelectedFilters(prevFilters => ({
                     ...prevFilters,
-                    subject: sortedSubjects // Default all subjects to be checked
+                    subject: sortedSubjects.filter(subject => !NoNoSubjects.includes(subject)) // Default all subjects to be checked
                 }));
             })
             .catch(error => console.error('Error fetching filter options:', error));
