@@ -215,7 +215,7 @@ function App() {
                     )}
                 {currentStep === 5 && (
                     <div className="flex flex-row">
-                        <div id="glass" className="w-[30vw] h-[90vh] p-6 m-3">
+                        <div id="glass" className="w-[30vw] h-[90vh] p-6 m-3 overflow-y-scroll">
                             <GenerateSchedules availableCourses={filteredCourses()} takenCourseIds={takenCourseIds} selectedYear={selectedYear} description={description} reqList={reqList} sections={sections} selectedFilters={selectedFilters} />
                         </div>
                         <div id="glass" className="w-[65vw] h-[90vh] p-6 m-3 flex">
