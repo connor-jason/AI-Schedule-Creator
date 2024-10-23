@@ -1,5 +1,7 @@
 # 🎓 SmartSchedule AI 🤖
 
+![aischedule](https://github.com/user-attachments/assets/24b35845-a415-423e-851c-c0a0c02e74e5)
+
 👋 **Intro:**
 - This project is a proof of concept for an AI-powered course schedule generation system for Worcester Polytechnic Institute (WPI) students
 - Simplifies course selection through AI-driven personalized schedules based on academic history, preferences, and degree requirements
