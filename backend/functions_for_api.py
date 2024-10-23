@@ -4,6 +4,7 @@ import re
 import pandas as pd
 from models import Base, CourseSubject, School, Department, Course, Section, PrerequisiteGroup, Prerequisite, SameCredit, Subject
 from itertools import combinations, product
+import os
 from openai import OpenAI
 
 def remove_same_classes(courses, my_prerequisites, session): 
@@ -256,7 +257,7 @@ def parse_xlsx_file(filepath):
     return result_dict
 
 def call_openai_api(available_courses, taken_courses, selected_year, description, req_list, session, selected_filters):
-    client = OpenAI(api_key="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")
+    client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
     # The prompt for OpenAI API
     # prompt = f"""
@@ -366,3 +367,4 @@ def serialize_section(section):
         "meeting_patterns": section.meeting_patterns,
         "instructor": section.instructor
     }
+

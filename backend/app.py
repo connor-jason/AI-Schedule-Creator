@@ -9,6 +9,10 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 from functions_for_api import call_openai_api, filter_courses_by_prerequisites, generate_valid_combinations, get_course_subject, parse_xlsx_file, remove_same_classes, remove_same_credit_courses
 from models import Base, CourseSubject, Course, Section, Subject
 import re
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
